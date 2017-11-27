@@ -45,7 +45,7 @@
         <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="287" Margin="298,103,0,0" VerticalAlignment="Top" Width="356">
             <TextBox HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="{Binding DataObject.Name, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
             <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding DataObject.Email, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
-            <TextBox HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="{Binding DataObject.PhoneNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
+            <TextBox HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="{Binding DataObject.Phonenumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
             <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding DataObject.Age, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
             <ComboBox HorizontalAlignment="Left" Height="41" Width="356"/>
             <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding DataObject.CardNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>

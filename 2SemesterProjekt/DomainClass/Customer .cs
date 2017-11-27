@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataTransformation.Implementation;
 using DataTransformation.Interfaces;
 using InMemoryStorage.Interfaces;
 
 namespace _2SemesterProjekt
 {
-   public class Customer : IStorable, ITransformed<Customer>
+   public class Customer : TransformedBase<Customer>
    {
 
        public string Name { get; set; }
@@ -22,15 +23,19 @@ namespace _2SemesterProjekt
 
        
         public int Key { get; set; }
-       public ITransformed<Customer> Clone()
-       {
-           throw new NotImplementedException();
-       }
+       
 
-       public void SetValuesFromObject(Customer obj)
+       public override void SetValuesFromObject(Customer obj)
        {
-           throw new NotImplementedException();
-       }
+          Name = obj.Name;
+           Age = obj.Age;
+           Email = obj.Email;
+           PhoneNumber = obj.PhoneNumber;
+           CardNumber = obj.CardNumber;
+           CVRNumber = obj.CVRNumber;
+           ExpirationMonth = obj.ExpirationMonth;
+           ExpirationYear = obj.ExpirationYear;
+        }
 
 
        

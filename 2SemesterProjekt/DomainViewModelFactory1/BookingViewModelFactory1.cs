@@ -17,7 +17,7 @@ namespace _2SemesterProjekt.BookingFolder
                 StartDate = tObj.StartDate,
                 EndDate = tObj.EndDate,
                 NumberOfChildren = tObj.NumberOfChildren,
-                NumberOfAnimals = tObj.NumberOfAnimals,
+                NumberOfAnimals = tObj.NumberOfAnimals
                 
             };
 

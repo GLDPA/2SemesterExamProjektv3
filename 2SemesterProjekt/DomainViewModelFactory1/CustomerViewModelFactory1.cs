@@ -19,7 +19,7 @@ namespace _2SemesterProjekt
                 Age = vmObj.Age,
                 Email = vmObj.Email,
                 PhoneNumber = vmObj.PhoneNumber,
-                CardNumber = vmObj.CardNumber,
+                CardNumber = vmObj.Cardnumber,
                 CVRNumber = vmObj.CVRNumber,
                 ExpirationYear = vmObj.ExpirationYear,
                 ExpirationMonth = vmObj.ExpirationMonth
