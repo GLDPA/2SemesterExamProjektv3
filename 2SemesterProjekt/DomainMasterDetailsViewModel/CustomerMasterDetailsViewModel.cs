@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Catalog.Implementation;
+using ExtensionsCommands.Types;
 using ExtensionsViewModel.Implementation;
 using ViewModel.Interfaces;
 using _2SemesterProjekt.SummerHouseMappe;
@@ -18,6 +19,7 @@ namespace _2SemesterProjekt
                 new List<string>{},
                 new List<string>{})
         {
+            ViewStateService.ViewState = CRUDStates.CreateState;
         }
     }
 }

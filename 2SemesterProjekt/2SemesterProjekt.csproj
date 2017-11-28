@@ -222,14 +222,30 @@
     <Reference Include="CommandInterfaces">
       <HintPath>..\..\MVVMStarterLibrary\CommandImplementation\bin\Debug\CommandInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="ControllerInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MVVMStarterLibrary\ControllerInterfaces\bin\Debug\ControllerInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="ControlState">
       <HintPath>..\..\MVVMStarterLibrary\ControlState\bin\Debug\ControlState.dll</HintPath>
+    </Reference>
+    <Reference Include="DataCommandImplementation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MVVMStarterLibrary\DataCommandImplementation\bin\Debug\DataCommandImplementation.dll</HintPath>
+    </Reference>
+    <Reference Include="DataControllerImplementation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MVVMStarterLibrary\DataControllerImplementation\bin\Debug\DataControllerImplementation.dll</HintPath>
     </Reference>
     <Reference Include="DataTransformationImplementation">
       <HintPath>..\..\MVVMStarterLibrary\CatalogImplementation\bin\Debug\DataTransformationImplementation.dll</HintPath>
     </Reference>
     <Reference Include="DataTransformationInterfaces">
       <HintPath>..\..\MVVMStarterLibrary\CatalogImplementation\bin\Debug\DataTransformationInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtensionsCommands, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MVVMStarterLibrary\ExtensionsCommands\bin\Debug\ExtensionsCommands.dll</HintPath>
     </Reference>
     <Reference Include="ExtensionsViewModel">
       <HintPath>..\..\MVVMStarterLibrary\ExtensionsViewModel\obj\Debug\ExtensionsViewModel.dll</HintPath>
@@ -239,6 +255,10 @@
     </Reference>
     <Reference Include="ExtensionsViewModel">
       <HintPath>..\..\MVVMStarterLibrary\ExtensionsViewModel\bin\Debug\ExtensionsViewModel.dll</HintPath>
+    </Reference>
+    <Reference Include="FilePersistency, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MVVMStarterLibrary\FilePersistency\bin\Debug\FilePersistency.dll</HintPath>
     </Reference>
     <Reference Include="InMemoryStorageImplementation">
       <HintPath>..\..\MVVMStarterLibrary\CatalogImplementation\bin\Debug\InMemoryStorageImplementation.dll</HintPath>
@@ -251,6 +271,10 @@
     </Reference>
     <Reference Include="PersistencyInterfaces">
       <HintPath>..\..\MVVMStarterLibrary\CatalogImplementation\bin\Debug\PersistencyInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="StringPersistencyInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MVVMStarterLibrary\StringPersistencyInterfaces\bin\Debug\StringPersistencyInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="ViewModelImplementation">
       <HintPath>..\..\MVVMStarterLibrary\ViewModelImplementation\bin\Debug\ViewModelImplementation.dll</HintPath>

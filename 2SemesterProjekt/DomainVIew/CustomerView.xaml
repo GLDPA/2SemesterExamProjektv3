@@ -1,11 +1,15 @@
 ﻿<Page
-    x:Class="_2SemesterProjekt.CustomerView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:_2SemesterProjekt"
+    x:Class="_2SemesterProjekt.CustomerView"
     mc:Ignorable="d">
- 
+    
+    <Page.DataContext>
+        <local:CustomerMasterDetailsViewModel/>
+    </Page.DataContext>
 
     <Grid>
         <Grid.Background>
@@ -15,7 +19,17 @@
             <ColumnDefinition Width="341*"/>
             <ColumnDefinition Width="229*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Kunde" VerticalAlignment="Top" Width="154" FontSize="24" FontWeight="Bold"/>
+
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Kunde" VerticalAlignment="Top" Width="154" FontSize="24" FontWeight="Bold"/>
+            <ListView ItemsSource="{Binding ItemCollection}" SelectedItem="{Binding ItemSelected}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local:CustomerItemViewModel">
+                        <TextBlock Text="{Binding Description}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
         <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="610" VerticalAlignment="Top" Width="504" Margin="150,103,0,0" Background="{ThemeResource AccentButtonForegroundPointerOver}">
             <StackPanel HorizontalAlignment="Left" Height="287" Width="145">
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Navn" Width="145"/>
@@ -30,7 +44,7 @@
                 <StackPanel.RenderTransform>
                     <CompositeTransform ScaleY="-1"/>
                 </StackPanel.RenderTransform>
-                <Button Content="Godkend" Height="78.009" Margin="0,-0.027,0,0" VerticalAlignment="Top" Width="134.886" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black">
+                <Button Command="{Binding DataCommand[CreateCommand]}" Content="Godkend" Height="78.009" Margin="0,-0.027,0,0" VerticalAlignment="Top" Width="134.886" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black">
                     <Button.RenderTransform>
                         <CompositeTransform Rotation="180.042" ScaleX="-1"/>
                     </Button.RenderTransform>
@@ -43,13 +57,13 @@
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="287" Margin="298,103,0,0" VerticalAlignment="Top" Width="356">
-            <TextBox HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="{Binding DataObject.Name, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
-            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding DataObject.Email, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
-            <TextBox HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="{Binding DataObject.PhoneNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
-            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding DataObject.Age, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
+            <TextBox HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="{Binding ItemDetails.Name, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
+            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.Email, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
+            <TextBox HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="{Binding ItemDetails.PhoneNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
+            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.Age, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
             <ComboBox HorizontalAlignment="Left" Height="41" Width="356"/>
-            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding DataObject.CardNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
-            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding DataObject.CVRNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
+            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.CardNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
+            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.CVRNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="65" Margin="23,758,0,0" VerticalAlignment="Top" Width="172">
             <Button Click="GoToMainPage" Content="Home" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="172" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
