@@ -56,8 +56,6 @@
         <StackPanel HorizontalAlignment="Left" Height="103" Margin="77,944,0,0" VerticalAlignment="Top" Width="200">
             <Button Click="GoToMainPage" Content="Home" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="172" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="103" Margin="324,944,0,0" VerticalAlignment="Top" Width="245">
-            <Button Content="Inspection katalog" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="211" FontWeight="Bold" FontSize="20" Background="{ThemeResource AccentButtonForeground}" BorderBrush="Black"/>
-        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="103" Margin="324,944,0,0" VerticalAlignment="Top" Width="245"/>
     </Grid>
 </Page>

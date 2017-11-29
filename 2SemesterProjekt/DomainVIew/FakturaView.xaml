@@ -7,7 +7,68 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Møns klint.jpg"/>
+        </Grid.Background>
+
+        <StackPanel HorizontalAlignment="Left" Height="109" VerticalAlignment="Top" Width="188" Margin="24,22,0,0">
+            <TextBlock HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="24" FontWeight="Bold" SelectionChanged="TextBlock_SelectionChanged" Text="Faktura"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" Height="1009" Margin="1213,38,0,0" VerticalAlignment="Top" Width="682" Background="{ThemeResource AccentButtonForeground}">
+            <StackPanel Height="481" Width="217" HorizontalAlignment="Left">
+                <TextBlock TextWrapping="Wrap" Text="Kunde" Height="59" />
+                <TextBlock TextWrapping="Wrap" Height="59" SelectionChanged="TextBlock_SelectionChanged_1">
+                    <Run Text="Sommerhus"/>
+                    <LineBreak/>
+                    <Run/>
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" Height="59" Text="Booking"/>
+                <TextBlock TextWrapping="Wrap" Height="59" Text="Morgenmad"/>
+                <TextBlock TextWrapping="Wrap" Height="59" Text="Total Pris"/>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Right" Height="78" Width="585" RenderTransformOrigin="0.5,0.5" Margin="0,204.5,2,0" Orientation="Horizontal">
+                <StackPanel.RenderTransform>
+                    <CompositeTransform ScaleY="-1"/>
+                </StackPanel.RenderTransform>
+                <Button Content="Godkend" Height="78.009" Margin="0,-0.027,0,0" VerticalAlignment="Top" Width="134.886" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black">
+                    <Button.RenderTransform>
+                        <CompositeTransform Rotation="180.042" ScaleX="-1"/>
+                    </Button.RenderTransform>
+                </Button>
+
+                <Button Content="Annuller" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="188.558" RenderTransformOrigin="0.5,0.5" Margin="100,0.136,0,-0.223" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="20" FontWeight="Bold" Background="#33FFFFFF" BorderBrush="Black">
+                    <Button.RenderTransform>
+                        <CompositeTransform ScaleX="-1" Rotation="-179.948"/>
+                    </Button.RenderTransform>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" Height="562" Margin="1466,38,0,0" VerticalAlignment="Top" Width="429">
+            <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,60,0" Height="59">
+                <ListBox Height="100" Width="100"/>
+                <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="59" Width="369">
+                    <ListBox Height="100" Width="100"/>
+                </ComboBox>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,60,0" Height="59">
+                <ListBox Height="100" Width="100"/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,60,0" Height="59">
+                <ListBox Height="100" Width="100"/>
+            </ComboBox>
+            <CheckBox Content="CheckBox" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="369"/>
+            <TextBlock TextWrapping="Wrap" Text="Total Pris Her" Margin="0,0,60,0" Height="59"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" Height="103" Margin="77,944,0,0" VerticalAlignment="Top" Width="200">
+            <Button Click="GoToMainPage" Content="Home" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="172" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" Height="103" Margin="324,944,0,0" VerticalAlignment="Top" Width="245"/>
 
     </Grid>
 </Page>

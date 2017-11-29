@@ -36,5 +36,10 @@ namespace _2SemesterProjekt.DomainView
         {
 
         }
+        private void GoToMainPage(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage), null);
+        }
     }
+
 }

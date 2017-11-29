@@ -22,7 +22,7 @@
 
         <StackPanel HorizontalAlignment="Left" Height="1009" Margin="1213,38,0,0" VerticalAlignment="Top" Width="682" Background="{ThemeResource AccentButtonForeground}">
             <StackPanel Height="481" Width="217" HorizontalAlignment="Left">
-                <TextBlock TextWrapping="Wrap" Text="Navn" Height="59" />
+                <TextBlock TextWrapping="Wrap" Text="Kunde" Height="59" />
                 <TextBlock TextWrapping="Wrap" Text="Check-in" Height="59"/>
                 <TextBlock TextWrapping="Wrap" Height="59" Text="Check-out"/>
                 <TextBlock TextWrapping="Wrap" Text="Numbers of children" Height="59"/>
@@ -66,10 +66,6 @@
 
         <StackPanel HorizontalAlignment="Left" Height="103" Margin="77,944,0,0" VerticalAlignment="Top" Width="200">
             <Button Click="GoToMainPage" Content="Home" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="172" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
-        </StackPanel>
-
-        <StackPanel HorizontalAlignment="Left" Height="103" Margin="324,944,0,0" VerticalAlignment="Top" Width="245">
-            <Button Content="Booking katalog" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="211" FontWeight="Bold" FontSize="20" Background="{ThemeResource AccentButtonForeground}" BorderBrush="Black"/>
         </StackPanel>
 
     </Grid>

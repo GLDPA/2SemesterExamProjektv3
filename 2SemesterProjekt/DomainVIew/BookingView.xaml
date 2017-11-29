@@ -22,9 +22,7 @@
 
         <StackPanel HorizontalAlignment="Left" Height="1009" Margin="1213,38,0,0" VerticalAlignment="Top" Width="682" Background="{ThemeResource AccentButtonForeground}">
             <StackPanel Height="481" Width="217" HorizontalAlignment="Left">
-                <TextBlock TextWrapping="Wrap" Text="Navn" Height="59" />
-                <TextBlock TextWrapping="Wrap" Text="Email" Height="59"/>
-                <TextBlock TextWrapping="Wrap" Text="Phone Nr" Height="59"/>
+                <TextBlock TextWrapping="Wrap" Text="Kunde" Height="59" />
                 <TextBlock TextWrapping="Wrap" Text="Check-in" Height="59"/>
                 <TextBlock TextWrapping="Wrap" Height="59" Text="Check-out"/>
                 <TextBlock TextWrapping="Wrap" Text="Numbers of children" Height="59"/>
@@ -44,7 +42,7 @@
                         <CompositeTransform Rotation="180.042" ScaleX="-1"/>
                     </Button.RenderTransform>
                 </Button>
-                
+
                 <Button Content="Annuller" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="188.558" RenderTransformOrigin="0.5,0.5" Margin="100,0.136,0,-0.223" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="20" FontWeight="Bold" Background="#33FFFFFF" BorderBrush="Black">
                     <Button.RenderTransform>
                         <CompositeTransform ScaleX="-1" Rotation="-179.948"/>
@@ -54,22 +52,20 @@
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Left" Height="562" Margin="1466,38,0,0" VerticalAlignment="Top" Width="429">
-            <TextBox HorizontalAlignment="Left" Height="55" TextWrapping="Wrap" Text="{Binding DataObject.Name, Mode=TwoWay}" VerticalAlignment="Top" Width="369"/>
-            <TextBox HorizontalAlignment="Left" Height="59" TextWrapping="Wrap" Text="{Binding DataObject.Email, Mode=TwoWay}" VerticalAlignment="Top" Width="369"/>
-            <TextBox HorizontalAlignment="Left" Height="59" TextWrapping="Wrap" Text="{Binding DataObject.PhoneNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="369"/>
+            <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,60,0" Height="59">
+                <ListBox Height="100" Width="100"/>
+            </ComboBox>
             <TextBox HorizontalAlignment="Left" Height="59" TextWrapping="Wrap" Text="{Binding DataObject.StartDate, Mode=TwoWay}" VerticalAlignment="Top" Width="369"/>
             <TextBox HorizontalAlignment="Left" Height="59" TextWrapping="Wrap" Text="{Binding DataObject.EndDate, Mode=TwoWay}" VerticalAlignment="Top" Width="369"/>
             <TextBox HorizontalAlignment="Left" Height="59" TextWrapping="Wrap" Text="{Binding DataObject.NumberOfChildren, Mode=TwoWay}" VerticalAlignment="Top" Width="369"/>
             <TextBox HorizontalAlignment="Left" Height="59" TextWrapping="Wrap" Text="{Binding DataObject.NumberOfAnimals, Mode=TwoWay}" VerticalAlignment="Top" Width="369"/>
-            <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,60,0" Height="59"/>
+            <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,60,0" Height="59">
+                <ListBox Height="100" Width="100"/>
+            </ComboBox>
         </StackPanel>
-        
+
         <StackPanel HorizontalAlignment="Left" Height="103" Margin="77,944,0,0" VerticalAlignment="Top" Width="200">
             <Button Click="GoToMainPage" Content="Home" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="172" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
-        </StackPanel>
-        
-        <StackPanel HorizontalAlignment="Left" Height="103" Margin="324,944,0,0" VerticalAlignment="Top" Width="245">
-            <Button Content="Booking katalog" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="211" FontWeight="Bold" FontSize="20" Background="{ThemeResource AccentButtonForeground}" BorderBrush="Black"/>
         </StackPanel>
 
     </Grid>
