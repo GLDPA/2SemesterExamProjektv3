@@ -80,10 +80,10 @@ namespace _2SemesterProjekt
 
         public int CVRNumber
         {
-            get { return DataObject.CVRNumber; }
+            get { return DataObject.CVC; }
             set
             {
-                DataObject.CVRNumber = value;
+                DataObject.CVC = value;
                 OnPropertyChanged();
             }
         }
@@ -106,6 +106,36 @@ namespace _2SemesterProjekt
                 DataObject.ExpirationYear = value;
                 OnPropertyChanged();
                  
+            }
+        }
+
+        public int NumberOfPeople
+        {
+            get { return DataObject.NumberOfPeople; }
+            set
+            {
+                DataObject.NumberOfAnimals = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int NumberOfChildren
+        {
+            get { return DataObject.NumberOfChildren; }
+            set
+            {
+                DataObject.NumberOfChildren = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int NumberOfAnimals
+        {
+            get { return DataObject.NumberOfAnimals; }
+            set
+            {
+                DataObject.NumberOfAnimals = value;
+                OnPropertyChanged();
             }
         }
     }

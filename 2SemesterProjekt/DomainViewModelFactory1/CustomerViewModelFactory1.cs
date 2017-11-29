@@ -20,9 +20,12 @@ namespace _2SemesterProjekt
                 Email = vmObj.Email,
                 PhoneNumber = vmObj.PhoneNumber,
                 CardNumber = vmObj.Cardnumber,
-                CVRNumber = vmObj.CVRNumber,
+                CVC = vmObj.CVC,
                 ExpirationYear = vmObj.ExpirationYear,
-                ExpirationMonth = vmObj.ExpirationMonth
+                ExpirationMonth = vmObj.ExpirationMonth,
+                NumberOfPeople = vmObj.NumberOfPeople,
+                NumberOfChildren = vmObj.NumberOfChildren,
+                NumberOfAnimals = vmObj.NumberOfAnimals
 
             };
             

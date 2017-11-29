@@ -23,9 +23,7 @@ namespace _2SemesterProjekt.BookingFolder
                 return _instance;
             }
         }
-        //public BookingCatalog: base(new  BookingViewModelFactory())
-        //{
-        //}
+       
         public BookingCatalog() : base(new BookingViewModelFactory())
         {
         }

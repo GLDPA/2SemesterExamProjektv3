@@ -19,7 +19,8 @@ namespace _2SemesterProjekt
                 City = vmObj.City,
                 ZipCode = vmObj.ZipCode,
                 Municipality = vmObj.Municipality,
-                NickName = vmObj.NickName
+                NickName = vmObj.NickName,
+                PricePrNight = vmObj.PricePrNight
             };
         return obj;
         }

@@ -14,9 +14,12 @@ namespace _2SemesterProjekt
         private string _email;
         private int _phonenumber;
         private int _cardnumber;
-        private int _cvr;
+        private int _cvc;
         private int _expirationMonth;
         private int _expirationYear;
+        private int _numberOfPeople;
+        private int _numberOfChildren;
+        private int _numberOfAnimals;
 
 
         public string Name { get { return _name; } set { value = _name; } }
@@ -24,10 +27,12 @@ namespace _2SemesterProjekt
         public string Email { get { return _email; } set { value = _email; } }
         public int PhoneNumber { get { return _phonenumber; } set { value = _phonenumber; } }
         public int Cardnumber { get { return _cardnumber; } set { value = _cardnumber; } }
-        public int CVRNumber { get { return _cvr; } set { value = _cvr; } }
+        public int CVC { get { return _cvc; } set { value = _cvc; } }
         public int ExpirationMonth { get { return _expirationMonth; } set { value = _expirationMonth; } }
         public int ExpirationYear { get { return _expirationYear; } set { value = _expirationYear; } }
-
+        public int NumberOfPeople { get { return _numberOfPeople; }set { value = _numberOfPeople; } }
+        public int NumberOfChildren { get { return _numberOfChildren; }set { value = _numberOfChildren; } }
+        public int NumberOfAnimals { get { return _numberOfAnimals; }set { value = _numberOfChildren; } }
         public override void SetValuesFromObject(Customer obj)
         {
             Key = obj.Key;
@@ -36,9 +41,12 @@ namespace _2SemesterProjekt
             Email = obj.Email;
             PhoneNumber = obj.PhoneNumber;
             Cardnumber = obj.CardNumber;
-            CVRNumber = obj.CVRNumber;
+            CVC = obj.CVC;
             ExpirationMonth = obj.ExpirationMonth;
             ExpirationYear = obj.ExpirationYear;
+            NumberOfPeople = obj.NumberOfPeople;
+            NumberOfChildren = obj.NumberOfChildren;
+            NumberOfAnimals = obj.NumberOfAnimals;
         }
     }
 }
