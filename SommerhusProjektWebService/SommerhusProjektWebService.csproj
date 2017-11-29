@@ -191,6 +191,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="KontaktPerson.cs" />
+    <Compile Include="Leverance.cs" />
+    <Compile Include="Leverandør.cs" />
+    <Compile Include="Opgaver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sommerhus.cs" />
     <Compile Include="SommerHusProjektDBContext.cs" />
