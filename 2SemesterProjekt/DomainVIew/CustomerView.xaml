@@ -16,11 +16,17 @@
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Møns klint.jpg"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="341*"/>
-            <ColumnDefinition Width="229*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-        <StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="0">
             <TextBlock HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Kunde" VerticalAlignment="Top" Width="154" FontSize="24" FontWeight="Bold"/>
             <ListView ItemsSource="{Binding ItemCollection}" SelectedItem="{Binding ItemSelected}">
                 <ListView.ItemTemplate>
@@ -30,8 +36,9 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="610" VerticalAlignment="Top" Width="504" Margin="150,103,0,0" Background="{ThemeResource AccentButtonForegroundPointerOver}">
-            <StackPanel HorizontalAlignment="Left" Height="287" Width="145">
+
+        <StackPanel Grid.Column="1" Grid.Row="0"  HorizontalAlignment="Left" Background="{ThemeResource AccentButtonForegroundPointerOver}">
+            <StackPanel HorizontalAlignment="Left">
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Navn" Width="145"/>
                 <TextBlock HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="Email" Width="145"/>
                 <TextBlock HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Tlf. nr." Width="145"/>
@@ -40,23 +47,16 @@
                 <TextBlock HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="Kort Nr." Width="145" />
                 <TextBlock HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="CVC" Width="145"/>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Right" Height="78" Width="500" RenderTransformOrigin="0.5,0.5" Margin="0,245,2,0" Orientation="Horizontal">
-                <StackPanel.RenderTransform>
-                    <CompositeTransform ScaleY="-1"/>
-                </StackPanel.RenderTransform>
-                <Button Command="{Binding DataCommand[CreateCommand]}" Content="Godkend" Height="78.009" Margin="0,-0.027,0,0" VerticalAlignment="Top" Width="134.886" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black">
-                    <Button.RenderTransform>
-                        <CompositeTransform Rotation="180.042" ScaleX="-1"/>
-                    </Button.RenderTransform>
-                </Button>
-                <Button Content="Annuller" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="184.559" RenderTransformOrigin="0.5,0.5" Margin="180,0.134,0,-0.221" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="20" FontWeight="Bold" Background="#33FFFFFF" BorderBrush="Black">
-                    <Button.RenderTransform>
-                        <CompositeTransform ScaleX="-1" Rotation="-179.948"/>
-                    </Button.RenderTransform>
-                </Button>
-            </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="287" Margin="298,103,0,0" VerticalAlignment="Top" Width="356">
+
+        <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Horizontal">
+            <Button Command="{Binding DataCommand[CreateCommand]}" Content="Godkend" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black">
+            </Button>
+            <Button Content="Annuller" FontSize="20" FontWeight="Bold" Background="#33FFFFFF" BorderBrush="Black">
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" HorizontalAlignment="Left" >
             <TextBox HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="{Binding ItemDetails.Name, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
             <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.Email, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
             <TextBox HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="{Binding ItemDetails.PhoneNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
@@ -65,11 +65,10 @@
             <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.CardNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
             <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.CVRNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="65" Margin="23,758,0,0" VerticalAlignment="Top" Width="172">
-            <Button Click="GoToMainPage" Content="Home" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="172" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="65" Margin="235,758,0,0" VerticalAlignment="Top" Width="211">
-            <Button Content="Kunde katalog" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="211" FontWeight="Bold" FontSize="20" Background="{ThemeResource AccentButtonForeground}" BorderBrush="Black"/>
+        
+        <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
+            <Button Click="GoToMainPage" Content="Home" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
+            <Button Content="Kunde katalog" FontWeight="Bold" FontSize="20" Background="{ThemeResource AccentButtonForeground}" BorderBrush="Black"/>
         </StackPanel>
 
     </Grid>
