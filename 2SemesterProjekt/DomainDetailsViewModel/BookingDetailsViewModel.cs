@@ -13,31 +13,31 @@ namespace _2SemesterProjekt.BookingFolder
         {
         }
 
-        public DateTime StartDateTime
+        public DateTime CheckInDate
         {
-            get { return DataObject.StartDate; } set { DataObject.StartDate = value; OnPropertyChanged(); }
+            get { return DataObject.CheckInDate; } set { DataObject.CheckInDate = value; OnPropertyChanged(); }
 
         }
 
-        public DateTime EndDateTime
+        public DateTime CheckInTime
         {
-            get { return DataObject.EndDate; } set { DataObject.EndDate = value; OnPropertyChanged(); }
+            get { return DataObject.CheckInTime; } set { DataObject.CheckInTime = value; OnPropertyChanged(); }
         }
 
 
-        public int NumberOfChilren
+        public DateTime CheckOutDate
         {
-            get { return DataObject.NumberOfChildren; } set { DataObject.NumberOfChildren = value; OnPropertyChanged(); }
+            get { return DataObject.CheckOutDate; } set { DataObject.CheckOutDate = value; OnPropertyChanged(); }
 
 
         }
 
 
-        public int NumberOfAnimals
+        public DateTime CheckOutTime
         {
-            get { return DataObject.NumberOfAnimals; } set { DataObject.NumberOfAnimals = value; OnPropertyChanged(); }
+            get { return DataObject.CheckOutTime; } set { DataObject.CheckInTime = value; OnPropertyChanged(); }
         }
-
+        public double TotalPrice { get { return DataObject.TotalPrice; }set { DataObject.TotalPrice = value; OnPropertyChanged();} }
 
 
     }

@@ -13,22 +13,20 @@ namespace _2SemesterProjekt.BookingFolder
         public BookingItemVm(BookingVm obj) : base(obj)
         {
         }
-
-
         public string Name { get { return DataObject.Name; } }
 
-        public int Price { get { return DataObject.Price; } }
+        public double Price { get { return DataObject.TotalPrice; } }
 
         public string Email { get { return DataObject.Email; } }
 
         public int PhoneNumber { get { return DataObject.PhoneNumber; } }
 
-        public DateTime StartDateTime { get { return DataObject.StartDate; } }
+        public DateTime CheckInDate { get { return DataObject.CheckInDate; } }
 
-        public DateTime EndDateTime { get { return DataObject.EndDate; } }
+        public DateTime CheckInTime { get { return DataObject.CheckInTime; } }
 
-        public  int NumberOfChildren { get { return DataObject.NumberOfChildren; } }
+        public  DateTime CheckOutDate { get { return DataObject.CheckOutDate; } }
 
-        public  int NumberOfAnimals { get { return DataObject.NumberOfAnimals; }}
+        public  DateTime CheckOutTime { get { return DataObject.CheckOutTime; }}
     }
 }

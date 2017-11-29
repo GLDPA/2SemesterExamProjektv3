@@ -32,18 +32,8 @@ namespace _2SemesterProjekt.Faktura
             ExpYear = obj.ExpYear;
             CVC = obj.CVC;
         }
-        //public override void SetDefaultValues()
-        //{
-        //    Key = NullKey;
-        //    BookingID = 123;
-        //    CustomerName = "(CustomerName)";
-        //    Email = "(Email)";
-        //    PhoneNr = 12346578;
-        //    CardNr = 16;
-        //    ExpMonth = 02;
-        //    ExpYear = 21;
-        //    CVC = 456;
-        }
+        
     }
+}
 
 

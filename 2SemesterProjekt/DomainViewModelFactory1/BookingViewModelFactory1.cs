@@ -14,10 +14,11 @@ namespace _2SemesterProjekt.BookingFolder
             Booking booking = new Booking
             {
                 Key = tObj.Key,
-                StartDate = tObj.StartDate,
-                EndDate = tObj.EndDate,
-                NumberOfChildren = tObj.NumberOfChildren,
-                NumberOfAnimals = tObj.NumberOfAnimals
+                CheckInDate = tObj.CheckInDate,
+                CheckInTime = tObj.CheckInTime,
+                CheckOutTime = tObj.CheckOutTime,
+                CheckOutDate = tObj.CheckOutDate,
+                TotalPrice = tObj.TotalPrice
                 
             };
 

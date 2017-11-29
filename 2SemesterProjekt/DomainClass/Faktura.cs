@@ -4,32 +4,14 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using DataTransformation.Implementation;
 using DataTransformation.Interfaces;
 using InMemoryStorage.Implementation;
 
 namespace _2SemesterProjekt.Faktura
 {
-    public class Faktura : StorableBase, ITransformed<Faktura>
+    public class Faktura : TransformedBase<Faktura>
     {
-        public Faktura(int bookingID, int price, string customerName, string email, int phoneNr, int cardNr, int expMonth, int expYear, int cVC)
-        {
-            BookingID = bookingID;
-            Price = price;
-            CustomerName = customerName;
-            Email = email;
-            PhoneNr = phoneNr;
-            CardNr = cardNr;
-            ExpMonth = expMonth;
-            ExpYear = expYear;
-            CVC = cVC;
-        }
-
-        public Faktura()
-        {
-            throw new NotImplementedException();
-        }
-
-
         public int BookingID { get; set; }
         public int Price { get; set; }
         public string CustomerName { get; set; }
@@ -39,15 +21,20 @@ namespace _2SemesterProjekt.Faktura
         public int ExpMonth { get; set; }
         public int ExpYear { get; set; }
         public int CVC { get; set; }
-
-        public ITransformed<Faktura> Clone()
+        public override void SetValuesFromObject(Faktura obj)
         {
-            throw new NotImplementedException();
+            BookingID =obj.BookingID;
+            Price = obj.Price;
+            CustomerName = obj.CustomerName;
+            Email = obj.Email;
+            PhoneNr = obj.PhoneNr;
+            CardNr = obj.CardNr;
+            ExpMonth = obj.ExpMonth;
+            ExpYear = obj.ExpYear;
+            CVC = obj.CVC;
         }
+        
 
-        public void SetValuesFromObject(Faktura obj)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

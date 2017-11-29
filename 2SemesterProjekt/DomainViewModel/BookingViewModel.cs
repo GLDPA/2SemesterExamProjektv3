@@ -12,28 +12,30 @@ namespace _2SemesterProjekt.BookingFolder
 
         public string Name { get; }
 
-        public int Price { get; }
+        public double TotalPrice { get; set; }
 
         public string Email { get; }
 
         public int PhoneNumber { get; }
 
-        public DateTime StartDate { get; set; }
+        public DateTime CheckInDate { get; set; }
 
-        public DateTime EndDate { get; set; }
+        public DateTime CheckInTime { get; set; }
 
-        public int NumberOfChildren { get; set; }
+        public DateTime CheckOutTime { get; set; }
 
-        public int NumberOfAnimals { get; set; }
+        public DateTime CheckOutDate { get; set; }
+
+        
 
         public override void SetValuesFromObject(Booking obj)
         {
             Key = obj.Key;
-            StartDate = obj.StartDate;
-            EndDate = obj.EndDate;
-            NumberOfChildren = obj.NumberOfChildren;
-            NumberOfAnimals = obj.NumberOfAnimals;
-
+            CheckInDate = obj.CheckInDate;
+            CheckInTime = obj.CheckInTime;
+            CheckOutTime = obj.CheckOutTime;
+            CheckOutDate = obj.CheckOutDate;
+            TotalPrice = obj.TotalPrice;
         }
     }
 }
