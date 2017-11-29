@@ -46,6 +46,8 @@
                 <TextBlock HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="Betalings kort" Width="145"/>
                 <TextBlock HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="Kort Nr." Width="145" />
                 <TextBlock HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="CVC" Width="145"/>
+                <TextBlock HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Udløbsmåned" Width="145"/>
+                <TextBlock HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Udløbsår" Width="145"/>
             </StackPanel>
         </StackPanel>
 
@@ -64,6 +66,8 @@
             <ComboBox HorizontalAlignment="Left" Height="41" Width="356"/>
             <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.CardNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
             <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.CVRNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
+            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.ExpirationMonth, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
+            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.ExpirationYear, Mode=TwoWay}" VerticalAlignment="Top" Width="356"/>
         </StackPanel>
         
         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
