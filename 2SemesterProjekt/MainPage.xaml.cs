@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using _2SemesterProjekt.DomainView;
 using _2SemesterProjekt.SummerHouseMappe;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -36,6 +37,20 @@ namespace _2SemesterProjekt
         private void GoToCustomerView(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(CustomerView), null);
+        }
+
+        private void GoToBookingView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BookingView), null);
+        }
+        
+        private void GoToInspectionView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(InspectionView), null);
+        }
+        private void GoToFakturaView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FakturaView), null);
         }
     }
 }
