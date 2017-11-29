@@ -23,8 +23,8 @@
 
         <StackPanel HorizontalAlignment="Left" Height="1009" Margin="1213,22,0,0" VerticalAlignment="Top" Width="682" Background="{ThemeResource AccentButtonForeground}">
             <StackPanel Height="481" Width="217" HorizontalAlignment="Left">
-                <TextBlock TextWrapping="Wrap" Text="Key is Retuned" Height="59" />
-                <TextBlock TextWrapping="Wrap" Text="Sheets hae been changed" Height="59"/>
+                <TextBlock TextWrapping="Wrap" Text="Key is returned" Height="59" />
+                <TextBlock TextWrapping="Wrap" Text="Sheets have been changed" Height="59"/>
                 <TextBlock TextWrapping="Wrap" Text="House is in order" Height="59"/>
                 <TextBlock TextWrapping="Wrap" Text="House is clean" Height="59"/>
             </StackPanel>
