@@ -8,7 +8,7 @@ using ViewModel.Implementation;
 
 namespace _2SemesterProjekt.InspectionFolder
 {
-    class InspectionVmFactory1 : ViewModelFactoryBase<Inspection, InspectionVm>
+    class InspectionVmFactory2 : ViewModelFactoryBase<Inspection, InspectionVm>
     {
         public override IDataWrapper<InspectionVm> CreateDetailsViewModel(InspectionVm obj)
         {

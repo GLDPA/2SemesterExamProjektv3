@@ -33,8 +33,5 @@ namespace _2SemesterProjekt.Faktura
             ExpYear = obj.ExpYear;
             CVC = obj.CVC;
         }
-        
-
-       
     }
 }
