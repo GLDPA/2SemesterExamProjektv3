@@ -36,6 +36,9 @@ namespace _2SemesterProjekt.SummerHouseMappe
             this.Frame.Navigate(typeof(MainPage), null);
         }
 
-       
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
