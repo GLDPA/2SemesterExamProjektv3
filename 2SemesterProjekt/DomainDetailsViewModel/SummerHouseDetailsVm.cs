@@ -13,7 +13,12 @@ namespace _2SemesterProjekt
             : base(obj)
         {
         }
-        public string StreetName { get { return DataObject.StreetName; } set{ DataObject.StreetName = value; OnPropertyChanged();} }
+        public string StreetName { get { return DataObject.StreetName; }
+            set
+            {
+                DataObject.StreetName = value;
+                OnPropertyChanged();
+            } }
         public string StreetNr { get { return DataObject.StreetNr; } set { DataObject.StreetNr=value; OnPropertyChanged(); } }
         public int ZipCode { get { return DataObject.ZipCode; } set { DataObject.ZipCode = value; OnPropertyChanged(); } }
         public string City { get { return DataObject.City; } set { DataObject.City = value; OnPropertyChanged(); } }

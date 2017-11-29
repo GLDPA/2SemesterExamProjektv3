@@ -13,7 +13,7 @@ namespace _2SemesterProjekt
         public CustomerItemViewModel(CustomerViewModel obj) : base(obj)
         {
         }
-
+        // Tilføjet property
         public string Description
         { get { return DataObject.Name; } }
         }
