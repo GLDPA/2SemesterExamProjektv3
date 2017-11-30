@@ -29,6 +29,6 @@ namespace SommerhusProjektWebService
 
         public virtual Leverandør Leverandør { get; set; }
 
-        public virtual SommerhusTable Sommerhu { get; set; }
+        public virtual SommerhusTable SommerhusTable { get; set; }
     }
 }

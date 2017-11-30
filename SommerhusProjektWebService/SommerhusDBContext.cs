@@ -5,13 +5,11 @@
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class SommerhusProjektDBContext : DbContext
+    public partial class SommerhusDBContext : DbContext
     {
-        public SommerhusProjektDBContext()
-            : base("name=SommerhusProjektDBContext")
+        public SommerhusDBContext()
+            : base("name=SommerhusDBContext")
         {
-            base.Configuration.LazyLoadingEnabled = false;
-            base.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<BookingFaktura> BookingFakturas { get; set; }
@@ -20,7 +18,7 @@
         public virtual DbSet<Leverance> Leverances { get; set; }
         public virtual DbSet<Leverandør> Leverandør { get; set; }
         public virtual DbSet<Opgaver> Opgavers { get; set; }
-        public virtual DbSet<SommerhusTable> Sommerhus { get; set; }
+        public virtual DbSet<SommerhusTable> SommerhusTables { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -97,12 +95,12 @@
 
             modelBuilder.Entity<SommerhusTable>()
                 .HasMany(e => e.Leverances)
-                .WithRequired(e => e.Sommerhu)
+                .WithRequired(e => e.SommerhusTable)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<SommerhusTable>()
                 .HasMany(e => e.Opgavers)
-                .WithRequired(e => e.Sommerhu)
+                .WithRequired(e => e.SommerhusTable)
                 .WillCascadeOnDelete(false);
         }
     }

@@ -6,6 +6,7 @@ namespace SommerhusProjektWebService
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Table("SommerhusTable")]
     public partial class SommerhusTable
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -36,9 +37,9 @@ namespace SommerhusProjektWebService
         public int vejNummer { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public ICollection<Leverance> Leverances { get; set; }
+        public virtual ICollection<Leverance> Leverances { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public ICollection<Opgaver> Opgavers { get; set; }
+        public virtual ICollection<Opgaver> Opgavers { get; set; }
     }
 }
