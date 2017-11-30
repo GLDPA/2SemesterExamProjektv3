@@ -10,10 +10,10 @@ namespace _2SemesterProjekt.InspectionFolder
    public class InspectionMasterDetailsVm : MasterDetailsViewModelCRUD<Inspection, InspectionVm, Inspection>
     {
         public InspectionMasterDetailsVm()
-            : base(new InspectionVmFactory1(),
+            : base(new InspectionVmFactory2(),
                 ObjectProvider.InspectionCatalog,
-                new List<string> {"AllIsWell"},
-                new List<string> {"HouseIsNotDestroyed"})
+                new List<string> {"All Is Well"},
+                new List<string> {"House Is Not Destroyed"})
         {
         }
     }

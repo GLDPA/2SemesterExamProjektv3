@@ -23,12 +23,8 @@ namespace _2SemesterProjekt
         public int NumberOfPeople { get; set; }
         public int NumberOfChildren { get; set; }
         public  int NumberOfAnimals { get; set; }
-    
-        
-        public int Key { get; set; }
-       
 
-       public override void SetValuesFromObject(Customer obj)
+        public override void SetValuesFromObject(Customer obj)
        {
           Name = obj.Name;
            Age = obj.Age;
@@ -42,8 +38,5 @@ namespace _2SemesterProjekt
            NumberOfChildren = obj.NumberOfChildren;
            NumberOfAnimals = obj.NumberOfAnimals;
        }
-
-
-       
    }
 }
