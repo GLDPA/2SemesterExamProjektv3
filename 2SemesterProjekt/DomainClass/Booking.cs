@@ -11,11 +11,11 @@ namespace _2SemesterProjekt.BookingFolder
     {
         public string Name { get; }
 
-        public double TotalPrice { get; set; }
-
         public string Email { get; }
 
         public int PhoneNumber { get; }
+
+        public double TotalPrice { get; set; }
 
         public DateTime CheckInDate { get; set; }
 
@@ -24,7 +24,6 @@ namespace _2SemesterProjekt.BookingFolder
         public DateTime CheckOutDate { get; set; }
 
         public DateTime CheckOutTime { get; set; }
-
 
         public override void SetValuesFromObject(Booking obj)
         {
