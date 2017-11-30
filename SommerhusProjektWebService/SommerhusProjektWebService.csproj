@@ -197,7 +197,7 @@
     <Compile Include="Opgaver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sommerhus.cs" />
-    <Compile Include="SommerHusProjektDBContext.cs" />
+    <Compile Include="SommerhusProjektDBContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />

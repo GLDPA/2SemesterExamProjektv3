@@ -8,6 +8,13 @@ namespace SommerhusProjektWebService
 
     public partial class Sommerhus
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Sommerhus()
+        {
+            Leverances = new HashSet<Leverance>();
+            Opgavers = new HashSet<Opgaver>();
+        }
+
         [Key]
         [StringLength(100)]
         public string sommerhusNavn { get; set; }
@@ -27,5 +34,11 @@ namespace SommerhusProjektWebService
         public string kommune { get; set; }
 
         public int vejNummer { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public ICollection<Leverance> Leverances { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public ICollection<Opgaver> Opgavers { get; set; }
     }
 }
