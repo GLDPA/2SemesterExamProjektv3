@@ -196,7 +196,7 @@
     <Compile Include="Leverandør.cs" />
     <Compile Include="Opgaver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sommerhus.cs" />
+    <Compile Include="SommerhusTable.cs" />
     <Compile Include="SommerhusProjektDBContext.cs" />
   </ItemGroup>
   <ItemGroup>

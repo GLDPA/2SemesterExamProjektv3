@@ -20,7 +20,7 @@
         public virtual DbSet<Leverance> Leverances { get; set; }
         public virtual DbSet<Leverandør> Leverandør { get; set; }
         public virtual DbSet<Opgaver> Opgavers { get; set; }
-        public virtual DbSet<Sommerhus> Sommerhus { get; set; }
+        public virtual DbSet<SommerhusTable> Sommerhus { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -79,28 +79,28 @@
                 .Property(e => e.sommerhusNavn)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Sommerhus>()
+            modelBuilder.Entity<SommerhusTable>()
                 .Property(e => e.sommerhusNavn)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Sommerhus>()
+            modelBuilder.Entity<SommerhusTable>()
                 .Property(e => e.by)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Sommerhus>()
+            modelBuilder.Entity<SommerhusTable>()
                 .Property(e => e.vejNavn)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Sommerhus>()
+            modelBuilder.Entity<SommerhusTable>()
                 .Property(e => e.kommune)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Sommerhus>()
+            modelBuilder.Entity<SommerhusTable>()
                 .HasMany(e => e.Leverances)
                 .WithRequired(e => e.Sommerhu)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Sommerhus>()
+            modelBuilder.Entity<SommerhusTable>()
                 .HasMany(e => e.Opgavers)
                 .WithRequired(e => e.Sommerhu)
                 .WillCascadeOnDelete(false);

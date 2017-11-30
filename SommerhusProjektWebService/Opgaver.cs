@@ -21,6 +21,6 @@ namespace SommerhusProjektWebService
 
         public virtual KontaktPerson KontaktPerson { get; set; }
 
-        public virtual Sommerhus Sommerhu { get; set; }
+        public virtual SommerhusTable Sommerhu { get; set; }
     }
 }
