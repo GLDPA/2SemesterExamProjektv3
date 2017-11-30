@@ -20,9 +20,9 @@ namespace _2SemesterProjekt.DomainView
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Faktura : Page
+    public sealed partial class FakturaView : Page
     {
-        public Faktura()
+        public FakturaView()
         {
             this.InitializeComponent();
         }

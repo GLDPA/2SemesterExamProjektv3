@@ -69,11 +69,11 @@ namespace _2SemesterProjekt
         {
             get
             {
-                return DataObject.CardNumber;
+                return DataObject.Cardnumber;
             }
             set
             {
-                DataObject.CardNumber = value;
+                DataObject.Cardnumber = value;
                 OnPropertyChanged();
             }
         }
