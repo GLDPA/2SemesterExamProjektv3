@@ -9,6 +9,7 @@ namespace _2SemesterProjekt.Faktura
 {
     public class FakturaVM : TransformedBase<Faktura>
     {
+        public int CustomerId { get; set; }
         public int BookingID { get; set; }
         public double PricePrNight { get; set; }
         public string Name { get; set; }
@@ -23,6 +24,7 @@ namespace _2SemesterProjekt.Faktura
         public override void SetValuesFromObject(Faktura obj)
         {
             Key = obj.Key;
+            CustomerId = obj.CustomerId;
             BookingID = obj.BookingID;
             PricePrNight = obj.PricePrNight;
             Name = obj.Name;

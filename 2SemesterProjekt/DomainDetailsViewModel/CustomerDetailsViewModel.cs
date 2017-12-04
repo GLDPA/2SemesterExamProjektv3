@@ -13,6 +13,12 @@ namespace _2SemesterProjekt
         {
         }
 
+        public int CustomerId
+        {
+            get { return DataObject.CustomerId; }
+            set { DataObject.CustomerId = value;OnPropertyChanged(); }
+        }
+
         public string Name
         {
             get

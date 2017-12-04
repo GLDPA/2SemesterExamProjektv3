@@ -24,6 +24,12 @@ namespace _2SemesterProjekt.Faktura
             }
         }
 
+        public int CustomerId
+        {
+            get { return DataObject.CustomerId; }
+            set { DataObject.CustomerId = value;OnPropertyChanged(); }
+        }
+
         public double Price
         {
             get { return DataObject.PricePrNight; }
