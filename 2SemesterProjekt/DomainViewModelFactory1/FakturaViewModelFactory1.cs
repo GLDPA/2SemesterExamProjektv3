@@ -16,7 +16,6 @@ namespace _2SemesterProjekt.Faktura
                 Key = tObj.Key,
                 CustomerId = tObj.CustomerId,
                 BookingID = tObj.BookingID,
-                PricePrNight = tObj.PricePrNight,
                 Name = tObj.Name,
                 Email = tObj.Email,
                 CardNr = tObj.CardNr,

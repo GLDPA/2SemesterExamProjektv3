@@ -22,7 +22,7 @@ namespace _2SemesterProjekt
         public int ExpirationYear { get; set; }
         public int NumberOfPeople { get; set; }
         public int NumberOfChildren { get; set; }
-        public  int NumberOfAnimals { get; set; }
+        public int NumberOfAnimals { get; set; }
 
         public override void SetValuesFromObject(Customer obj)
         {

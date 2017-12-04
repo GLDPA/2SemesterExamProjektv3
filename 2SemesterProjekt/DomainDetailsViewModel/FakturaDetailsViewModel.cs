@@ -30,16 +30,7 @@ namespace _2SemesterProjekt.Faktura
             set { DataObject.CustomerId = value;OnPropertyChanged(); }
         }
 
-        public double Price
-        {
-            get { return DataObject.PricePrNight; }
-            set
-            {
-                DataObject.PricePrNight = value;
-                OnPropertyChanged();
-            }
-        }
-
+       
         public string CustomerName
         {
             get { return DataObject.Name; }
@@ -112,7 +103,7 @@ namespace _2SemesterProjekt.Faktura
             }
             set
             {
-                DataObject.PricePrNight = value;
+                DataObject.TotalPrice = value;
                 OnPropertyChanged();
             }
         }

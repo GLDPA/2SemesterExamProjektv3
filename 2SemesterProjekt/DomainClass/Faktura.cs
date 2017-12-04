@@ -23,8 +23,6 @@ namespace _2SemesterProjekt.Faktura
 
         public int CustomerId { get { return _customer.CustomerId; }set { value = _customer.CustomerId; } }
 
-        public double PricePrNight { get { return _summerHouse.PricePrNight; } set {value=_summerHouse.PricePrNight;} }
-
         public string Name { get { return _customer.Name; } set { value = _customer.Name; } }
 
         public string Email { get { return _customer.Email; } set { value = _customer.Email; } }
@@ -39,13 +37,25 @@ namespace _2SemesterProjekt.Faktura
 
         public int CVC { get { return _customer.CVC; } set { value = _customer.CVC; } }
 
-        public double TotalPrice { get; set; }
+        public double TotalPrice
+        {
+            get
+            {
+                TotalPrice = _summerHouse.PricePrNight * (_customer.NumberOfPeople + _customer.NumberOfChildren);
+                if (_customer.NumberOfAnimals > 0)
+                {
+                    TotalPrice = TotalPrice + 200;
+                }
+                return TotalPrice
+                ;
+            }
+            set { value = TotalPrice; }
+        }
 
         public override void SetValuesFromObject(Faktura obj)
         {
             BookingID =obj.BookingID;
             CustomerId = obj.CustomerId;
-            PricePrNight = obj.PricePrNight;
             Name = obj.Name;
             Email = obj.Email;
             PhoneNr = obj.PhoneNr;
@@ -55,5 +65,6 @@ namespace _2SemesterProjekt.Faktura
             CVC = obj.CVC;
             TotalPrice = obj.TotalPrice;
         }
+        
     } // (antal personer * prisen for morgenmad pr person * med antal dage/nætter) + (PrisPrNat * antal dage/nætter) +((evt pris for dyr (* antal nætter))) = TotalPris
 }
