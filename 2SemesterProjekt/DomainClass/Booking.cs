@@ -18,8 +18,6 @@ namespace _2SemesterProjekt.BookingFolder
 
         public int PhoneNumber { get { return _customer.PhoneNumber; } }
 
-        
-
         public DateTime CheckInDate { get; set; }
 
         public DateTime CheckInTime { get; set; }

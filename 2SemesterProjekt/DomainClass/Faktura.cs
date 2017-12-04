@@ -20,15 +20,25 @@ namespace _2SemesterProjekt.Faktura
         private Booking _booking;
 
         public int BookingID { get { return _booking.BookingId; } set { value = _booking.BookingId; } }
+
         public double PricePrNight { get { return _summerHouse.PricePrNight; } set {value=_summerHouse.PricePrNight;} }
+
         public string CustomerName { get { return _customer.Name; } set { value = _customer.Name; } }
+
         public string Email { get { return _customer.Email; } set { value = _customer.Email; } }
+
         public int PhoneNr { get { return _customer.PhoneNumber; } set { value = _customer.PhoneNumber; } }
+
         public int CardNr { get { return _customer.CardNumber; } set { value = _customer.CardNumber; } }
+
         public int ExpMonth { get { return _customer.ExpirationMonth; } set { value = _customer.ExpirationMonth; } }
+
         public int ExpYear { get { return _customer.ExpirationYear; } set { value = _customer.ExpirationYear; } }
+
         public int CVC { get { return _customer.CVC; } set { value = _customer.CVC; } }
+
         public double TotalPrice { get; set; }
+
         public override void SetValuesFromObject(Faktura obj)
         {
             BookingID =obj.BookingID;
@@ -42,5 +52,5 @@ namespace _2SemesterProjekt.Faktura
             CVC = obj.CVC;
             TotalPrice = obj.TotalPrice;
         }
-    }
+    } // (antal personer * prisen for morgenmad pr person * med antal dage/nætter) + (PrisPrNat * antal dage/nætter) +((evt pris for dyr (* antal nætter))) = TotalPris
 }

@@ -12,9 +12,7 @@
     <Page.DataContext>
         <DomainMasterDetailsViewModel:SummerHouseMasterDetailsVm/>
     </Page.DataContext>
-
     <Grid>
-
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Møns klint.jpg"/>
         </Grid.Background>
