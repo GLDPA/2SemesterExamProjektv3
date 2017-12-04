@@ -9,6 +9,7 @@ namespace _2SemesterProjekt
 {
     public class CustomerViewModel : TransformedBase<Customer>
     {
+        private int _customerId;
         private string _name;
         private int _age;
         private string _email;
@@ -21,7 +22,7 @@ namespace _2SemesterProjekt
         private int _numberOfChildren;
         private int _numberOfAnimals;
 
-
+        public int CustomerId { get { return _customerId; } set { value = _customerId; } }
         public string Name { get { return _name; } set { value = _name; } }
         public int Age { get { return _age; } set { value = _age; } }
         public string Email { get { return _email; } set { value = _email; } }
@@ -36,6 +37,7 @@ namespace _2SemesterProjekt
         public override void SetValuesFromObject(Customer obj)
         {
             Key = obj.Key;
+            CustomerId = obj.CustomerId;
             Name = obj.Name;
             Age = obj.Age;
             Email = obj.Email;

@@ -12,9 +12,9 @@ namespace _2SemesterProjekt
         public override Customer CreateDomainObject(CustomerViewModel vmObj)
         {
             Customer customer = new Customer
-
             {
                 Key = vmObj.Key,
+                CustomerId =  vmObj.CustomerId,
                 Name = vmObj.Name,
                 Age = vmObj.Age,
                 Email = vmObj.Email,
@@ -28,8 +28,6 @@ namespace _2SemesterProjekt
                 NumberOfAnimals = vmObj.NumberOfAnimals
 
             };
-            
-
             return customer;
         }
     }

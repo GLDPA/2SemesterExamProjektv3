@@ -8,15 +8,13 @@ using DataTransformation.Implementation;
 namespace _2SemesterProjekt.BookingFolder
 {
  public  class BookingVm : TransformedBase<Booking>
-    {
+ {
+     private Customer _customer;
+        public string Name { get { return _customer.Name; } }
 
-        public string Name { get; }
+        public string Email { get { return _customer.Email; } }
 
-        public double TotalPrice { get; set; }
-
-        public string Email { get; }
-
-        public int PhoneNumber { get; }
+        public int PhoneNumber { get { return _customer.PhoneNumber; } }
 
         public DateTime CheckInDate { get; set; }
 
@@ -35,7 +33,6 @@ namespace _2SemesterProjekt.BookingFolder
             CheckInTime = obj.CheckInTime;
             CheckOutTime = obj.CheckOutTime;
             CheckOutDate = obj.CheckOutDate;
-            TotalPrice = obj.TotalPrice;
         }
     }
 }
