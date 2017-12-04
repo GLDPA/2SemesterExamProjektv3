@@ -13,49 +13,46 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Møns klint.jpg"/>
         </Grid.Background>
-        <StackPanel HorizontalAlignment="Left" Height="109" VerticalAlignment="Top" Width="188" Margin="24,22,0,0">
-            <TextBlock HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="24" FontWeight="Bold">
-                <Run Text="Booking"/>
-                <LineBreak/>
-                <Run/>
-            </TextBlock>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="478"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="600"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <TextBlock HorizontalAlignment="Left" Height="60" TextWrapping="Wrap" Text="Inspektions Vindue" VerticalAlignment="Top" Width="180" FontSize="24" FontWeight="Bold"  FontStyle="Italic"/>
         </StackPanel>
 
-        <StackPanel HorizontalAlignment="Left" Height="1009" Margin="1213,22,0,0" VerticalAlignment="Top" Width="682" Background="{ThemeResource AccentButtonForeground}">
-            <StackPanel Height="481" Width="217" HorizontalAlignment="Left">
-                <TextBlock TextWrapping="Wrap" Text="Key is returned" Height="59" />
-                <TextBlock TextWrapping="Wrap" Text="Sheets have been changed" Height="59"/>
-                <TextBlock TextWrapping="Wrap" Text="House is in order" Height="59"/>
-                <TextBlock TextWrapping="Wrap" Text="House is clean" Height="59"/>
-            </StackPanel>
 
-            <StackPanel HorizontalAlignment="Right" Height="78" Width="585" RenderTransformOrigin="0.5,0.5" Margin="0,204.5,2,0" Orientation="Horizontal">
-                <StackPanel.RenderTransform>
-                    <CompositeTransform ScaleY="-1"/>
-                </StackPanel.RenderTransform>
-                <Button Content="Godkend" Height="78.009" Margin="0,-0.027,0,0" VerticalAlignment="Top" Width="134.886" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black">
-                    <Button.RenderTransform>
-                        <CompositeTransform Rotation="180.042" ScaleX="-1"/>
-                    </Button.RenderTransform>
-                </Button>
-                <Button Content="Annuller" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="188.558" RenderTransformOrigin="0.5,0.5" Margin="100,0.136,0,-0.223" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="20" FontWeight="Bold" Background="#33FFFFFF" BorderBrush="Black">
-                    <Button.RenderTransform>
-                        <CompositeTransform ScaleX="-1" Rotation="-179.948"/>
-                    </Button.RenderTransform>
-                </Button>
+        <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="right">
+            <StackPanel Height="481" Width="217" HorizontalAlignment="right">
+                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Nøglen returneret" Width="145" FontWeight="Bold" FontSize="16"/>
+                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Linned skiftet" Width="145" FontWeight="Bold" FontSize="16"/>
+                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Rengøring" Width="145" FontWeight="Bold" FontSize="16"/>
+                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Kunde" Width="145" FontWeight="Bold" FontSize="16"/>
             </StackPanel>
         </StackPanel>
 
-        <StackPanel HorizontalAlignment="Left" Height="562" Margin="1466,38,0,0" VerticalAlignment="Top" Width="429">
-            <CheckBox Content="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="59"/>
-            <CheckBox Content="" DataContext="{Binding }" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="59 "/>
-            <CheckBox Content="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="59 "/>
-            <CheckBox Content="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="59 "/>
+        <StackPanel Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
+            <Button Content="Godkend" Width="188.558" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+            <Button Content="Annuller" Width="188.558" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
         </StackPanel>
-        
-        <StackPanel HorizontalAlignment="Left" Height="103" Margin="77,944,0,0" VerticalAlignment="Top" Width="200">
-            <Button Click="GoToMainPage" Content="Home" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="172" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
+
+
+        <StackPanel Grid.Column="2" HorizontalAlignment="Left">
+            <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="103" Margin="324,944,0,0" VerticalAlignment="Top" Width="245"/>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
+            <Button Click="GoToMainPage" Content="Home" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
+        </StackPanel>
     </Grid>
 </Page>
