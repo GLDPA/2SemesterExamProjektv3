@@ -10,7 +10,7 @@ namespace _2SemesterProjekt.Faktura
     public class FakturaVM : TransformedBase<Faktura>
     {
         public int BookingID { get; set; }
-        public int Price { get; set; }
+        public double PricePrNight { get; set; }
         public string CustomerName { get; set; }
         public string Email { get; set; }
         public int PhoneNr { get; set; }
@@ -18,12 +18,13 @@ namespace _2SemesterProjekt.Faktura
         public int ExpMonth { get; set; }
         public int ExpYear { get; set; }
         public int CVC { get; set; }
+        public double TotalPrice { get; set; }
 
         public override void SetValuesFromObject(Faktura obj)
         {
             Key = obj.Key;
             BookingID = obj.BookingID;
-            Price = obj.Price;
+            PricePrNight = obj.PricePrNight;
             CustomerName = obj.CustomerName;
             Email = obj.Email;
             PhoneNr = obj.PhoneNr;
@@ -31,6 +32,7 @@ namespace _2SemesterProjekt.Faktura
             ExpMonth = obj.ExpMonth;
             ExpYear = obj.ExpYear;
             CVC = obj.CVC;
+            TotalPrice = obj.TotalPrice;
         }
         
     }

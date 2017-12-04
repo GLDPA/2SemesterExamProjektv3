@@ -9,13 +9,16 @@ namespace _2SemesterProjekt.BookingFolder
 {
     public class Booking : TransformedBase<Booking>
     {
-        public string Name { get; }
+        private Customer _customer;
+        public int BookingId { get; set; }
 
-        public string Email { get; }
+        public string Name { get { return _customer.Name; } }
 
-        public int PhoneNumber { get; }
+        public string Email { get { return _customer.Email; } }
 
-        public double TotalPrice { get; set; }
+        public int PhoneNumber { get { return _customer.PhoneNumber; } }
+
+        
 
         public DateTime CheckInDate { get; set; }
 
@@ -27,11 +30,11 @@ namespace _2SemesterProjekt.BookingFolder
 
         public override void SetValuesFromObject(Booking obj)
         {
+            BookingId = obj.BookingId;
             CheckInDate = obj.CheckInDate;
             CheckInTime = obj.CheckInTime;
             CheckOutDate = obj.CheckOutDate;
             CheckOutTime = obj.CheckOutTime;
-            TotalPrice = obj.TotalPrice;
-        }
+            }
     }
 }

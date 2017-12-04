@@ -15,8 +15,6 @@ namespace _2SemesterProjekt.BookingFolder
         }
         public string Name { get { return DataObject.Name; } }
 
-        public double Price { get { return DataObject.TotalPrice; } }
-
         public string Email { get { return DataObject.Email; } }
 
         public int PhoneNumber { get { return DataObject.PhoneNumber; } }
