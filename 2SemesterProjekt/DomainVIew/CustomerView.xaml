@@ -59,15 +59,15 @@
         
        
         <StackPanel Grid.Column="2" HorizontalAlignment="Left" >
-            <TextBox HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="{Binding ItemDetails.Name, Mode=TwoWay}" VerticalAlignment="Top" Width="300" BorderBrush="#66000000"/>
-            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.Email, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
-            <TextBox HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="{Binding ItemDetails.PhoneNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
-            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.Age, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
-            <ComboBox HorizontalAlignment="Left" Height="41" Width="300"/>
-            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.CardNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
-            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.CVRNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
-            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.ExpirationMonth, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
-            <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="{Binding ItemDetails.ExpirationYear, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.Name, Mode=TwoWay}" VerticalAlignment="Top" Width="300" BorderBrush="#66000000"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.Email, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.PhoneNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.Age, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
+            <ComboBox HorizontalAlignment="Left" Height="36" Width="300"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.CardNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.CVRNumber, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.ExpirationMonth, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.ExpirationYear, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
