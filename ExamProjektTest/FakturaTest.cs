@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using _2SemesterProjekt.Faktura;
 
 namespace ExamProjektTest
 {
@@ -11,8 +12,14 @@ namespace ExamProjektTest
     class FakturaTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TotalPriceTest()
         {
+            //Arrange
+            Faktura faktura = new Faktura();
+
+            //Act
+
+            //Assert
         }
     }
 }

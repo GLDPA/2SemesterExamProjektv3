@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using _2SemesterProjekt;
 
 namespace ExamProjektTest
 {
@@ -7,8 +8,18 @@ namespace ExamProjektTest
     public class SummerHouseTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TomtFeltTest()
         {
+            // Admin efterlader et tomt felt  -- viser ugyldigt
+
+            //Arange
+            SummerHouse summerhouse = new SummerHouse();
+            
+            
+            //Act
+
+            //Assert
+
         }
     }
 }
