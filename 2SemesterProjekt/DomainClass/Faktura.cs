@@ -21,9 +21,11 @@ namespace _2SemesterProjekt.Faktura
 
         public int BookingID { get { return _booking.BookingId; } set { value = _booking.BookingId; } }
 
+        public int CustomerId { get { return _customer.CustomerId; }set { value = _customer.CustomerId; } }
+
         public double PricePrNight { get { return _summerHouse.PricePrNight; } set {value=_summerHouse.PricePrNight;} }
 
-        public string CustomerName { get { return _customer.Name; } set { value = _customer.Name; } }
+        public string Name { get { return _customer.Name; } set { value = _customer.Name; } }
 
         public string Email { get { return _customer.Email; } set { value = _customer.Email; } }
 
@@ -42,8 +44,9 @@ namespace _2SemesterProjekt.Faktura
         public override void SetValuesFromObject(Faktura obj)
         {
             BookingID =obj.BookingID;
+            CustomerId = obj.CustomerId;
             PricePrNight = obj.PricePrNight;
-            CustomerName = obj.CustomerName;
+            Name = obj.Name;
             Email = obj.Email;
             PhoneNr = obj.PhoneNr;
             CardNr = obj.CardNr;

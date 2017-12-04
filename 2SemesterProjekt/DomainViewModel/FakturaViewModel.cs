@@ -11,7 +11,7 @@ namespace _2SemesterProjekt.Faktura
     {
         public int BookingID { get; set; }
         public double PricePrNight { get; set; }
-        public string CustomerName { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
         public int PhoneNr { get; set; }
         public int CardNr { get; set; }
@@ -25,7 +25,7 @@ namespace _2SemesterProjekt.Faktura
             Key = obj.Key;
             BookingID = obj.BookingID;
             PricePrNight = obj.PricePrNight;
-            CustomerName = obj.CustomerName;
+            Name = obj.Name;
             Email = obj.Email;
             PhoneNr = obj.PhoneNr;
             CardNr = obj.CardNr;
