@@ -11,7 +11,7 @@ namespace _2SemesterProjekt
 {
    public class Customer : TransformedBase<Customer>
    {
-
+        public int CustomerId { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
         public string Email { get; set; }
@@ -22,11 +22,12 @@ namespace _2SemesterProjekt
         public int ExpirationYear { get; set; }
         public int NumberOfPeople { get; set; }
         public int NumberOfChildren { get; set; }
-        public  int NumberOfAnimals { get; set; }
+        public int NumberOfAnimals { get; set; }
 
         public override void SetValuesFromObject(Customer obj)
-       {
-          Name = obj.Name;
+        {
+           CustomerId = obj.CustomerId;
+           Name = obj.Name;
            Age = obj.Age;
            Email = obj.Email;
            PhoneNumber = obj.PhoneNumber;

@@ -24,22 +24,19 @@ namespace _2SemesterProjekt.Faktura
             }
         }
 
-        public int Price
+        public int CustomerId
         {
-            get { return DataObject.Price; }
-            set
-            {
-                DataObject.Price = value;
-                OnPropertyChanged();
-            }
+            get { return DataObject.CustomerId; }
+            set { DataObject.CustomerId = value;OnPropertyChanged(); }
         }
 
+       
         public string CustomerName
         {
-            get { return DataObject.CustomerName; }
+            get { return DataObject.Name; }
             set
             {
-                DataObject.CustomerName = value;
+                DataObject.Name = value;
                 OnPropertyChanged();
             }
         }
@@ -94,6 +91,19 @@ namespace _2SemesterProjekt.Faktura
             set
             {
                 DataObject.CVC = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public double TotalPrice
+        {
+            get
+            {
+                return DataObject.TotalPrice;
+            }
+            set
+            {
+                DataObject.TotalPrice = value;
                 OnPropertyChanged();
             }
         }

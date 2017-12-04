@@ -14,9 +14,9 @@ namespace _2SemesterProjekt.Faktura
             Faktura obj = new Faktura
             {
                 Key = tObj.Key,
+                CustomerId = tObj.CustomerId,
                 BookingID = tObj.BookingID,
-                Price = tObj.Price,
-                CustomerName = tObj.CustomerName,
+                Name = tObj.Name,
                 Email = tObj.Email,
                 CardNr = tObj.CardNr,
                 ExpMonth = tObj.ExpMonth,
