@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel.Store.Preview.InstallControl;
 using Windows.Graphics.Printing;
 using Catalog.Implementation;
-using DataTransformation.Interfaces;
+    using DataTransformation.Implementation;
+    using DataTransformation.Interfaces;
 using ExtensionsModel.Implementation;
-using InMemoryStorage.Interfaces;
+using InMemoryStorage.Interfaces; 
 
 namespace _2SemesterProjekt
 {
-   public class CustomerCatalog : FilePersistableCatalogNoDTO<Customer, CustomerViewModel>
+   public class CustomerCatalog : WebAPIPersistableCatalog<Customer, CustomerViewModel, Customer>
    {
        private static CustomerCatalog _instance;
        
-       public CustomerCatalog() : base(new CustomerViewModelFactory())
+       public CustomerCatalog() : base("http://sommerhusprojektwebservice2017.azurewebsites.net/", "Customers",new CustomerViewModelFactory(), new IdenticalDataFactory<Customer>())
        {
        }
 
