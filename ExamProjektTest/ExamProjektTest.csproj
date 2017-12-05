@@ -144,6 +144,14 @@
       <Name>2SemesterProjekt</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DataTransformationImplementation">
+      <HintPath>..\..\MVVMStarterLibrary\CatalogImplementation\bin\Debug\DataTransformationImplementation.dll</HintPath>
+    </Reference>
+    <Reference Include="InMemoryStorageImplementation">
+      <HintPath>..\..\MVVMStarterLibrary\CatalogImplementation\bin\Debug\InMemoryStorageImplementation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

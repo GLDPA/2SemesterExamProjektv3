@@ -26,6 +26,8 @@ namespace _2SemesterProjekt.BookingFolder
 
         public DateTime CheckOutTime { get; set; }
 
+
+
         public override void SetValuesFromObject(Booking obj)
         {
             BookingId = obj.BookingId;
