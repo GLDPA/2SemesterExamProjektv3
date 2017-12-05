@@ -28,13 +28,14 @@ namespace ExamProjektTest
             booking.CheckInDate = DateTime.Today;
             booking.CheckOutDate = new DateTime(8/12/2017);
             double expectedresult = 2200;
-            TimeSpan numberofdays = booking.CheckInDate - booking.CheckOutDate;
+            TimeSpan numberofdays = booking.CheckOutDate - booking.CheckInDate;
 
             //Act
-            faktura.TotalPrice = (numberofdays.Days * summerHouse.PricePrNight) + (booking.PriceForBreakfast *(customer.NumberOfPeople + customer.NumberOfChildren) * numberofdays) + (booking.PriceForAnimals * customer.NumberOfAnimals) ;
+            faktura.TotalPrice = (numberofdays.Days * summerHouse.PricePrNight) 
+                + (booking.PriceForBreakfast *(customer.NumberOfPeople + customer.NumberOfChildren) * numberofdays.Days) 
+                + (booking.PriceForAnimals * customer.NumberOfAnimals) ;
 
             //Assert
-
             Assert.AreEqual(expectedresult,faktura.TotalPrice);
         }
     }

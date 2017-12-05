@@ -26,7 +26,9 @@ namespace _2SemesterProjekt.BookingFolder
 
         public DateTime CheckOutTime { get; set; }
 
+        public int PriceForBreakfast { get; set; }
 
+        public int PriceForAnimals { get; set; }
 
         public override void SetValuesFromObject(Booking obj)
         {
