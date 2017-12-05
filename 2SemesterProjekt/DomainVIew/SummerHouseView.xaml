@@ -42,12 +42,6 @@
         </ListView>
 
 
-
-        <!--<StackPanel HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="162">
-            <TextBlock HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" Text="Sommerhus" VerticalAlignment="Top" Width="162" FontSize="24" FontWeight="Bold">
-            </TextBlock>
-        </StackPanel>-->
-
         <StackPanel Grid.Column="1" Grid.Row="0"  HorizontalAlignment="right">
             <StackPanel HorizontalAlignment="Left">
                 <TextBlock TextWrapping="Wrap" Text="Vej navn" Height="33" Width="145" FontWeight="Bold" FontSize="16" />
@@ -60,8 +54,9 @@
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
-            <Button Command="{Binding DataCommand[CreateCommand]}" Content="Godkend" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black">
-            </Button>
+            <Button Command="{Binding DataCommand[CreateCommand]}" Content="Godkend" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+            <Button Command="{Binding DataCommand[DeleteCommand]}" Content="Slet" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+            <Button Command="{Binding DataCommand[UpdateCommand]}" Content="Opdater" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
             <Button Content="Annuller" FontSize="20" FontWeight="Bold" BorderBrush="Black" Background="White"/>
         </StackPanel>
 
@@ -76,6 +71,22 @@
 
         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
             <Button Click="GoToMainPage" Content="Home" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
+
+            <RadioButton Content="Create"
+                         Visibility="{Binding ControlStates[CreateStateControl].VisibilityState}"
+                         Command="{Binding StateCommand[CreateStateCommand]}"/>
+
+            <RadioButton Content="Update"
+                         Visibility="{Binding ControlStates[UpdateStateControl].VisibilityState}"
+                         Command="{Binding StateCommand[UpdateStateCommand]}"/>
+
+            <RadioButton Content="Delete"
+                         Visibility="{Binding ControlStates[DeleteStateControl].VisibilityState}"
+                         Command="{Binding StateCommand[DeleteStateCommand]}"/>
+
+            <RadioButton Content="Read" IsChecked="True" 
+                         Visibility="{Binding ControlStates[ReadStateControl].VisibilityState}"
+                         Command="{Binding StateCommand[ReadStateCommand]}"/>
 
         </StackPanel>
 
