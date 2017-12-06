@@ -11,9 +11,7 @@ namespace _2SemesterProjekt.BookingFolder
     {
         private Customer _customer;
         private SummerHouse _summerHouse;
-
         
-
         public int BookingId { get; set; }
 
         public string Name { get { return _customer.Name; } }
@@ -29,7 +27,6 @@ namespace _2SemesterProjekt.BookingFolder
         public DateTime CheckOutDate { get; set; }
 
         public DateTime CheckOutTime { get; set; }
-
 
         public DateTime DateOfBooking { get; set; }
 
