@@ -13,8 +13,8 @@ namespace _2SemesterProjekt.Faktura
         public MasterDetailsViewModel()
            : base(new FakturaVmFactory2(),
                   ObjectProvider.FakturaCatalog,
-                  new List<string> { "BookingId", "PhoneNr", "Email", "Price", "CustomerName", "CardNr", "ExpMonth", "ExpYear" },
-                  new List<string> { "CVC" })
+                  new List<string> { "BookingId" },
+                  new List<string> {})
         {
 
         }            

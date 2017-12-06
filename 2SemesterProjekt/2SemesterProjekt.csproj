@@ -122,7 +122,7 @@
     <Compile Include="DomainCatalog\FakturaCatalog.cs" />
     <Compile Include="DomainDetailsViewModel\FakturaDetailsViewModel.cs" />
     <Compile Include="DomainItemViewModel\FakturaItemViewModel.cs" />
-    <Compile Include="DomainMasterDetailsViewModel\FakturaMasterDetailViewModel.cs" />
+    <Compile Include="DomainMasterDetailsViewModel\FakturaMasterDetailsViewModel.cs" />
     <Compile Include="DomainViewModel\FakturaViewModel.cs" />
     <Compile Include="DomainViewModelFactory1\FakturaViewModelFactory1.cs" />
     <Compile Include="DomainViewModelFactory2\FakturaViewModelFactory2.cs" />
