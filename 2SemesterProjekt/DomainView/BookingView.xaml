@@ -54,7 +54,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="2" HorizontalAlignment="Left">
-            <ComboBox  HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
+            <ComboBox ItemsSource="{Binding Path=Customer}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
             <ComboBox HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
             <CalendarDatePicker DataContext="{Binding ItemDetails.CheckInDate}"  HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
             <TimePicker DataContext="{Binding ItemDetails.CheckInTime}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
