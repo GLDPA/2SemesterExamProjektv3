@@ -34,5 +34,13 @@ namespace _2SemesterProjekt.BookingFolder
         {
             get { return DataObject.CheckOutTime; } set { DataObject.CheckInTime = value; OnPropertyChanged(); }
         }
+        public bool Breakfast
+        {
+            get { return DataObject.Breakfast; } set { DataObject.Breakfast = value; OnPropertyChanged(); }
+        }
+        public DateTime DateOfBooking
+        {
+            get { return DataObject.DateOfBooking; } set { DataObject.DateOfBooking = value; OnPropertyChanged(); }
+        }
     }
 }

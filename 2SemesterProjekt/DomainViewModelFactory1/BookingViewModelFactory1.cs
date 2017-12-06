@@ -18,6 +18,8 @@ namespace _2SemesterProjekt.BookingFolder
                 CheckInTime = tObj.CheckInTime,
                 CheckOutTime = tObj.CheckOutTime,
                 CheckOutDate = tObj.CheckOutDate,
+                Breakfast = tObj.Breakfast,
+                DateOfBooking = tObj.DateOfBooking
             };
 
             return booking;

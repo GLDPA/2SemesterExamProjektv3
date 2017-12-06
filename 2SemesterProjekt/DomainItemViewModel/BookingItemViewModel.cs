@@ -26,5 +26,8 @@ namespace _2SemesterProjekt.BookingFolder
         public  DateTime CheckOutDate { get { return DataObject.CheckOutDate; } }
 
         public  DateTime CheckOutTime { get { return DataObject.CheckOutTime; }}
+
+        public DateTime DateOfBooking { get { return DataObject.DateOfBooking; } }
+
     }
 }

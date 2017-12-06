@@ -26,6 +26,10 @@ namespace _2SemesterProjekt.BookingFolder
 
         public DateTime CheckOutTime { get; set; }
 
+        public DateTime DateOfBooking { get; set; }
+
+        public bool Breakfast { get; set; }
+
         public override void SetValuesFromObject(Booking obj)
         {
             BookingId = obj.BookingId;
@@ -33,6 +37,8 @@ namespace _2SemesterProjekt.BookingFolder
             CheckInTime = obj.CheckInTime;
             CheckOutDate = obj.CheckOutDate;
             CheckOutTime = obj.CheckOutTime;
-            }
+            Breakfast = obj.Breakfast;
+            DateOfBooking = obj.DateOfBooking;
+        }
     }
 }
