@@ -15,7 +15,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="400"/>
             <ColumnDefinition Width="400"/>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="478"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="600"/>
@@ -43,8 +43,10 @@
             <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Morgenmad" Width="145" FontWeight="Bold" FontSize="16"/>
             <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Total" Width="145" FontWeight="Bold" FontSize="16"/>
         </StackPanel>
-        <StackPanel Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
+        <StackPanel Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,0,0,0" Width="373">
             <Button Command="{Binding DataCommand[CreateCommand]}" Content="Godkend" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+            <Button Command="{Binding DataCommand[DeleteCommand]}" Content="Slet" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+            <Button Command="{Binding DataCommand[UpdateCommand]}" Content="Opdater" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
             <Button Content="Annuller" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
         </StackPanel>
 
@@ -61,6 +63,31 @@
 
         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
             <Button Click="GoToMainPage" Content="Home" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right" >
+            <RadioButton Content="Create"
+                         Visibility="{Binding ControlStates[CreateStateControl].VisibilityState}"
+                         Command="{Binding StateCommand[CreateStateCommand]}"
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+
+            <RadioButton Content="Update"
+                         Visibility="{Binding ControlStates[UpdateStateControl].VisibilityState}"
+                         Command="{Binding StateCommand[UpdateStateCommand]}"
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"
+                         Margin="4"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"  >
+            <RadioButton Content="Delete"
+                         Visibility="{Binding ControlStates[DeleteStateControl].VisibilityState}"
+                         Command="{Binding StateCommand[DeleteStateCommand]}"
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+
+            <RadioButton Content="Read" IsChecked="True" 
+                         Visibility="{Binding ControlStates[ReadStateControl].VisibilityState}"
+                         Command="{Binding StateCommand[ReadStateCommand]}"
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"
+                         Margin="4"/>
+
         </StackPanel>
     </Grid>
 </Page>
