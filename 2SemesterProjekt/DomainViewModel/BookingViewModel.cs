@@ -11,6 +11,8 @@ namespace _2SemesterProjekt.BookingFolder
  {
         private Customer _customer;
         private SummerHouse _summerhouse;
+
+        public int BookingID { get; set; }
         public string Name { get { return _customer.Name; } }
 
         public string Email { get { return _customer.Email; } }
@@ -56,6 +58,7 @@ namespace _2SemesterProjekt.BookingFolder
             Breakfast = obj.Breakfast;
             DateOfBooking = obj.DateOfBooking;
             TotalPrice = obj.TotalPrice;
+            BookingID = obj.BookingId;
         }
     }
 }
