@@ -19,6 +19,8 @@ namespace _2SemesterProjekt.Faktura
 
         private Booking _booking;
 
+        public int FakturaId { get; set; }
+
         public int BookingID { get { return _booking.BookingId; } set { value = _booking.BookingId; } }
 
         public int CustomerId { get { return _customer.CustomerId; }set { value = _customer.CustomerId; } }
@@ -37,9 +39,7 @@ namespace _2SemesterProjekt.Faktura
 
         public int CVC { get { return _customer.CVC; } set { value = _customer.CVC; } }
 
-
         public DateTime DateOfFaktura { get; set; }
-
 
         public double TotalPrice { get { return _booking.TotalPrice; } set { value = _booking.TotalPrice; } }
 
@@ -57,6 +57,7 @@ namespace _2SemesterProjekt.Faktura
             ExpYear = obj.ExpYear;
             CVC = obj.CVC;
             TotalPrice = obj.TotalPrice;
+            FakturaId = obj.FakturaId;
         }
     } 
 }

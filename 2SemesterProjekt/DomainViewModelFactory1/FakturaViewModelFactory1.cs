@@ -22,7 +22,8 @@ namespace _2SemesterProjekt.Faktura
                 ExpMonth = tObj.ExpMonth,
                 ExpYear = tObj.ExpYear,
                 CVC = tObj.CVC,
-                DateOfFaktura = tObj.DateOfFaktura
+                DateOfFaktura = tObj.DateOfFaktura,
+                FakturaId = tObj.FakturaId
             };
             return obj;
         }

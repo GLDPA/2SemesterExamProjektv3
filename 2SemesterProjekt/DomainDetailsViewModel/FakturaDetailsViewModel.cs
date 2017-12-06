@@ -9,11 +9,20 @@ namespace _2SemesterProjekt.Faktura
 {
     class FakturaDetailsVM : DetailsViewModelBase<FakturaVM>
     {
+
+        
         public FakturaDetailsVM(FakturaVM obj)
             : base(obj)
         {
         }
-
+        public int FakturaId
+        {
+            get { return DataObject.BookingID; }
+            set
+            {
+                DataObject.BookingID = value;OnPropertyChanged();
+            }
+        }
         public int BookingId
         {
             get { return DataObject.BookingID; }
