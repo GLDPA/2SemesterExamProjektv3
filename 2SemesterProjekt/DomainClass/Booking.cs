@@ -27,11 +27,11 @@ namespace _2SemesterProjekt.BookingFolder
 
         public DateTime CheckOutTime { get; set; }
 
-<<<<<<< HEAD
+
         public DateTime DateOfBooking { get; set; }
 
         public bool Breakfast { get; set; }
-=======
+
         public int PriceForBreakfast { get; set; }
 
         public int PriceForAnimals { get; set; }
@@ -48,7 +48,7 @@ namespace _2SemesterProjekt.BookingFolder
             }
             set { value = TotalPrice; }
         }
->>>>>>> UnitTestingProjekt
+
 
         public override void SetValuesFromObject(Booking obj)
         {
@@ -59,6 +59,7 @@ namespace _2SemesterProjekt.BookingFolder
             CheckOutTime = obj.CheckOutTime;
             Breakfast = obj.Breakfast;
             DateOfBooking = obj.DateOfBooking;
+            TotalPrice = obj.TotalPrice;
         }
     }
 }

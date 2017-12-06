@@ -42,5 +42,9 @@ namespace _2SemesterProjekt.BookingFolder
         {
             get { return DataObject.DateOfBooking; } set { DataObject.DateOfBooking = value; OnPropertyChanged(); }
         }
+        public double TotalPrice
+        {
+            get { return DataObject.TotalPrice; } set { DataObject.TotalPrice = value; OnPropertyChanged(); }
+        }
     }
 }

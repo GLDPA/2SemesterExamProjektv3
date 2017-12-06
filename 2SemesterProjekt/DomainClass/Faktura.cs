@@ -37,12 +37,12 @@ namespace _2SemesterProjekt.Faktura
 
         public int CVC { get { return _customer.CVC; } set { value = _customer.CVC; } }
 
-<<<<<<< HEAD
-        public DateTime DateOfFaktura { get; set; }
-=======
 
-        public double TotalPrice { get; set; }
->>>>>>> UnitTestingProjekt
+        public DateTime DateOfFaktura { get; set; }
+
+
+        public double TotalPrice { get { return _booking.TotalPrice; } set { value = _booking.TotalPrice; } }
+
 
         
         public override void SetValuesFromObject(Faktura obj)
@@ -56,7 +56,7 @@ namespace _2SemesterProjekt.Faktura
             ExpMonth = obj.ExpMonth;
             ExpYear = obj.ExpYear;
             CVC = obj.CVC;
+            TotalPrice = obj.TotalPrice;
         }
-        
-    } // (antal personer * prisen for morgenmad pr person * med antal dage/nætter) + (PrisPrNat * antal dage/nætter) +((evt pris for dyr (* antal nætter))) = TotalPris
+    } 
 }

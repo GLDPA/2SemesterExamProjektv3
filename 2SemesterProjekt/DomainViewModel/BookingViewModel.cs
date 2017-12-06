@@ -27,7 +27,18 @@ namespace _2SemesterProjekt.BookingFolder
         public bool Breakfast { get; set; }
 
         public DateTime DateOfBooking { get; set; }
-        
+
+        public double TotalPrice
+        {
+            get
+            {
+                return (NumberOfDays.Days * _summerHouse.PricePrNight)
+                       + ((PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren)) * NumberOfDays.Days)
+                       + (PriceForAnimals * _customer.NumberOfAnimals);
+            }
+            set { value = TotalPrice; }
+        }
+
         public override void SetValuesFromObject(Booking obj)
         {
             Key = obj.Key;
@@ -37,6 +48,7 @@ namespace _2SemesterProjekt.BookingFolder
             CheckOutDate = obj.CheckOutDate;
             Breakfast = obj.Breakfast;
             DateOfBooking = obj.DateOfBooking;
+            TotalPrice = obj.TotalPrice;
         }
     }
 }
