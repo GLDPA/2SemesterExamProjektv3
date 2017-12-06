@@ -17,7 +17,7 @@ namespace _2SemesterProjekt
    {
        private static CustomerCatalog _instance;
        
-       public CustomerCatalog() : base("http://sommerhusprojektwebservice2017.azurewebsites.net/", "Customers",new CustomerViewModelFactory(), new IdenticalDataFactory<Customer>())
+       public CustomerCatalog() : base("http://sommerhusprojektwebservice2017v1206.azurewebsites.net/", "Customers",new CustomerViewModelFactory(), new IdenticalDataFactory<Customer>())
        {
        }
 

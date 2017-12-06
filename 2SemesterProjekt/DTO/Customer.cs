@@ -1,13 +1,14 @@
-namespace SommerhusProjektWebService
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using DataTransformation.Implementation;
+
+namespace _2SemesterProjekt.DTO
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
     //using System.Data.Entity.Spatial;
 
     [Table("Customer")]
-    public partial class Customer
+    public partial class Customer : TransformedBase<_2SemesterProjekt.Customer>
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Customer()
@@ -41,5 +42,20 @@ namespace SommerhusProjektWebService
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BookingFaktura> BookingFakturas { get; set; }
+
+        public override void SetValuesFromObject(_2SemesterProjekt.Customer obj)
+        {
+            Navn = obj.Name;
+            Alder = obj.Age;
+            Email = obj.Email;
+            TlfNr = obj.PhoneNumber;
+            Kort_nummer = obj.CardNumber;
+            CVC_nummer = obj.CVC;
+            UdløbsMåned = obj.ExpirationMonth;
+            Udløbår = obj.ExpirationYear;
+
+
+
+        }
     }
 }
