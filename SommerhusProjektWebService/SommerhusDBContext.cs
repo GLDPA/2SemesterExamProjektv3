@@ -10,6 +10,8 @@
         public SommerhusDBContext()
             : base("name=SommerhusDBContext")
         {
+            base.Configuration.LazyLoadingEnabled = false;
+            base.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<BookingFaktura> BookingFakturas { get; set; }
