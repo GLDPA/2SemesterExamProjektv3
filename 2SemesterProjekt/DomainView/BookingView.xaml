@@ -38,8 +38,7 @@
                 <TextBlock HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Sommerhus" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Width="145" FontWeight="Bold" FontSize="16">
                     <Run Text="Check ind "/>
-                    <Run Text="d"/>
-                    <Run Text="ato og tid"/>
+                    <Run Text="dato og tid"/>
                 </TextBlock>
                 <TextBlock HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="75" TextWrapping="Wrap" Text="Check ud dato og tid" Width="145" FontWeight="Bold" FontSize="16"/>
