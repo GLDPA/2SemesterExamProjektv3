@@ -9,7 +9,8 @@ namespace _2SemesterProjekt.BookingFolder
 {
  public  class BookingVm : TransformedBase<Booking>
  {
-     private Customer _customer;
+        private Customer _customer;
+        private SummerHouse _summerhouse;
         public string Name { get { return _customer.Name; } }
 
         public string Email { get { return _customer.Email; } }
@@ -28,11 +29,17 @@ namespace _2SemesterProjekt.BookingFolder
 
         public DateTime DateOfBooking { get; set; }
 
+        public int PriceForBreakfast { get; set; }
+
+        public int PriceForAnimals { get; set; }
+
+        public TimeSpan NumberOfDays { get { return CheckOutDate - CheckInDate; } set { value = NumberOfDays; } }
+
         public double TotalPrice
         {
             get
             {
-                return (NumberOfDays.Days * _summerHouse.PricePrNight)
+                return (NumberOfDays.Days * _summerhouse.PricePrNight)
                        + ((PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren)) * NumberOfDays.Days)
                        + (PriceForAnimals * _customer.NumberOfAnimals);
             }
