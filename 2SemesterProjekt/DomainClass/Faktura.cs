@@ -37,7 +37,12 @@ namespace _2SemesterProjekt.Faktura
 
         public int CVC { get { return _customer.CVC; } set { value = _customer.CVC; } }
 
+<<<<<<< HEAD
         public DateTime DateOfFaktura { get; set; }
+=======
+
+        public double TotalPrice { get; set; }
+>>>>>>> UnitTestingProjekt
 
         
         public override void SetValuesFromObject(Faktura obj)
