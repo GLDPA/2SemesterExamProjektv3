@@ -101,6 +101,7 @@
     <Compile Include="DomainItemViewModel\BookingItemViewModel.cs" />
     <Compile Include="DomainMasterDetailsViewModel\BookingMasterDetailsViewModel.cs" />
     <Compile Include="DomainViewModelFactory1\BookingViewModelFactory1.cs" />
+    <Compile Include="DomainViewModelFactory1\CustomerDTOFactory.cs" />
     <Compile Include="DomainViewModel\BookingViewModel.cs" />
     <Compile Include="DomainViewModelFactory2\BookingViewModelFactory2.cs" />
     <Compile Include="DomainClass\Customer .cs" />
@@ -139,6 +140,13 @@
     <Compile Include="DomainView\InspectionView.xaml.cs">
       <DependentUpon>InspectionView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DTO\BookingFaktura.cs" />
+    <Compile Include="DTO\Customer.cs" />
+    <Compile Include="DTO\KontaktPerson.cs" />
+    <Compile Include="DTO\Leverance.cs" />
+    <Compile Include="DTO\Leverandør.cs" />
+    <Compile Include="DTO\Opgaver.cs" />
+    <Compile Include="DTO\SommerhusTable.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
