@@ -5,10 +5,14 @@
     xmlns:local="using:_2SemesterProjekt.DomainView"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:bookingfolder="using:_2SemesterProjekt.BookingFolder"
     mc:Ignorable="d">
-
+    
+    <Page.DataContext>
+        <bookingfolder:BookingMasterDetailsViewModel></bookingfolder:BookingMasterDetailsViewModel>
+    </Page.DataContext>
     <Grid>
-
+        
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Møns klint.jpg"/>
         </Grid.Background>
@@ -51,14 +55,14 @@
         </StackPanel>
 
         <StackPanel Grid.Column="2" HorizontalAlignment="Left">
+            <ComboBox  HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
             <ComboBox HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
-            <ComboBox HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
-            <CalendarDatePicker  HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
-            <TimePicker HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
-            <CalendarDatePicker HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
-            <TimePicker HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
-            <CheckBox Content="CheckBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
-            <TextBlock HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
+            <CalendarDatePicker DataContext="{Binding ItemDetails.CheckInDate}"  HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
+            <TimePicker DataContext="{Binding ItemDetails.CheckInTime}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
+            <CalendarDatePicker DataContext="{Binding ItemDetails.CheckOutDate}" HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
+            <TimePicker DataContext="{Binding ItemDetails.CheckOutTime}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
+            <CheckBox DataContext="{Binding ItemDetails.Breakfast}" Content="CheckBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
+            <TextBlock Text="{Binding ItemDetails.TotalPrice}" HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
