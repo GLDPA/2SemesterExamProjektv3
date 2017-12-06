@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel.Store.Preview.InstallControl;
 using Windows.Graphics.Printing;
 using Catalog.Implementation;
-    using DataTransformation.Implementation;
-    using DataTransformation.Interfaces;
+using DataTransformation.Implementation;
+using DataTransformation.Interfaces;
 using ExtensionsModel.Implementation;
 using InMemoryStorage.Interfaces; 
 
