@@ -294,6 +294,10 @@
     <Reference Include="ViewState">
       <HintPath>..\..\MVVMStarterLibrary\ViewState\bin\Debug\ViewState.dll</HintPath>
     </Reference>
+    <Reference Include="WebAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MVVMStarterLibrary\WebAPI\bin\Debug\WebAPI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\..\MVVMStarterLibrary\ExtensionsViewModel\bin\Debug\CatalogImplementation.dll" />

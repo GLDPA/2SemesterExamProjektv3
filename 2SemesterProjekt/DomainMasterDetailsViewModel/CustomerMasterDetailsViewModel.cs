@@ -11,7 +11,7 @@ using _2SemesterProjekt.SummerHouseMappe;
 
 namespace _2SemesterProjekt
 {
-    public class CustomerMasterDetailsViewModel : MasterDetailsViewModelCRUD<Customer,CustomerViewModel,Customer>
+    public class CustomerMasterDetailsViewModel : MasterDetailsViewModelCRUD<Customer,CustomerViewModel, DTO.Customer>
     {
         public CustomerMasterDetailsViewModel()
             : base(new CustomerVMFactory(),
