@@ -129,7 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.0.1</Version>
+      <Version>6.0.2</Version>
     </PackageReference>
     <PackageReference Include="MSTest.TestAdapter">
       <Version>1.1.18</Version>
@@ -145,11 +145,41 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="CatalogImplementation">
+      <HintPath>..\..\MVVMStarterLibrary\CatalogImplementation\bin\Debug\CatalogImplementation.dll</HintPath>
+    </Reference>
+    <Reference Include="CatalogInterfaces">
+      <HintPath>..\..\MVVMStarterLibrary\ViewModelImplementation\bin\Debug\CatalogInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlState">
+      <HintPath>..\..\MVVMStarterLibrary\ControlState\bin\Debug\ControlState.dll</HintPath>
+    </Reference>
     <Reference Include="DataTransformationImplementation">
       <HintPath>..\..\MVVMStarterLibrary\CatalogImplementation\bin\Debug\DataTransformationImplementation.dll</HintPath>
     </Reference>
+    <Reference Include="DataTransformationInterfaces">
+      <HintPath>..\..\MVVMStarterLibrary\DataTransformationInterfaces\bin\Debug\DataTransformationInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtensionsModel">
+      <HintPath>..\..\MVVMStarterLibrary\ExtensionsModel\bin\Debug\ExtensionsModel.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtensionsViewModel">
+      <HintPath>..\..\MVVMStarterLibrary\ExtensionsViewModel\bin\Debug\ExtensionsViewModel.dll</HintPath>
+    </Reference>
     <Reference Include="InMemoryStorageImplementation">
       <HintPath>..\..\MVVMStarterLibrary\CatalogImplementation\bin\Debug\InMemoryStorageImplementation.dll</HintPath>
+    </Reference>
+    <Reference Include="InMemoryStorageInterfaces">
+      <HintPath>..\..\MVVMStarterLibrary\InMemoryStorage\bin\Debug\InMemoryStorageInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ViewModelImplementation">
+      <HintPath>..\..\MVVMStarterLibrary\ViewModelImplementation\bin\Debug\ViewModelImplementation.dll</HintPath>
+    </Reference>
+    <Reference Include="ViewModelInterfaces">
+      <HintPath>..\..\MVVMStarterLibrary\ViewModelImplementation\bin\Debug\ViewModelInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ViewState">
+      <HintPath>..\..\MVVMStarterLibrary\ViewState\bin\Debug\ViewState.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
