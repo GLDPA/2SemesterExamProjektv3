@@ -5,7 +5,7 @@ using _2SemesterProjekt;
 namespace ExamProjektTest
 {
     [TestClass]
-    public class SummerHouseTest
+     class SummerHouseTest
     {
         [TestMethod]
         public void TomtFeltTest()

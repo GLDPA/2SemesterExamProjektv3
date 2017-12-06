@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ExamProjektTest
 {
     [TestClass]
-    public class CustomerTest
+     class CustomerTest
     {
         [TestMethod]
         public void TestMethod1()
