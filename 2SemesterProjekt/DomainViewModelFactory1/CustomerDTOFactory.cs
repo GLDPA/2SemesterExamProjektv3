@@ -31,6 +31,6 @@ namespace _2SemesterProjekt.DomainViewModelFactory1
 
             return customer;
         }
-    {
+    
     }
 }
