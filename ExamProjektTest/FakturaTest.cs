@@ -11,34 +11,8 @@ using _2SemesterProjekt.Faktura;
 namespace ExamProjektTest
 {
     [TestClass]
-    public class FakturaTest
+    class FakturaTest
     {
-        [TestMethod]
-        public void TotalPriceTest()
-        {
-            //Arrange
-            Faktura faktura = new Faktura();
-            SummerHouse summerHouse = new SummerHouse();
-            Customer customer = new Customer();
-            Booking booking = new Booking();
-            summerHouse.PricePrNight = 300;
-            customer.NumberOfPeople = 2;
-            customer.NumberOfChildren = 2;
-            customer.NumberOfAnimals = 1;
-            booking.CheckInDate = new DateTime(2017,12,5);
-            booking.CheckOutDate = new DateTime(2017,12,8);
-            double expectedresult = 2000;
-            TimeSpan numberofdays = booking.CheckOutDate - booking.CheckInDate;
-            booking.PriceForBreakfast = 75;
-            booking.PriceForAnimals = 200;
-
-            //Act
-            double actualresult = (numberofdays.Days * summerHouse.PricePrNight) 
-                + ((booking.PriceForBreakfast *(customer.NumberOfPeople + customer.NumberOfChildren)) * numberofdays.Days) 
-                + (booking.PriceForAnimals * customer.NumberOfAnimals) ;
-
-            //Assert
-            Assert.AreEqual(expectedresult,actualresult);
-        }
+        
     }
 }

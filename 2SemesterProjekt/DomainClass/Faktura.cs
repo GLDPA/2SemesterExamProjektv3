@@ -37,18 +37,8 @@ namespace _2SemesterProjekt.Faktura
 
         public int CVC { get { return _customer.CVC; } set { value = _customer.CVC; } }
 
-        public TimeSpan NumberOfDays { get { return _booking.CheckOutDate - _booking.CheckInDate; }  set{value = NumberOfDays;} }
 
-        public double TotalPrice
-        {
-            get
-            {
-                return (NumberOfDays.Days * _summerHouse.PricePrNight)
-                    + ((_booking.PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren)) * NumberOfDays.Days)
-                    + (_booking.PriceForAnimals * _customer.NumberOfAnimals);
-            }
-            set { value = TotalPrice; }
-        }
+        public double TotalPrice { get; set; }
 
         public override void SetValuesFromObject(Faktura obj)
         {
