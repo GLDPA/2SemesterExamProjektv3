@@ -35,6 +35,8 @@ namespace _2SemesterProjekt.Faktura
 
         public int CVC { get { return _customer.CVC; } set { value = _customer.CVC; } }
 
+        public DateTime DateOfFaktura { get; set; }
+
         public double TotalPrice
         {
             get
@@ -62,6 +64,7 @@ namespace _2SemesterProjekt.Faktura
             ExpYear = obj.ExpYear;
             CVC = obj.CVC;
             TotalPrice = obj.TotalPrice;
+            DateOfFaktura = obj.DateOfFaktura;
         }
         
     }

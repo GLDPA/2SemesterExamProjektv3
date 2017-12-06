@@ -107,5 +107,17 @@ namespace _2SemesterProjekt.Faktura
                 OnPropertyChanged();
             }
         }
+        public DateTime DateOfFaktura
+        {
+            get
+            {
+                return DataObject.DateOfFaktura;
+            }
+            set
+            {
+                DataObject.DateOfFaktura = value;
+                OnPropertyChanged();
+            }
+        }
     }
 }

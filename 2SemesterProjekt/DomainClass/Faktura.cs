@@ -37,21 +37,9 @@ namespace _2SemesterProjekt.Faktura
 
         public int CVC { get { return _customer.CVC; } set { value = _customer.CVC; } }
 
-        public double TotalPrice
-        {
-            get
-            {
-                TotalPrice = _summerHouse.PricePrNight * (_customer.NumberOfPeople + _customer.NumberOfChildren);
-                if (_customer.NumberOfAnimals > 0)
-                {
-                    TotalPrice = TotalPrice + 200;
-                }
-                return TotalPrice
-                ;
-            }
-            set { value = TotalPrice; }
-        }
+        public DateTime DateOfFaktura { get; set; }
 
+        
         public override void SetValuesFromObject(Faktura obj)
         {
             BookingID =obj.BookingID;
@@ -63,7 +51,6 @@ namespace _2SemesterProjekt.Faktura
             ExpMonth = obj.ExpMonth;
             ExpYear = obj.ExpYear;
             CVC = obj.CVC;
-            TotalPrice = obj.TotalPrice;
         }
         
     } // (antal personer * prisen for morgenmad pr person * med antal dage/nætter) + (PrisPrNat * antal dage/nætter) +((evt pris for dyr (* antal nætter))) = TotalPris
