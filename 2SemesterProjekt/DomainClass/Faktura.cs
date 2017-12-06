@@ -44,7 +44,7 @@ namespace _2SemesterProjekt.Faktura
             get
             {
                 return (NumberOfDays.Days * _summerHouse.PricePrNight)
-                    + (_booking.PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren) * NumberOfDays.Days)
+                    + ((_booking.PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren)) * NumberOfDays.Days)
                     + (_booking.PriceForAnimals * _customer.NumberOfAnimals);
             }
             set { value = TotalPrice; }
