@@ -11,6 +11,7 @@ namespace _2SemesterProjekt.BookingFolder
     {
         private Customer _customer;
         private SummerHouse _summerHouse;
+        private DateTime _dayofweek;
         
         public int BookingId { get; set; }
 
@@ -36,13 +37,43 @@ namespace _2SemesterProjekt.BookingFolder
 
         public int PriceForAnimals { get; set; }
 
+        public double CalculatePrice()
+        {
+           return _summerHouse.PricePrNight - 10 / 100 * _summerHouse.PricePrNight;
+        }
+
+
+        public double GetPrice()
+        {
+            double Price = _summerHouse.PricePrNight;
+            switch (DateTime.Today.DayOfWeek.ToString())
+            {
+                case "Monday":
+                    Price = CalculatePrice();
+                    break;
+                case "Tuesday":
+                    Price = CalculatePrice();
+                    break;
+                case "Wednesday":
+                    Price = CalculatePrice();
+                    break;
+                case "Thursday":
+                    Price = CalculatePrice();
+                    break;
+            }
+
+            return Price;
+            
+        }
+       
+
         public TimeSpan NumberOfDays { get { return CheckOutDate - CheckInDate; } set { value = NumberOfDays; } }
 
         public double TotalPrice
         {
             get
             {
-                return (NumberOfDays.Days * _summerHouse.PricePrNight)
+                return (NumberOfDays.Days * GetPrice())
                        + ((PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren)) * NumberOfDays.Days)
                        + (PriceForAnimals * _customer.NumberOfAnimals);
             }
