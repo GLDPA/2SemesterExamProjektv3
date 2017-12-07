@@ -12,6 +12,7 @@ namespace _2SemesterProjekt.BookingFolder
         private Customer _customer;
         private SummerHouse _summerHouse;
         private DateTime _dayofweek;
+        private Booking _booking;
         
         public int BookingId { get; set; }
 
@@ -39,7 +40,7 @@ namespace _2SemesterProjekt.BookingFolder
 
         public double CalculatePrice()
         {
-           return _summerHouse.PricePrNight - 10 / 100 * _summerHouse.PricePrNight;
+           return _summerHouse.PricePrNight - (10.0 / 100.0) * _summerHouse.PricePrNight;
         }
 
 
@@ -58,7 +59,7 @@ namespace _2SemesterProjekt.BookingFolder
                     Price = CalculatePrice();
                     break;
                 case "Thursday":
-                    Price = CalculatePrice();
+                    CalculatePrice();
                     break;
             }
 
