@@ -13,6 +13,11 @@ namespace _2SemesterProjekt.BookingFolder
         public BookingItemVm(BookingVm obj) : base(obj)
         {
         }
+
+     
+
+        public int BookingId { get { return DataObject.BookingID; } }
+
         public string Name { get { return DataObject.Name; } }
 
         public string Email { get { return DataObject.Email; } }

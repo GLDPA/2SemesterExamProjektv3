@@ -21,7 +21,7 @@
             <ColumnDefinition Width="478"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="600"/>
+            <RowDefinition Height="600"/>   
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -52,10 +52,7 @@
                 <TextBlock HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="Udløbsår" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="Antal voksne" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="Antal børn" Width="145" FontWeight="Bold" FontSize="16"/>
-                <TextBlock HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Width="145" FontWeight="Bold" FontSize="16">
-                    <Run Text="Antal "/>
-                    <Run Text="dyr"/>
-                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="Antal dyr " Width="145" FontWeight="Bold" FontSize="16"/>
             </StackPanel>
         </StackPanel>
 
