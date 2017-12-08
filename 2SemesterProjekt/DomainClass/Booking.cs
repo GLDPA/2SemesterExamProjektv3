@@ -40,7 +40,7 @@ namespace _2SemesterProjekt.BookingFolder
 
         public double CalculatePrice()
         {
-           return ((_summerHouse.PricePrNight - 10.0) / 100.0) * _summerHouse.PricePrNight;
+           return (_summerHouse.PricePrNight - (10.0 / 100.0)) * _summerHouse.PricePrNight;
         }
 
 
@@ -59,7 +59,10 @@ namespace _2SemesterProjekt.BookingFolder
                     Price = CalculatePrice();
                     break;
                 case "Thursday":
-                    CalculatePrice();
+                   Price = CalculatePrice();
+                    break;
+                default:
+                    Price = _summerHouse.PricePrNight;
                     break;
             }
 
@@ -72,12 +75,7 @@ namespace _2SemesterProjekt.BookingFolder
 
         public double TotalPrice
         {
-            get
-            {
-                return (NumberOfDays.Days * GetPrice())
-                       + ((PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren)) * NumberOfDays.Days)
-                       + (PriceForAnimals * _customer.NumberOfAnimals);
-            }
+            get { return (NumberOfDays.Days * GetPrice()); }
             set { value = TotalPrice; }
         }
 
