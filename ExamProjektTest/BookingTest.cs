@@ -26,7 +26,7 @@ namespace ExamProjektTest
             //customer.NumberOfAnimals = 1;
             booking.CheckInDate = new DateTime(2017, 12, 7);
             booking.CheckOutDate = new DateTime(2017, 12, 10);
-            double expectedresult = 870;
+            double expectedresult = 900;
             TimeSpan numberofdays = booking.CheckOutDate - booking.CheckInDate;
             //booking.PriceForBreakfast = 75;
             //booking.PriceForAnimals = 200;

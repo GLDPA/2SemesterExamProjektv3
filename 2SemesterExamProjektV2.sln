@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2SemesterProjekt", "2SemesterProjekt\2SemesterProjekt.csproj", "{D0783DBA-8DD2-4FD1-8F27-BF433EB9FA8B}"
 EndProject
@@ -22,6 +22,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D0783DBA-8DD2-4FD1-8F27-BF433EB9FA8B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D0783DBA-8DD2-4FD1-8F27-BF433EB9FA8B}.Debug|Any CPU.Build.0 = Debug|x86
+		{D0783DBA-8DD2-4FD1-8F27-BF433EB9FA8B}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{D0783DBA-8DD2-4FD1-8F27-BF433EB9FA8B}.Debug|ARM.ActiveCfg = Debug|ARM
 		{D0783DBA-8DD2-4FD1-8F27-BF433EB9FA8B}.Debug|ARM.Build.0 = Debug|ARM
 		{D0783DBA-8DD2-4FD1-8F27-BF433EB9FA8B}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -58,6 +60,7 @@ Global
 		{1BB47BCE-C8FA-413E-A20E-579E9D0BCE6A}.Release|x86.ActiveCfg = Release|Any CPU
 		{1BB47BCE-C8FA-413E-A20E-579E9D0BCE6A}.Release|x86.Build.0 = Release|Any CPU
 		{A20CF758-56AF-4A6B-9B94-9B05990D49F4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A20CF758-56AF-4A6B-9B94-9B05990D49F4}.Debug|Any CPU.Build.0 = Debug|x86
 		{A20CF758-56AF-4A6B-9B94-9B05990D49F4}.Debug|ARM.ActiveCfg = Debug|ARM
 		{A20CF758-56AF-4A6B-9B94-9B05990D49F4}.Debug|ARM.Build.0 = Debug|ARM
 		{A20CF758-56AF-4A6B-9B94-9B05990D49F4}.Debug|ARM.Deploy.0 = Debug|ARM
