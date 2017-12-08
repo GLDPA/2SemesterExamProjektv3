@@ -40,5 +40,17 @@ namespace _2SemesterProjekt
             NumberOfChildren = obj.NumberOfChildren;
             NumberOfAnimals = obj.NumberOfAnimals;
         }
+
+
+        public void EmailValidation()
+        {
+           
+            if ( Email.Equals(null))
+            {
+                throw new ArgumentException("Test");
+            }
+
+        }
     }
+
 }
