@@ -7,8 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:inspectionFolder="using:_2SemesterProjekt.InspectionFolder"
     mc:Ignorable="d">
-
-
+    
+    <Page.DataContext>
+        <inspectionFolder:InspectionMasterDetailsVm/>
+    </Page.DataContext>
+    
     <Grid>
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Møns klint.jpg"/>
