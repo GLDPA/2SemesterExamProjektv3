@@ -5,8 +5,14 @@
     xmlns:local="using:_2SemesterProjekt"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:DomainMasterDetailsViewModel="using:_2SemesterProjekt"
+    xmlns:faktura="using:_2SemesterProjekt.Faktura"
     mc:Ignorable="d">
-  
+
+    <Page.DataContext>
+        <faktura:MasterDetailsViewModel/>
+    </Page.DataContext>
+
     <Grid>
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Møns klint.jpg"/>
@@ -27,7 +33,7 @@
         </StackPanel>
         <ListView Grid.Row="0" Grid.Column="0" Margin="10,100,0,0" ItemsSource="{Binding ItemCollection}" SelectedItem="{Binding ItemSelected, Mode=TwoWay}" BorderBrush="Black" FontWeight="Bold" FontSize="16">
             <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:CustomerItemViewModel">
+                <DataTemplate x:DataType="faktura:MasterDetailsViewModel">
                     <TextBlock Text="{Binding Description}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -37,8 +43,6 @@
 
         <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="right">
             <StackPanel HorizontalAlignment="Left">
-                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Kunde" Width="145" FontWeight="Bold" FontSize="16"/>
-                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Sommerhus" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Booking" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Total Pris" Width="145" FontWeight="Bold" FontSize="16"/>
             </StackPanel>
@@ -52,8 +56,6 @@
         </StackPanel>
 
         <StackPanel Grid.Column="2" HorizontalAlignment="Left">
-            <ComboBox HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="300"/>
-            <ComboBox HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="300"/>
             <ComboBox HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="300"/>
             <TextBlock HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
         </StackPanel>

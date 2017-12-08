@@ -10,10 +10,23 @@ namespace _2SemesterProjekt.Faktura
 {
     public class FakturaCatalog : FilePersistableCatalogNoDTO<Faktura, FakturaVM>
     {
-        public FakturaCatalog(IFactory<Faktura, FakturaVM> vmFactory) : base(vmFactory)
+
+        private static FakturaCatalog _instance;
+
+        public FakturaCatalog() : base(new FakturaVmFactory1())
         {
         }
 
-        public FakturaCatalog Instance { get; internal set; }
+        public static FakturaCatalog Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new FakturaCatalog();
+                }
+                return _instance;
+            }
+        }
     }
 }

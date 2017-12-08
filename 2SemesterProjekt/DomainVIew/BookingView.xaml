@@ -34,12 +34,10 @@
 
         <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right">
             <StackPanel HorizontalAlignment="Right">
+                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Booking ID" Width="145" FontWeight="Bold" FontSize="16" />
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Kunde" Width="145" FontWeight="Bold" FontSize="16" />
                 <TextBlock HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Sommerhus" Width="145" FontWeight="Bold" FontSize="16"/>
-                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Width="145" FontWeight="Bold" FontSize="16">
-                    <Run Text="Check ind "/>
-                    <Run Text="dato og tid"/>
-                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Check ind dato og tid " Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="75" TextWrapping="Wrap" Text="Check ud dato og tid" Width="145" FontWeight="Bold" FontSize="16"/>
             </StackPanel>
@@ -54,14 +52,15 @@
         </StackPanel>
 
         <StackPanel Grid.Column="2" HorizontalAlignment="Left">
-            <ComboBox ItemsSource="{Binding Path=Customer}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.BookingID}" VerticalAlignment="Top" Width="300"/>
+            <ComboBox ItemsSource="{Binding ItemDetails.Email}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
             <ComboBox HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
             <CalendarDatePicker DataContext="{Binding ItemDetails.CheckInDate}"  HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
             <TimePicker DataContext="{Binding ItemDetails.CheckInTime}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
             <CalendarDatePicker DataContext="{Binding ItemDetails.CheckOutDate}" HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
             <TimePicker DataContext="{Binding ItemDetails.CheckOutTime}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
             <CheckBox DataContext="{Binding ItemDetails.Breakfast}" Content="CheckBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
-            <TextBlock Text="{Binding ItemDetails.TotalPrice}" HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.TotalPrice}" VerticalAlignment="Top" Width="300"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
