@@ -9,13 +9,17 @@ namespace _2SemesterProjekt.BookingFolder
 {
     public class Booking : TransformedBase<Booking>
     {
-        public string Name { get; }
+        private Customer _customer;
+        private SummerHouse _summerHouse;
+        private DateTime _dayofweek;
+        
+        public int BookingId { get; set; }
 
-        public string Email { get; }
+        public string Name { get { return _customer.Name; } }
 
-        public int PhoneNumber { get; }
+        public string Email { get { return _customer.Email; } }
 
-        public double TotalPrice { get; set; }
+        public int PhoneNumber { get { return _customer.PhoneNumber; } }
 
         public DateTime CheckInDate { get; set; }
 
@@ -25,12 +29,67 @@ namespace _2SemesterProjekt.BookingFolder
 
         public DateTime CheckOutTime { get; set; }
 
+        public DateTime DateOfBooking { get; set; }
+
+        public bool Breakfast { get; set; }
+
+        public int PriceForBreakfast { get; set; }
+
+        public int PriceForAnimals { get; set; }
+
+        public double CalculatePrice()
+        {
+           return _summerHouse.PricePrNight - 10 / 100 * _summerHouse.PricePrNight;
+        }
+
+
+        public double GetPrice()
+        {
+            double Price = _summerHouse.PricePrNight;
+            switch (DateTime.Today.DayOfWeek.ToString())
+            {
+                case "Monday":
+                    Price = CalculatePrice();
+                    break;
+                case "Tuesday":
+                    Price = CalculatePrice();
+                    break;
+                case "Wednesday":
+                    Price = CalculatePrice();
+                    break;
+                case "Thursday":
+                    Price = CalculatePrice();
+                    break;
+            }
+
+            return Price;
+            
+        }
+       
+
+        public TimeSpan NumberOfDays { get { return CheckOutDate - CheckInDate; } set { value = NumberOfDays; } }
+
+        public double TotalPrice
+        {
+            get
+            {
+                return (NumberOfDays.Days * GetPrice())
+                       + ((PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren)) * NumberOfDays.Days)
+                       + (PriceForAnimals * _customer.NumberOfAnimals);
+            }
+            set { value = TotalPrice; }
+        }
+
+
         public override void SetValuesFromObject(Booking obj)
         {
+            BookingId = obj.BookingId;
             CheckInDate = obj.CheckInDate;
             CheckInTime = obj.CheckInTime;
             CheckOutDate = obj.CheckOutDate;
             CheckOutTime = obj.CheckOutTime;
+            Breakfast = obj.Breakfast;
+            DateOfBooking = obj.DateOfBooking;
             TotalPrice = obj.TotalPrice;
         }
     }

@@ -16,7 +16,6 @@ namespace _2SemesterProjekt.BookingFolder
         public DateTime CheckInDate
         {
             get { return DataObject.CheckInDate; } set { DataObject.CheckInDate = value; OnPropertyChanged(); }
-
         }
 
         public DateTime CheckInTime
@@ -28,8 +27,6 @@ namespace _2SemesterProjekt.BookingFolder
         public DateTime CheckOutDate
         {
             get { return DataObject.CheckOutDate; } set { DataObject.CheckOutDate = value; OnPropertyChanged(); }
-
-
         }
 
 
@@ -37,8 +34,21 @@ namespace _2SemesterProjekt.BookingFolder
         {
             get { return DataObject.CheckOutTime; } set { DataObject.CheckInTime = value; OnPropertyChanged(); }
         }
-        public double TotalPrice { get { return DataObject.TotalPrice; }set { DataObject.TotalPrice = value; OnPropertyChanged();} }
-
-
+        public bool Breakfast
+        {
+            get { return DataObject.Breakfast; } set { DataObject.Breakfast = value; OnPropertyChanged(); }
+        }
+        public DateTime DateOfBooking
+        {
+            get { return DataObject.DateOfBooking; } set { DataObject.DateOfBooking = value; OnPropertyChanged(); }
+        }
+        public double TotalPrice
+        {
+            get { return DataObject.TotalPrice; } set { DataObject.TotalPrice = value; OnPropertyChanged(); }
+        }
+        public int BookingID
+        {
+            get { return DataObject.BookingID; } set { DataObject.BookingID = value; OnPropertyChanged(); }
+        }
     }
 }
