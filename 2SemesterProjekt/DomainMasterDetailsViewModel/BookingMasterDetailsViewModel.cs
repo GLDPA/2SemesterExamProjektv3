@@ -15,5 +15,18 @@ namespace _2SemesterProjekt.BookingFolder
                 new List<string> { }, new List<string>())
         { }
 
+        public List<string> CustomerNamesList
+        {
+            get
+            {
+                List<string> Names = new List<string>();
+                foreach (var c in CustomerCatalog.Instance.All)
+                {
+                    Names.Add(c.Name);
+                }
+                return Names;
+            }
+        }
+
     }
 }

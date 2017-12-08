@@ -53,7 +53,7 @@
 
         <StackPanel Grid.Column="2" HorizontalAlignment="Left">
             <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.BookingID}" VerticalAlignment="Top" Width="300"/>
-            <ComboBox ItemsSource="{Binding ItemDetails.Email}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
+            <ComboBox ItemsSource="{Binding CustomerNamesList}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
             <ComboBox HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
             <CalendarDatePicker DataContext="{Binding ItemDetails.CheckInDate}"  HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
             <TimePicker DataContext="{Binding ItemDetails.CheckInTime}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>

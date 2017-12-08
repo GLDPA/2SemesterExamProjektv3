@@ -9,6 +9,8 @@ namespace _2SemesterProjekt
        
        public CustomerCatalog() : base("http://sommerhusprojektwebservice2017v1206.azurewebsites.net/", "Customers",new CustomerViewModelFactory(), new CustomerDTOFactory())
        {
+
+            Load();
        }
 
        public static CustomerCatalog Instance
