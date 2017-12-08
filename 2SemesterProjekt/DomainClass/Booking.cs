@@ -47,24 +47,24 @@ namespace _2SemesterProjekt.BookingFolder
         public double GetPrice()
         {
 
-            //double Price =_summerHouse.PricePrNight;
+            double Price =_summerHouse.PricePrNight;
             switch (DateTime.Today.DayOfWeek.ToString())
             {
                 case "Monday":
-                    _summerHouse.PricePrNight = CalculatePrice();
+                    Price = CalculatePrice();
                     break;
                 case "Tuesday":
-                    _summerHouse.PricePrNight = CalculatePrice();
+                    Price = CalculatePrice();
                     break;
                 case "Wednesday":
-                    _summerHouse.PricePrNight = CalculatePrice();
+                    Price = CalculatePrice();
                     break;
                 case "Thursday":
                     CalculatePrice();
                     break;
             }
 
-            return _summerHouse.PricePrNight;
+            return Price;
             
         }
        
