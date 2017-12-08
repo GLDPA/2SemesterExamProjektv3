@@ -40,7 +40,7 @@ namespace _2SemesterProjekt.BookingFolder
 
         public double CalculatePrice()
         {
-           return _summerHouse.PricePrNight - (10.0 / 100.0) * _summerHouse.PricePrNight;
+           return ((_summerHouse.PricePrNight - 10.0) / 100.0) * _summerHouse.PricePrNight;
         }
 
 
