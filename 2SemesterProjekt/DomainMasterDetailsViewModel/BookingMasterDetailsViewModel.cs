@@ -33,5 +33,21 @@ namespace _2SemesterProjekt.BookingFolder
             }
         }
 
+
+
+        public List<string> SummerhouseNamesList
+        {
+            get
+            {
+                List<string> Names = new List<string>();
+                foreach (var c in SummerHouseCatalog.Instance.All)
+                {
+                    Names.Add(c.NickName);
+                }
+                return Names;
+            }
+        }
+
+
     }
 }

@@ -48,6 +48,7 @@
                 <TextBlock TextWrapping="Wrap" Text="By" Height="33" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock TextWrapping="Wrap" Text="Kommune" Height="33" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock TextWrapping="Wrap" Text="Navn" Height="33" Width="145" FontWeight="Bold" FontSize="16"/>
+                <TextBlock TextWrapping="Wrap" Text="Pris" Height="33" Width="145" FontWeight="Bold" FontSize="16"/>
             </StackPanel>
         </StackPanel>
 
@@ -65,7 +66,7 @@
             <TextBox HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="{Binding ItemDetails.City, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
             <TextBox HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="{Binding ItemDetails.Municipality, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
             <TextBox HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="{Binding ItemDetails.NickName, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
-            <TextBox HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="{Binding ItemDetails.NickName, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
+            <TextBox HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="{Binding ItemDetails.PricePrNight, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
             <Button Click="GoToMainPage" Content="Home" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />

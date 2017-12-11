@@ -39,12 +39,7 @@ namespace _2SemesterProjekt.BookingFolder
 
         public double TotalPrice
         {
-            get
-            {
-                return (NumberOfDays.Days * _summerhouse.PricePrNight)
-                       + ((PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren)) * NumberOfDays.Days)
-                       + (PriceForAnimals * _customer.NumberOfAnimals);
-            }
+            get { return (NumberOfDays.Days * _summerhouse.PricePrNight); }
             set { value = TotalPrice; }
         }
 
