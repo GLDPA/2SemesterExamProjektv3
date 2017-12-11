@@ -34,7 +34,7 @@
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Nøglen returneret" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Linned skiftet" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Rengøring" Width="145" FontWeight="Bold" FontSize="16"/>
-                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Kunde" Width="145" FontWeight="Bold" FontSize="16"/>
+                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Skader" Width="145" FontWeight="Bold" FontSize="16"/>
             </StackPanel>
         </StackPanel>
 
