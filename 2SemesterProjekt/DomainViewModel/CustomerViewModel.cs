@@ -42,15 +42,7 @@ namespace _2SemesterProjekt
         }
 
 
-        public void EmailValidation()
-        {
-           
-            if ( Email.Equals(null))
-            {
-                throw new ArgumentException("Test");
-            }
-
-        }
+       
     }
 
 }

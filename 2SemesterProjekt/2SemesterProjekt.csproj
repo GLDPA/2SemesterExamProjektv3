@@ -102,6 +102,7 @@
     <Compile Include="DomainMasterDetailsViewModel\BookingMasterDetailsViewModel.cs" />
     <Compile Include="DomainViewModelFactory1\BookingViewModelFactory1.cs" />
     <Compile Include="DomainViewModelFactory1\CustomerDTOFactory.cs" />
+    <Compile Include="DomainViewModelFactory1\SummerHouseDTOFactory.cs" />
     <Compile Include="DomainViewModel\BookingViewModel.cs" />
     <Compile Include="DomainViewModelFactory2\BookingViewModelFactory2.cs" />
     <Compile Include="DomainClass\Customer .cs" />

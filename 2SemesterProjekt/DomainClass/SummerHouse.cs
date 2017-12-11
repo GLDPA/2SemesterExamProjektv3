@@ -11,9 +11,10 @@ namespace _2SemesterProjekt
 {
     public class SummerHouse : TransformedBase<SummerHouse>
     {
+        private string _nickName;
         public string StreetName { get; set; }
 
-        public string StreetNr { get; set; }
+        public int StreetNr { get; set; }
 
         public int ZipCode { get; set; }
 
@@ -28,6 +29,7 @@ namespace _2SemesterProjekt
 
         public override void SetValuesFromObject(SummerHouse obj)
         {
+            Key = obj.Key;
             StreetName = obj.StreetName;
             StreetNr = obj.StreetNr;
             ZipCode = obj.ZipCode;

@@ -16,7 +16,7 @@ namespace _2SemesterProjekt
 
         public string Description
         {
-            get { return DataObject.StreetName; }
+            get { return DataObject.NickName; }
         }
 
     }

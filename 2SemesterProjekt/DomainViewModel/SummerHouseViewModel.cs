@@ -10,7 +10,7 @@ namespace _2SemesterProjekt
     public class SommerhusVm :TransformedBase<SummerHouse>
     {
         public string StreetName { get; set; }
-        public string StreetNr { get; set; }
+        public int StreetNr { get; set; }
         public int ZipCode { get; set; }
         public string City { get; set; }
         public string Municipality { get; set; }

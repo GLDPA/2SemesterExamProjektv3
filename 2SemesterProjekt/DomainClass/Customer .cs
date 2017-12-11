@@ -36,7 +36,7 @@ namespace _2SemesterProjekt
         public int NumberOfAnimals { get; set; }
 
 
-        public override void SetValuesFromObject(Customer obj)
+       public override void SetValuesFromObject(Customer obj)
         {
            Key = obj.Key;
            CustomerId = obj.CustomerId;

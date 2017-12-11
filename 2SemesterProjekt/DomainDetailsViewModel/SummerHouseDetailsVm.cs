@@ -19,7 +19,7 @@ namespace _2SemesterProjekt
                 DataObject.StreetName = value;
                 OnPropertyChanged();
             } }
-        public string StreetNr { get { return DataObject.StreetNr; } set { DataObject.StreetNr=value; OnPropertyChanged(); } }
+        public int StreetNr { get { return DataObject.StreetNr; } set { DataObject.StreetNr=value; OnPropertyChanged(); } }
         public int ZipCode { get { return DataObject.ZipCode; } set { DataObject.ZipCode = value; OnPropertyChanged(); } }
         public string City { get { return DataObject.City; } set { DataObject.City = value; OnPropertyChanged(); } }
         public string Municipality { get { return DataObject.Municipality; } set { DataObject.Municipality = value; OnPropertyChanged(); } }
