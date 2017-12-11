@@ -16,37 +16,7 @@ namespace _2SemesterProjekt.BookingFolder
         { }
 
 
-        // 1) we create a propety 
-        // 2) we create a List object with string elements
-        // 3) we run a foreach-loop in Customercatalog
-        // 4) Add the names and return the list
-        public List<string> CustomerNamesList
-        {
-            get
-            {
-                List<string> Names = new List<string>();
-                foreach (var c in CustomerCatalog.Instance.All)
-                {
-                    Names.Add(c.Name);
-                }
-                return Names;
-            }
-        }
 
-
-
-        public List<string> SummerhouseNamesList
-        {
-            get
-            {
-                List<string> Names = new List<string>();
-                foreach (var c in SummerHouseCatalog.Instance.All)
-                {
-                    Names.Add(c.NickName);
-                }
-                return Names;
-            }
-        }
 
 
     }

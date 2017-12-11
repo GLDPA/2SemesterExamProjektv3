@@ -56,11 +56,11 @@
             <Button Command="{Binding DataCommand[UpdateCommand]}" Content="Opdater" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
             <Button Content="Annuller" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
         </StackPanel>
-
+        <!--Forkert der skal ikke stå Datacontext for date and time-->
         <StackPanel Grid.Column="2" HorizontalAlignment="Left">
             <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.BookingID}" VerticalAlignment="Top" Width="300"/>
-            <ComboBox ItemsSource="{Binding CustomerNamesList}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
-            <ComboBox ItemsSource="{Binding SummerhouseNamesList}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
+            <ComboBox ItemsSource="{Binding ItemDetails.CustomerNamesList}" SelectedItem="{Binding ItemDetails.CustomerSelected, Mode=TwoWay}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
+            <ComboBox ItemsSource="{Binding ItemDetails.SummerhouseNamesList}" SelectedItem="{Binding ItemDetails.SummerHouseSelected, Mode=TwoWay}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
             <CalendarDatePicker DataContext="{Binding ItemDetails.CheckInDate}"  HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
             <TimePicker DataContext="{Binding ItemDetails.CheckInTime}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
             <CalendarDatePicker DataContext="{Binding ItemDetails.CheckOutDate}" HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>

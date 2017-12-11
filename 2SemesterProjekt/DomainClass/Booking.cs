@@ -15,11 +15,11 @@ namespace _2SemesterProjekt.BookingFolder
         
         public int BookingId { get; set; }
 
-        public string Name { get { return _customer.Name; } }
+        //public string Name { get { return _customer.Name; } }
 
-        public string Email { get { return _customer.Email; } }
+        //public string Email { get { return _customer.Email; } }
 
-        public int PhoneNumber { get { return _customer.PhoneNumber; } }
+        //public int PhoneNumber { get { return _customer.PhoneNumber; } }
 
         public DateTime CheckInDate { get; set; }
 
@@ -39,7 +39,7 @@ namespace _2SemesterProjekt.BookingFolder
 
         public double CalculatePrice()
         {
-           return _summerHouse.PricePrNight - 10 / 100 * _summerHouse.PricePrNight;
+           return _summerHouse.PricePrNight - 10.0/ 100.0 * _summerHouse.PricePrNight;
         }
 
 
