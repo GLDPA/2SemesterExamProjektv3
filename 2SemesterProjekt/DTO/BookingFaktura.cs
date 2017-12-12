@@ -1,13 +1,15 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DataTransformation.Implementation;
+using _2SemesterProjekt.BookingFolder;
 
 namespace _2SemesterProjekt.DTO
 {
     //using System.Data.Entity.Spatial;
 
     [Table("BookingFaktura")]
-    public partial class BookingFaktura
+    public partial class BookingFaktura : TransformedBase<_2SemesterProjekt.BookingFolder.Booking>
     {
         [Key]
         [StringLength(100)]
@@ -45,5 +47,12 @@ namespace _2SemesterProjekt.DTO
         public DateTime Check_Ud_dato { get; set; }
 
         public virtual Customer Customer { get; set; }
+        public override void SetValuesFromObject(Booking obj)
+        {
+            Start_dato = obj.CheckInDate;
+            Slut_dato = obj.CheckOutDate;
+
+
+        }
     }
 }

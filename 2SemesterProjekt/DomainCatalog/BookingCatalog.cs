@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using DataTransformation.Interfaces;
 using ExtensionsModel.Implementation;
+using _2SemesterProjekt.DomainViewModelFactory1;
 
 namespace _2SemesterProjekt.BookingFolder
 {
-   public class BookingCatalog : FilePersistableCatalogNoDTO<Booking, BookingVm>
+   public class BookingCatalog : WebAPIPersistableCatalog<Booking, BookingVm, DTO.BookingFaktura> //FilePersistableCatalogNoDTO<Booking, BookingVm>
     {
         private static BookingCatalog _instance;
         public static BookingCatalog Instance
@@ -24,8 +25,10 @@ namespace _2SemesterProjekt.BookingFolder
             }
         }
        
-        public BookingCatalog() : base(new BookingViewModelFactory())
+        public BookingCatalog() : base("http://sommerhusprojektwebservice2017v1206.azurewebsites.net/", "BookingFakturas", new BookingViewModelFactory(), new BookingDTOFactory())
         {
+           Load();  
+            
         }
     }
 }

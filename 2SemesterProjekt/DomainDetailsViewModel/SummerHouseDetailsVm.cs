@@ -24,6 +24,6 @@ namespace _2SemesterProjekt
         public string City { get { return DataObject.City; } set { DataObject.City = value; OnPropertyChanged(); } }
         public string Municipality { get { return DataObject.Municipality; } set { DataObject.Municipality = value; OnPropertyChanged(); } }
         public string NickName { get { return DataObject.NickName; } set { DataObject.NickName = value; OnPropertyChanged(); } }
-        public double PricePrNight { get { return DataObject.PricePrNight;}set { DataObject.PricePrNight = value; OnPropertyChanged();} }
+        public int PricePrNight { get { return DataObject.PricePrNight;}set { DataObject.PricePrNight = value; OnPropertyChanged();} }
     }
 }

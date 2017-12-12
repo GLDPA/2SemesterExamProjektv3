@@ -35,6 +35,8 @@ namespace _2SemesterProjekt.DTO
         [StringLength(100)]
         public string kommune { get; set; }
 
+        public int PrisPrNat { get; set; }
+
         public int vejNummer { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -20,7 +20,9 @@ namespace _2SemesterProjekt.DomainViewModelFactory1
                 ZipCode = tObj.postNummer,
                 City = tObj.by,
                 Municipality = tObj.kommune,
-                NickName = tObj.sommerhusNavn
+                NickName = tObj.sommerhusNavn,
+                PricePrNight = tObj.PrisPrNat
+
             };
 
 
