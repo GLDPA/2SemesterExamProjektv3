@@ -21,7 +21,7 @@ namespace _2SemesterProjekt.DomainViewModelFactory1
                 City = tObj.by,
                 Municipality = tObj.kommune,
                 NickName = tObj.sommerhusNavn,
-                //PricePrNight = tObj.
+                PricePrNight = tObj.PrisPrNat
 
             };
 

@@ -15,7 +15,7 @@ namespace _2SemesterProjekt
         public string City { get; set; }
         public string Municipality { get; set; }
         public string NickName { get; set; }
-        public double PricePrNight { get; set; }
+        public int PricePrNight { get; set; }
         
 
         public override void SetValuesFromObject(SummerHouse obj)

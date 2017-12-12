@@ -33,7 +33,7 @@ namespace _2SemesterProjekt
             set;
         }
 
-        public double PricePrNight { get; set; }
+        public int PricePrNight { get; set; }
 
 
         public override void SetValuesFromObject(SummerHouse obj)

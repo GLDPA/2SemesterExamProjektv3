@@ -61,7 +61,7 @@
             <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.BookingID}" VerticalAlignment="Top" Width="300"/>
             <ComboBox ItemsSource="{Binding ItemDetails.CustomerNamesList}" SelectedItem="{Binding ItemDetails.CustomerSelected, Mode=TwoWay}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
             <ComboBox ItemsSource="{Binding ItemDetails.SummerhouseNamesList}" SelectedItem="{Binding ItemDetails.SummerHouseSelected, Mode=TwoWay}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
-            <CalendarDatePicker DataContext="{Binding ItemDetails.CheckInDate}"  HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
+            <CalendarDatePicker  DataContext="{Binding ItemDetails.CheckInDate}"  HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
             <TimePicker DataContext="{Binding ItemDetails.CheckInTime}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
             <CalendarDatePicker DataContext="{Binding ItemDetails.CheckOutDate}" HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
             <TimePicker DataContext="{Binding ItemDetails.CheckOutTime}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
