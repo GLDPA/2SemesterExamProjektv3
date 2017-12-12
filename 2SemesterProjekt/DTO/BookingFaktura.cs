@@ -35,16 +35,16 @@ namespace _2SemesterProjekt.DTO
         public int Faktura_Nr { get; set; }
 
         [Column("Start dato")]
-        public DateTime Start_dato { get; set; }
+        public DateTimeOffset Start_dato { get; set; }
 
         [Column("Slut dato")]
-        public DateTime Slut_dato { get; set; }
+        public DateTimeOffset Slut_dato { get; set; }
 
         [Column("CheckIn dato")]
-        public DateTime CheckIn_dato { get; set; }
+        public DateTimeOffset CheckIn_dato { get; set; }
 
         [Column("Check-Ud dato")]
-        public DateTime Check_Ud_dato { get; set; }
+        public DateTimeOffset Check_Ud_dato { get; set; }
 
         public virtual Customer Customer { get; set; }
         public override void SetValuesFromObject(Booking obj)

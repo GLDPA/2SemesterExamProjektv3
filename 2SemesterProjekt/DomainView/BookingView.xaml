@@ -61,9 +61,9 @@
             <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.BookingID, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
             <ComboBox ItemsSource="{Binding ItemDetails.CustomerNamesList}" SelectedItem="{Binding ItemDetails.CustomerSelected, Mode=TwoWay}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
             <ComboBox ItemsSource="{Binding ItemDetails.SummerhouseNamesList}" SelectedItem="{Binding ItemDetails.SummerHouseSelected, Mode=TwoWay}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
-            <CalendarDatePicker  Date="{Binding ItemDetails.CheckInDate, Mode=TwoWay}"  HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
+            <DatePicker  Date="{Binding ItemDetails.CheckInDate, Mode=TwoWay}"  HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
             <TimePicker Time="{Binding ItemDetails.CheckInTime, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
-            <CalendarDatePicker Date="{Binding ItemDetails.CheckOutDate, Mode=TwoWay}" HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
+            <DatePicker Date="{Binding ItemDetails.CheckOutDate, Mode=TwoWay}" HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
             <TimePicker Time="{Binding ItemDetails.CheckOutTime, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
             <CheckBox IsChecked="{Binding ItemDetails.Breakfast, Mode=TwoWay}" Content="CheckBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
             <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.TotalPrice}" VerticalAlignment="Top" Width="300"/>
