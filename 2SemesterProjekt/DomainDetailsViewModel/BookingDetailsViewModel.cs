@@ -22,13 +22,15 @@ namespace _2SemesterProjekt.BookingFolder
 
         public DateTime CheckInTime
         {
-            get { return DataObject.CheckInTime; } set { DataObject.CheckInTime = value; OnPropertyChanged(); }
+            get { return DataObject.CheckInTime; }
+            set { DataObject.CheckInTime = value; OnPropertyChanged(); }
         }
 
 
         public DateTime CheckOutDate
         {
-            get { return DataObject.CheckOutDate; } set { DataObject.CheckOutDate = value; OnPropertyChanged(); }
+            get { return DataObject.CheckOutDate; }
+            set { DataObject.CheckOutDate = value; OnPropertyChanged(); }
         }
 
 
