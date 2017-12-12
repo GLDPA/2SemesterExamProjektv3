@@ -7,7 +7,7 @@ using DataTransformation.Implementation;
 
 namespace _2SemesterProjekt
 {
-    class SummerHouseVmFactory1 :FactoryBase<SummerHouse, SommerhusVm>
+   public class SummerHouseVmFactory1 :FactoryBase<SummerHouse, SommerhusVm>
     {
         public override SummerHouse CreateDomainObject(SommerhusVm vmObj)
         {

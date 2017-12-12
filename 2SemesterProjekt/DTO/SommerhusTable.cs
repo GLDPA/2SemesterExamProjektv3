@@ -1,13 +1,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DataTransformation.Implementation;
 
 namespace _2SemesterProjekt.DTO
 {
     //using System.Data.Entity.Spatial;
 
     [Table("SommerhusTable")]
-    public partial class SommerhusTable
+    public partial class SommerhusTable : TransformedBase<_2SemesterProjekt.SummerHouse>
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SommerhusTable()
@@ -41,5 +42,15 @@ namespace _2SemesterProjekt.DTO
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Opgaver> Opgavers { get; set; }
+
+        public override void SetValuesFromObject(_2SemesterProjekt.SummerHouse obj)
+        {
+            sommerhusNavn = obj.NickName;
+            postNummer = obj.ZipCode;
+            by = obj.City;
+            vejNavn = obj.StreetName;
+            kommune = obj.Municipality;
+            vejNummer = obj.StreetNr;
+        }
     }
 }

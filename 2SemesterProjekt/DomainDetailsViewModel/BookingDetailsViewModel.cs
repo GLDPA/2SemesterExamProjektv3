@@ -9,6 +9,8 @@ namespace _2SemesterProjekt.BookingFolder
 {
     class BookingDetailsViewModel : DetailsViewModelBase<BookingVm>
     {
+
+
         public BookingDetailsViewModel(BookingVm obj) : base(obj)
         {
         }

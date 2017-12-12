@@ -50,6 +50,7 @@ namespace _2SemesterProjekt
             get { return DataObject.Email; }
             set
             {
+
                 DataObject.Email = value;
                 OnPropertyChanged();
 
@@ -144,5 +145,9 @@ namespace _2SemesterProjekt
                 OnPropertyChanged();
             }
         }
+
+
+
+       
     }
 }
