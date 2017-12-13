@@ -8,12 +8,16 @@ using ExtensionsViewModel.Implementation;
 
 namespace _2SemesterProjekt.BookingFolder
 {
-    class BookingMasterDetailsViewModel : MasterDetailsViewModelCRUD<Booking, BookingVm, Booking>
+    class BookingMasterDetailsViewModel : MasterDetailsViewModelCRUD<Booking, BookingVm, DTO.BookingFaktura>
     {
         public BookingMasterDetailsViewModel()
             : base(new BookingVmFactory(), ObjectProvider.BookingCatalog,
                 new List<string> { }, new List<string>())
         { }
+
+
+
+
 
     }
 }

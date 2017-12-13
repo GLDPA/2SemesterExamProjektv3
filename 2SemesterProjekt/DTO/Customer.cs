@@ -45,6 +45,7 @@ namespace _2SemesterProjekt.DTO
 
         public override void SetValuesFromObject(_2SemesterProjekt.Customer obj)
         {
+            Key = obj.Key;
             Navn = obj.Name;
             Alder = obj.Age;
             Email = obj.Email;

@@ -9,15 +9,22 @@ namespace _2SemesterProjekt.BookingFolder
 {
  public  class BookingVm : TransformedBase<Booking>
  {
-        private Customer _customer;
-        private SummerHouse _summerhouse;
+        // private string _customer;
+        // private SummerHouse _summerhouse;
 
         public int BookingID { get; set; }
-        public string Name { get { return _customer.Name; } }
 
-        public string Email { get { return _customer.Email; } }
+        public string SummerHouseName
+        {
+            get; set;
+        }
+        public string CustomerName { get; set; }
 
-        public int PhoneNumber { get { return _customer.PhoneNumber; } }
+        // public string Name { get { return _customer.Name; } }
+
+        // public string Email { get { return _customer.Email; } }
+
+        // public int PhoneNumber { get { return _customer.PhoneNumber; } }
 
         public DateTime CheckInDate { get; set; }
 
@@ -35,19 +42,6 @@ namespace _2SemesterProjekt.BookingFolder
 
         public int PriceForAnimals { get; set; }
 
-        public TimeSpan NumberOfDays { get { return CheckOutDate - CheckInDate; } set { value = NumberOfDays; } }
-
-        public double TotalPrice
-        {
-            get
-            {
-                return (NumberOfDays.Days * _summerhouse.PricePrNight)
-                       + ((PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren)) * NumberOfDays.Days)
-                       + (PriceForAnimals * _customer.NumberOfAnimals);
-            }
-            set { value = TotalPrice; }
-        }
-
         public override void SetValuesFromObject(Booking obj)
         {
             Key = obj.Key;
@@ -57,7 +51,6 @@ namespace _2SemesterProjekt.BookingFolder
             CheckOutDate = obj.CheckOutDate;
             Breakfast = obj.Breakfast;
             DateOfBooking = obj.DateOfBooking;
-            TotalPrice = obj.TotalPrice;
             BookingID = obj.BookingId;
         }
     }

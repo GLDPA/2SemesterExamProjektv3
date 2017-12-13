@@ -11,11 +11,22 @@ namespace _2SemesterProjekt
 {
    public class Customer : TransformedBase<Customer>
    {
+       private int _phoneNr;
+
         public int CustomerId { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
         public string Email { get; set; }
-        public int PhoneNumber { get; set; }
+
+       public int PhoneNumber
+       {
+           get { return _phoneNr; }
+           set
+           {
+               _phoneNr = value;
+               Key = _phoneNr;
+           }
+       }
         public int CardNumber { get; set; }
         public int CVC { get; set; }
         public int ExpirationMonth { get; set; }
@@ -24,8 +35,10 @@ namespace _2SemesterProjekt
         public int NumberOfChildren { get; set; }
         public int NumberOfAnimals { get; set; }
 
-        public override void SetValuesFromObject(Customer obj)
+
+       public override void SetValuesFromObject(Customer obj)
         {
+           Key = obj.Key;
            CustomerId = obj.CustomerId;
            Name = obj.Name;
            Age = obj.Age;
@@ -39,5 +52,9 @@ namespace _2SemesterProjekt
            NumberOfChildren = obj.NumberOfChildren;
            NumberOfAnimals = obj.NumberOfAnimals;
        }
-   }
+
+
+
+      
+    }
 }

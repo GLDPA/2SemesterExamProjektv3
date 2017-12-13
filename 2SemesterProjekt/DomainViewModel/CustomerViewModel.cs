@@ -40,5 +40,9 @@ namespace _2SemesterProjekt
             NumberOfChildren = obj.NumberOfChildren;
             NumberOfAnimals = obj.NumberOfAnimals;
         }
+
+
+       
     }
+
 }

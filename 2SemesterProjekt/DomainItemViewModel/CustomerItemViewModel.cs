@@ -16,8 +16,10 @@ namespace _2SemesterProjekt
         // Tilføjet property
         public string Description
         {
-            get { return DataObject.Name;}
+            get { return DataObject.Email;}
+            
         }
+        
 
     }
 
