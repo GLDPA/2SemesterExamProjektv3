@@ -8,7 +8,7 @@ namespace _2SemesterProjekt
        private static CustomerCatalog _instance;
        
         // Call on load method in our constructor  
-       public CustomerCatalog() : base("http://sommerhusprojektwebservice2017v1206.azurewebsites.net/", "Customers",new CustomerViewModelFactory(), new CustomerDTOFactory())
+       public CustomerCatalog() : base("http://localhost:2235/", "Customers",new CustomerViewModelFactory(), new CustomerDTOFactory())
        {
 
             Load();

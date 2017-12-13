@@ -8,48 +8,48 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using SommerhusProjektWebService;
+using SommerHusWS;
 
-namespace SommerhusProjektWebService.Controllers
+namespace SommerHusWS.Controllers
 {
-    public class LeverandørController : ApiController
+    public class LeverancesController : ApiController
     {
         private SommerhusDBContext db = new SommerhusDBContext();
 
-        // GET: api/Leverandør
-        public IQueryable<Leverandør> GetLeverandør()
+        // GET: api/Leverances
+        public IQueryable<Leverance> GetLeverances()
         {
-            return db.Leverandør;
+            return db.Leverances;
         }
 
-        // GET: api/Leverandør/5
-        [ResponseType(typeof(Leverandør))]
-        public IHttpActionResult GetLeverandør(int id)
+        // GET: api/Leverances/5
+        [ResponseType(typeof(Leverance))]
+        public IHttpActionResult GetLeverance(int id)
         {
-            Leverandør leverandør = db.Leverandør.Find(id);
-            if (leverandør == null)
+            Leverance leverance = db.Leverances.Find(id);
+            if (leverance == null)
             {
                 return NotFound();
             }
 
-            return Ok(leverandør);
+            return Ok(leverance);
         }
 
-        // PUT: api/Leverandør/5
+        // PUT: api/Leverances/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutLeverandør(int id, Leverandør leverandør)
+        public IHttpActionResult PutLeverance(int id, Leverance leverance)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != leverandør.CVR)
+            if (id != leverance.BestillingsNr)
             {
                 return BadRequest();
             }
 
-            db.Entry(leverandør).State = EntityState.Modified;
+            db.Entry(leverance).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace SommerhusProjektWebService.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!LeverandørExists(id))
+                if (!LeveranceExists(id))
                 {
                     return NotFound();
                 }
@@ -70,16 +70,16 @@ namespace SommerhusProjektWebService.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Leverandør
-        [ResponseType(typeof(Leverandør))]
-        public IHttpActionResult PostLeverandør(Leverandør leverandør)
+        // POST: api/Leverances
+        [ResponseType(typeof(Leverance))]
+        public IHttpActionResult PostLeverance(Leverance leverance)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Leverandør.Add(leverandør);
+            db.Leverances.Add(leverance);
 
             try
             {
@@ -87,7 +87,7 @@ namespace SommerhusProjektWebService.Controllers
             }
             catch (DbUpdateException)
             {
-                if (LeverandørExists(leverandør.CVR))
+                if (LeveranceExists(leverance.BestillingsNr))
                 {
                     return Conflict();
                 }
@@ -97,23 +97,23 @@ namespace SommerhusProjektWebService.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = leverandør.CVR }, leverandør);
+            return CreatedAtRoute("DefaultApi", new { id = leverance.BestillingsNr }, leverance);
         }
 
-        // DELETE: api/Leverandør/5
-        [ResponseType(typeof(Leverandør))]
-        public IHttpActionResult DeleteLeverandør(int id)
+        // DELETE: api/Leverances/5
+        [ResponseType(typeof(Leverance))]
+        public IHttpActionResult DeleteLeverance(int id)
         {
-            Leverandør leverandør = db.Leverandør.Find(id);
-            if (leverandør == null)
+            Leverance leverance = db.Leverances.Find(id);
+            if (leverance == null)
             {
                 return NotFound();
             }
 
-            db.Leverandør.Remove(leverandør);
+            db.Leverances.Remove(leverance);
             db.SaveChanges();
 
-            return Ok(leverandør);
+            return Ok(leverance);
         }
 
         protected override void Dispose(bool disposing)
@@ -125,9 +125,9 @@ namespace SommerhusProjektWebService.Controllers
             base.Dispose(disposing);
         }
 
-        private bool LeverandørExists(int id)
+        private bool LeveranceExists(int id)
         {
-            return db.Leverandør.Count(e => e.CVR == id) > 0;
+            return db.Leverances.Count(e => e.BestillingsNr == id) > 0;
         }
     }
 }

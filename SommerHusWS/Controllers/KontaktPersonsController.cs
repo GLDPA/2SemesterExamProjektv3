@@ -8,48 +8,48 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using SommerhusProjektWebService;
+using SommerHusWS;
 
-namespace SommerhusProjektWebService.Controllers
+namespace SommerHusWS.Controllers
 {
-    public class LeverancesController : ApiController
+    public class KontaktPersonsController : ApiController
     {
         private SommerhusDBContext db = new SommerhusDBContext();
 
-        // GET: api/Leverances
-        public IQueryable<Leverance> GetLeverances()
+        // GET: api/KontaktPersons
+        public IQueryable<KontaktPerson> GetKontaktPersons()
         {
-            return db.Leverances;
+            return db.KontaktPersons;
         }
 
-        // GET: api/Leverances/5
-        [ResponseType(typeof(Leverance))]
-        public IHttpActionResult GetLeverance(int id)
+        // GET: api/KontaktPersons/5
+        [ResponseType(typeof(KontaktPerson))]
+        public IHttpActionResult GetKontaktPerson(int id)
         {
-            Leverance leverance = db.Leverances.Find(id);
-            if (leverance == null)
+            KontaktPerson kontaktPerson = db.KontaktPersons.Find(id);
+            if (kontaktPerson == null)
             {
                 return NotFound();
             }
 
-            return Ok(leverance);
+            return Ok(kontaktPerson);
         }
 
-        // PUT: api/Leverances/5
+        // PUT: api/KontaktPersons/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutLeverance(int id, Leverance leverance)
+        public IHttpActionResult PutKontaktPerson(int id, KontaktPerson kontaktPerson)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != leverance.BestillingsNr)
+            if (id != kontaktPerson.IDNummer)
             {
                 return BadRequest();
             }
 
-            db.Entry(leverance).State = EntityState.Modified;
+            db.Entry(kontaktPerson).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace SommerhusProjektWebService.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!LeveranceExists(id))
+                if (!KontaktPersonExists(id))
                 {
                     return NotFound();
                 }
@@ -70,16 +70,16 @@ namespace SommerhusProjektWebService.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Leverances
-        [ResponseType(typeof(Leverance))]
-        public IHttpActionResult PostLeverance(Leverance leverance)
+        // POST: api/KontaktPersons
+        [ResponseType(typeof(KontaktPerson))]
+        public IHttpActionResult PostKontaktPerson(KontaktPerson kontaktPerson)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Leverances.Add(leverance);
+            db.KontaktPersons.Add(kontaktPerson);
 
             try
             {
@@ -87,7 +87,7 @@ namespace SommerhusProjektWebService.Controllers
             }
             catch (DbUpdateException)
             {
-                if (LeveranceExists(leverance.BestillingsNr))
+                if (KontaktPersonExists(kontaktPerson.IDNummer))
                 {
                     return Conflict();
                 }
@@ -97,23 +97,23 @@ namespace SommerhusProjektWebService.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = leverance.BestillingsNr }, leverance);
+            return CreatedAtRoute("DefaultApi", new { id = kontaktPerson.IDNummer }, kontaktPerson);
         }
 
-        // DELETE: api/Leverances/5
-        [ResponseType(typeof(Leverance))]
-        public IHttpActionResult DeleteLeverance(int id)
+        // DELETE: api/KontaktPersons/5
+        [ResponseType(typeof(KontaktPerson))]
+        public IHttpActionResult DeleteKontaktPerson(int id)
         {
-            Leverance leverance = db.Leverances.Find(id);
-            if (leverance == null)
+            KontaktPerson kontaktPerson = db.KontaktPersons.Find(id);
+            if (kontaktPerson == null)
             {
                 return NotFound();
             }
 
-            db.Leverances.Remove(leverance);
+            db.KontaktPersons.Remove(kontaktPerson);
             db.SaveChanges();
 
-            return Ok(leverance);
+            return Ok(kontaktPerson);
         }
 
         protected override void Dispose(bool disposing)
@@ -125,9 +125,9 @@ namespace SommerhusProjektWebService.Controllers
             base.Dispose(disposing);
         }
 
-        private bool LeveranceExists(int id)
+        private bool KontaktPersonExists(int id)
         {
-            return db.Leverances.Count(e => e.BestillingsNr == id) > 0;
+            return db.KontaktPersons.Count(e => e.IDNummer == id) > 0;
         }
     }
 }
