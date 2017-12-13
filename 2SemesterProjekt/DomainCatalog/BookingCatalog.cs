@@ -25,7 +25,7 @@ namespace _2SemesterProjekt.BookingFolder
             }
         }
        
-        public BookingCatalog() : base("http://sommerhusprojektwebservice2017v1206.azurewebsites.net/", "BookingFakturas", new BookingViewModelFactory(), new BookingDTOFactory())
+        public BookingCatalog() : base("http://localhost:2235/", "BookingFakturas", new BookingViewModelFactory(), new BookingDTOFactory())
         {
            Load();  
             

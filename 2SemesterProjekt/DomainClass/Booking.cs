@@ -22,11 +22,11 @@ namespace _2SemesterProjekt.BookingFolder
 
         public int PhoneNumber { get { return _customer.PhoneNumber; } }
 
-        public DateTime CheckInDate { get; set; }
+        public DateTimeOffset CheckInDate { get; set; }
 
         public DateTime CheckInTime { get; set; }
 
-        public DateTime CheckOutDate { get; set; }
+        public DateTimeOffset CheckOutDate { get; set; }
 
         public DateTime CheckOutTime { get; set; }
 
