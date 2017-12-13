@@ -15,30 +15,35 @@ namespace _2SemesterProjekt.BookingFolder
         {
         }
 
-        public DateTime CheckInDate
+        public DateTimeOffset CheckInDate
         {
-            get { return DataObject.CheckInDate; } set { DataObject.CheckInDate = value; OnPropertyChanged(); }
+            get { return DataObject.CheckInDate; }
+            set { DataObject.CheckInDate = value; OnPropertyChanged(); }
         }
 
         public DateTime CheckInTime
         {
-            get { return DataObject.CheckInTime; } set { DataObject.CheckInTime = value; OnPropertyChanged(); }
+            get { return DataObject.CheckInTime; }
+            set { DataObject.CheckInTime = value; OnPropertyChanged(); }
         }
 
 
-        public DateTime CheckOutDate
+        public DateTimeOffset CheckOutDate
         {
-            get { return DataObject.CheckOutDate; } set { DataObject.CheckOutDate = value; OnPropertyChanged(); }
+            get { return DataObject.CheckOutDate; }
+            set { DataObject.CheckOutDate = value; OnPropertyChanged(); }
         }
 
 
         public DateTime CheckOutTime
         {
-            get { return DataObject.CheckOutTime; } set { DataObject.CheckInTime = value; OnPropertyChanged(); }
+            get { return DataObject.CheckOutTime; }
+            set { DataObject.CheckInTime = value; OnPropertyChanged(); }
         }
         public bool Breakfast
         {
-            get { return DataObject.Breakfast; } set { DataObject.Breakfast = value; OnPropertyChanged(); }
+            get { return DataObject.Breakfast; }
+            set { DataObject.Breakfast = value; OnPropertyChanged(); }
         }
         public DateTime DateOfBooking
         {
