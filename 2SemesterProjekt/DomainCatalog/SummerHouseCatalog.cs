@@ -19,7 +19,7 @@ namespace _2SemesterProjekt
             }
         }
 
-        public SummerHouseCatalog() : base("http://localhost:2235/", "SommerhusTables", new SummerHouseVmFactory1(), new SummerHouseDTOFactory())
+        public SummerHouseCatalog() : base("http://localhost:59749/", "SommerhusTables", new SummerHouseVmFactory1(), new SummerHouseDTOFactory())
         {
            Load(); 
         }
