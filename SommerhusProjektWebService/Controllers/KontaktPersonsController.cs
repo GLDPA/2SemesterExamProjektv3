@@ -8,48 +8,48 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using SommerHusWS;
+using SommerhusProjektWebService;
 
-namespace SommerHusWS.Controllers
+namespace SommerhusProjektWebService.Controllers
 {
-    public class BookingFakturasController : ApiController
+    public class KontaktPersonsController : ApiController
     {
         private SommerhusDBContext db = new SommerhusDBContext();
 
-        // GET: api/BookingFakturas
-        public IQueryable<BookingFaktura> GetBookingFakturas()
+        // GET: api/KontaktPersons
+        public IQueryable<KontaktPerson> GetKontaktPersons()
         {
-            return db.BookingFakturas;
+            return db.KontaktPersons;
         }
 
-        // GET: api/BookingFakturas/5
-        [ResponseType(typeof(BookingFaktura))]
-        public IHttpActionResult GetBookingFaktura(string id)
+        // GET: api/KontaktPersons/5
+        [ResponseType(typeof(KontaktPerson))]
+        public IHttpActionResult GetKontaktPerson(int id)
         {
-            BookingFaktura bookingFaktura = db.BookingFakturas.Find(id);
-            if (bookingFaktura == null)
+            KontaktPerson kontaktPerson = db.KontaktPersons.Find(id);
+            if (kontaktPerson == null)
             {
                 return NotFound();
             }
 
-            return Ok(bookingFaktura);
+            return Ok(kontaktPerson);
         }
 
-        // PUT: api/BookingFakturas/5
+        // PUT: api/KontaktPersons/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutBookingFaktura(string id, BookingFaktura bookingFaktura)
+        public IHttpActionResult PutKontaktPerson(int id, KontaktPerson kontaktPerson)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != bookingFaktura.Email)
+            if (id != kontaktPerson.IDNummer)
             {
                 return BadRequest();
             }
 
-            db.Entry(bookingFaktura).State = EntityState.Modified;
+            db.Entry(kontaktPerson).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace SommerHusWS.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!BookingFakturaExists(id))
+                if (!KontaktPersonExists(id))
                 {
                     return NotFound();
                 }
@@ -70,16 +70,16 @@ namespace SommerHusWS.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/BookingFakturas
-        [ResponseType(typeof(BookingFaktura))]
-        public IHttpActionResult PostBookingFaktura(BookingFaktura bookingFaktura)
+        // POST: api/KontaktPersons
+        [ResponseType(typeof(KontaktPerson))]
+        public IHttpActionResult PostKontaktPerson(KontaktPerson kontaktPerson)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.BookingFakturas.Add(bookingFaktura);
+            db.KontaktPersons.Add(kontaktPerson);
 
             try
             {
@@ -87,7 +87,7 @@ namespace SommerHusWS.Controllers
             }
             catch (DbUpdateException)
             {
-                if (BookingFakturaExists(bookingFaktura.Email))
+                if (KontaktPersonExists(kontaktPerson.IDNummer))
                 {
                     return Conflict();
                 }
@@ -97,23 +97,23 @@ namespace SommerHusWS.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = bookingFaktura.Email }, bookingFaktura);
+            return CreatedAtRoute("DefaultApi", new { id = kontaktPerson.IDNummer }, kontaktPerson);
         }
 
-        // DELETE: api/BookingFakturas/5
-        [ResponseType(typeof(BookingFaktura))]
-        public IHttpActionResult DeleteBookingFaktura(string id)
+        // DELETE: api/KontaktPersons/5
+        [ResponseType(typeof(KontaktPerson))]
+        public IHttpActionResult DeleteKontaktPerson(int id)
         {
-            BookingFaktura bookingFaktura = db.BookingFakturas.Find(id);
-            if (bookingFaktura == null)
+            KontaktPerson kontaktPerson = db.KontaktPersons.Find(id);
+            if (kontaktPerson == null)
             {
                 return NotFound();
             }
 
-            db.BookingFakturas.Remove(bookingFaktura);
+            db.KontaktPersons.Remove(kontaktPerson);
             db.SaveChanges();
 
-            return Ok(bookingFaktura);
+            return Ok(kontaktPerson);
         }
 
         protected override void Dispose(bool disposing)
@@ -125,9 +125,9 @@ namespace SommerHusWS.Controllers
             base.Dispose(disposing);
         }
 
-        private bool BookingFakturaExists(string id)
+        private bool KontaktPersonExists(int id)
         {
-            return db.BookingFakturas.Count(e => e.Email == id) > 0;
+            return db.KontaktPersons.Count(e => e.IDNummer == id) > 0;
         }
     }
 }

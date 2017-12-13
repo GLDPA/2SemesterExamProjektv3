@@ -10,7 +10,7 @@ namespace SommerhusProjektWebService
     public partial class BookingFaktura
     {
         [Key]
-        [StringLength(50)]
+        [StringLength(100)]
         public string Email { get; set; }
 
         [Required]
@@ -18,7 +18,7 @@ namespace SommerhusProjektWebService
         public string KundeNavn { get; set; }
 
         [Column("Tlf Nr")]
-        public int Tlf_Nr { get; set; }
+        public int? Tlf_Nr { get; set; }
 
         [Column("Antal Dyr")]
         public int Antal_Dyr { get; set; }
@@ -37,6 +37,12 @@ namespace SommerhusProjektWebService
 
         [Column("Slut dato")]
         public DateTime Slut_dato { get; set; }
+
+        [Column("CheckIn dato")]
+        public DateTime CheckIn_dato { get; set; }
+
+        [Column("Check-Ud dato")]
+        public DateTime Check_Ud_dato { get; set; }
 
         public virtual Customer Customer { get; set; }
     }

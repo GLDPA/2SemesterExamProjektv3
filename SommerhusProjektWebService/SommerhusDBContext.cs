@@ -8,8 +8,10 @@
     public partial class SommerhusDBContext : DbContext
     {
         public SommerhusDBContext()
-            : base("name=SommerhusDBContext1")
+            : base("name=SommerhusDBContext")
         {
+            base.Configuration.LazyLoadingEnabled = false;
+            base.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<BookingFaktura> BookingFakturas { get; set; }
@@ -22,6 +24,10 @@
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<BookingFaktura>()
+                .Property(e => e.Email)
+                .IsFixedLength();
+
             modelBuilder.Entity<BookingFaktura>()
                 .Property(e => e.KundeNavn)
                 .IsFixedLength();
@@ -36,9 +42,8 @@
 
             modelBuilder.Entity<Customer>()
                 .HasMany(e => e.BookingFakturas)
-                .WithRequired(e => e.Customer)
-                .HasForeignKey(e => e.Tlf_Nr)
-                .WillCascadeOnDelete(false);
+                .WithOptional(e => e.Customer)
+                .HasForeignKey(e => e.Tlf_Nr);
 
             modelBuilder.Entity<KontaktPerson>()
                 .Property(e => e.Navn)

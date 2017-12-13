@@ -8,48 +8,48 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using SommerHusWS;
+using SommerhusProjektWebService;
 
-namespace SommerHusWS.Controllers
+namespace SommerhusProjektWebService.Controllers
 {
-    public class LeverandørController : ApiController
+    public class CustomersController : ApiController
     {
         private SommerhusDBContext db = new SommerhusDBContext();
 
-        // GET: api/Leverandør
-        public IQueryable<Leverandør> GetLeverandør()
+        // GET: api/Customers
+        public IQueryable<Customer> GetCustomers()
         {
-            return db.Leverandør;
+            return db.Customers;
         }
 
-        // GET: api/Leverandør/5
-        [ResponseType(typeof(Leverandør))]
-        public IHttpActionResult GetLeverandør(int id)
+        // GET: api/Customers/5
+        [ResponseType(typeof(Customer))]
+        public IHttpActionResult GetCustomer(int id)
         {
-            Leverandør leverandør = db.Leverandør.Find(id);
-            if (leverandør == null)
+            Customer customer = db.Customers.Find(id);
+            if (customer == null)
             {
                 return NotFound();
             }
 
-            return Ok(leverandør);
+            return Ok(customer);
         }
 
-        // PUT: api/Leverandør/5
+        // PUT: api/Customers/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutLeverandør(int id, Leverandør leverandør)
+        public IHttpActionResult PutCustomer(int id, Customer customer)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != leverandør.CVR)
+            if (id != customer.TlfNr)
             {
                 return BadRequest();
             }
 
-            db.Entry(leverandør).State = EntityState.Modified;
+            db.Entry(customer).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace SommerHusWS.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!LeverandørExists(id))
+                if (!CustomerExists(id))
                 {
                     return NotFound();
                 }
@@ -70,16 +70,16 @@ namespace SommerHusWS.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Leverandør
-        [ResponseType(typeof(Leverandør))]
-        public IHttpActionResult PostLeverandør(Leverandør leverandør)
+        // POST: api/Customers
+        [ResponseType(typeof(Customer))]
+        public IHttpActionResult PostCustomer(Customer customer)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Leverandør.Add(leverandør);
+            db.Customers.Add(customer);
 
             try
             {
@@ -87,7 +87,7 @@ namespace SommerHusWS.Controllers
             }
             catch (DbUpdateException)
             {
-                if (LeverandørExists(leverandør.CVR))
+                if (CustomerExists(customer.TlfNr))
                 {
                     return Conflict();
                 }
@@ -97,23 +97,23 @@ namespace SommerHusWS.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = leverandør.CVR }, leverandør);
+            return CreatedAtRoute("DefaultApi", new { id = customer.TlfNr }, customer);
         }
 
-        // DELETE: api/Leverandør/5
-        [ResponseType(typeof(Leverandør))]
-        public IHttpActionResult DeleteLeverandør(int id)
+        // DELETE: api/Customers/5
+        [ResponseType(typeof(Customer))]
+        public IHttpActionResult DeleteCustomer(int id)
         {
-            Leverandør leverandør = db.Leverandør.Find(id);
-            if (leverandør == null)
+            Customer customer = db.Customers.Find(id);
+            if (customer == null)
             {
                 return NotFound();
             }
 
-            db.Leverandør.Remove(leverandør);
+            db.Customers.Remove(customer);
             db.SaveChanges();
 
-            return Ok(leverandør);
+            return Ok(customer);
         }
 
         protected override void Dispose(bool disposing)
@@ -125,9 +125,9 @@ namespace SommerHusWS.Controllers
             base.Dispose(disposing);
         }
 
-        private bool LeverandørExists(int id)
+        private bool CustomerExists(int id)
         {
-            return db.Leverandør.Count(e => e.CVR == id) > 0;
+            return db.Customers.Count(e => e.TlfNr == id) > 0;
         }
     }
 }

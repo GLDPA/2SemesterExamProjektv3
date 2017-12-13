@@ -8,9 +8,9 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using SommerHusWS;
+using SommerhusProjektWebService;
 
-namespace SommerHusWS.Controllers
+namespace SommerhusProjektWebService.Controllers
 {
     public class SommerhusTablesController : ApiController
     {

@@ -8,48 +8,48 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using SommerHusWS;
+using SommerhusProjektWebService;
 
-namespace SommerHusWS.Controllers
+namespace SommerhusProjektWebService.Controllers
 {
-    public class CustomersController : ApiController
+    public class BookingFakturasController : ApiController
     {
         private SommerhusDBContext db = new SommerhusDBContext();
 
-        // GET: api/Customers
-        public IQueryable<Customer> GetCustomers()
+        // GET: api/BookingFakturas
+        public IQueryable<BookingFaktura> GetBookingFakturas()
         {
-            return db.Customers;
+            return db.BookingFakturas;
         }
 
-        // GET: api/Customers/5
-        [ResponseType(typeof(Customer))]
-        public IHttpActionResult GetCustomer(int id)
+        // GET: api/BookingFakturas/5
+        [ResponseType(typeof(BookingFaktura))]
+        public IHttpActionResult GetBookingFaktura(string id)
         {
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
+            BookingFaktura bookingFaktura = db.BookingFakturas.Find(id);
+            if (bookingFaktura == null)
             {
                 return NotFound();
             }
 
-            return Ok(customer);
+            return Ok(bookingFaktura);
         }
 
-        // PUT: api/Customers/5
+        // PUT: api/BookingFakturas/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutCustomer(int id, Customer customer)
+        public IHttpActionResult PutBookingFaktura(string id, BookingFaktura bookingFaktura)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != customer.TlfNr)
+            if (id != bookingFaktura.Email)
             {
                 return BadRequest();
             }
 
-            db.Entry(customer).State = EntityState.Modified;
+            db.Entry(bookingFaktura).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace SommerHusWS.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CustomerExists(id))
+                if (!BookingFakturaExists(id))
                 {
                     return NotFound();
                 }
@@ -70,16 +70,16 @@ namespace SommerHusWS.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Customers
-        [ResponseType(typeof(Customer))]
-        public IHttpActionResult PostCustomer(Customer customer)
+        // POST: api/BookingFakturas
+        [ResponseType(typeof(BookingFaktura))]
+        public IHttpActionResult PostBookingFaktura(BookingFaktura bookingFaktura)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Customers.Add(customer);
+            db.BookingFakturas.Add(bookingFaktura);
 
             try
             {
@@ -87,7 +87,7 @@ namespace SommerHusWS.Controllers
             }
             catch (DbUpdateException)
             {
-                if (CustomerExists(customer.TlfNr))
+                if (BookingFakturaExists(bookingFaktura.Email))
                 {
                     return Conflict();
                 }
@@ -97,23 +97,23 @@ namespace SommerHusWS.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = customer.TlfNr }, customer);
+            return CreatedAtRoute("DefaultApi", new { id = bookingFaktura.Email }, bookingFaktura);
         }
 
-        // DELETE: api/Customers/5
-        [ResponseType(typeof(Customer))]
-        public IHttpActionResult DeleteCustomer(int id)
+        // DELETE: api/BookingFakturas/5
+        [ResponseType(typeof(BookingFaktura))]
+        public IHttpActionResult DeleteBookingFaktura(string id)
         {
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
+            BookingFaktura bookingFaktura = db.BookingFakturas.Find(id);
+            if (bookingFaktura == null)
             {
                 return NotFound();
             }
 
-            db.Customers.Remove(customer);
+            db.BookingFakturas.Remove(bookingFaktura);
             db.SaveChanges();
 
-            return Ok(customer);
+            return Ok(bookingFaktura);
         }
 
         protected override void Dispose(bool disposing)
@@ -125,9 +125,9 @@ namespace SommerHusWS.Controllers
             base.Dispose(disposing);
         }
 
-        private bool CustomerExists(int id)
+        private bool BookingFakturaExists(string id)
         {
-            return db.Customers.Count(e => e.TlfNr == id) > 0;
+            return db.BookingFakturas.Count(e => e.Email == id) > 0;
         }
     }
 }
