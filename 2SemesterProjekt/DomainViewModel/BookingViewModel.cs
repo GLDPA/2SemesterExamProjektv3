@@ -9,9 +9,6 @@ namespace _2SemesterProjekt.BookingFolder
 {
  public  class BookingVm : TransformedBase<Booking>
  {
-        // private string _customer;
-        // private SummerHouse _summerhouse;
-
         public int BookingID { get; set; }
 
         public string SummerHouseName
@@ -19,12 +16,6 @@ namespace _2SemesterProjekt.BookingFolder
             get; set;
         }
         public string CustomerName { get; set; }
-
-        // public string Name { get { return _customer.Name; } }
-
-        // public string Email { get { return _customer.Email; } }
-
-        // public int PhoneNumber { get { return _customer.PhoneNumber; } }
 
         public DateTime CheckInDate { get; set; }
 

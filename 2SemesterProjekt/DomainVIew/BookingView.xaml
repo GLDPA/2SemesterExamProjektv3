@@ -65,7 +65,7 @@
             <TimePicker DataContext="{Binding ItemDetails.CheckInTime}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
             <CalendarDatePicker DataContext="{Binding ItemDetails.CheckOutDate}" HorizontalAlignment="Left" Height="36"  VerticalAlignment="Top" Width="300"/>
             <TimePicker DataContext="{Binding ItemDetails.CheckOutTime}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="36"/>
-            <CheckBox DataContext="{Binding ItemDetails.Breakfast}" Content="CheckBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
+            <ToggleSwitch IsOn="{Binding ItemDetails.Breakfast}"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
             <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.TotalPrice}" VerticalAlignment="Top" Width="300"/>
         </StackPanel>
 
