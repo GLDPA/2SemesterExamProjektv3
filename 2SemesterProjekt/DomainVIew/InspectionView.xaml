@@ -49,10 +49,10 @@
 
 
         <StackPanel Grid.Column="2" HorizontalAlignment="Left">
-            <CheckBox IsChecked="{Binding}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
-            <CheckBox IsChecked="{Binding}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
-            <CheckBox IsChecked="{Binding}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
-            <CheckBox IsChecked="{Binding}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <ToggleSwitch IsOn="{Binding ItemDetails.KeyIsReturned, Mode=TwoWay}"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <ToggleSwitch IsOn="{Binding ItemDetails.SheetIsChanged, Mode=TwoWay}"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <ToggleSwitch IsOn="{Binding ItemDetails.IsClean, Mode=TwoWay}"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <ToggleSwitch IsOn="{Binding ItemDetails.HouseIsNotDestroyed, Mode=TwoWay}"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">

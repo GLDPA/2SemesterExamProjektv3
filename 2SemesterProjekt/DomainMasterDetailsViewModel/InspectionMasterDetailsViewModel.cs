@@ -15,7 +15,6 @@ namespace _2SemesterProjekt.InspectionFolder
                 new List<string> {"All Is Well"},
                 new List<string> {"House Is Not Destroyed"})
         {
-            ViewStateService.ViewState = CRUDStates.CreateState;
         }
     }
 }

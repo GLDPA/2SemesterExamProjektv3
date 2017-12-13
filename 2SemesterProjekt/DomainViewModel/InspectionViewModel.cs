@@ -9,10 +9,14 @@ namespace _2SemesterProjekt.InspectionFolder
 {
    public class InspectionVm :TransformedWithDefaultBase<Inspection>
     {
-        public bool IsClean { get; set; }
-        public bool KeyIsReturned { get; set; }
-        public bool SheetIsChanged { get; set; }
-        public bool HouseIsNotDestroyed { get; set; }
+        public bool IsClean { get; 
+            set; }
+        public bool KeyIsReturned { get;
+            set; }
+        public bool SheetIsChanged { get;
+            set; }
+        public bool HouseIsNotDestroyed { get;
+            set; }
         public string AllIsWell { get; set; }
         public int InspectionId { get; set; }
         public DateTimeOffset DateOfInspection { get; set; }
