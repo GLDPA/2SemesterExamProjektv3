@@ -59,5 +59,23 @@ namespace _2SemesterProjekt.InspectionFolder
                 OnPropertyChanged();
             }
         }
+        public DateTimeOffset DateOfInspection
+        {
+            get { return DataObject.DateOfInspection; }
+            set
+            {
+                DataObject.DateOfInspection = value;
+                OnPropertyChanged();
+            }
+        }
+        public int InspectionId
+        {
+            get { return DataObject.InspectionId; }
+            set
+            {
+                DataObject.InspectionId = value;
+                OnPropertyChanged();
+            }
+        }
     }
 }

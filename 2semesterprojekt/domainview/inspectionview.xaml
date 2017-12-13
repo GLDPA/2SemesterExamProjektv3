@@ -7,7 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:inspectionFolder="using:_2SemesterProjekt.InspectionFolder"
     mc:Ignorable="d">
-
+    <Page.DataContext>
+        <inspectionFolder:InspectionMasterDetailsVm/>
+    </Page.DataContext>
 
     <Grid>
         <Grid.Background>
@@ -47,10 +49,10 @@
 
 
         <StackPanel Grid.Column="2" HorizontalAlignment="Left">
-            <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
-            <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
-            <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
-            <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <CheckBox IsChecked="{Binding}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <CheckBox IsChecked="{Binding}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <CheckBox IsChecked="{Binding}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <CheckBox IsChecked="{Binding}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
