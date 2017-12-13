@@ -14,6 +14,8 @@ namespace _2SemesterProjekt.InspectionFolder
             Inspection obj = new Inspection
             {
                Key = tObj.Key,
+               InspectionId = tObj.InspectionId,
+               DateOfInspection = tObj.DateOfInspection,
                AllIsWell =  tObj.AllIsWell,
                SheetIsChanged = tObj.SheetIsChanged,
                IsClean = tObj.IsClean,

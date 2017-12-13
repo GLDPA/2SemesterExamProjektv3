@@ -7,7 +7,7 @@ using ViewModel.Implementation;
 
 namespace _2SemesterProjekt.InspectionFolder
 {
-    class InspectionDetailsVm : DetailsViewModelBase<InspectionVm>
+    public class InspectionDetailsVm : DetailsViewModelBase<InspectionVm>
     {
         public InspectionDetailsVm(InspectionVm obj) 
             : base(obj)

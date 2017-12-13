@@ -14,10 +14,14 @@ namespace _2SemesterProjekt.InspectionFolder
         public bool SheetIsChanged { get; set; }
         public bool HouseIsNotDestroyed { get; set; }
         public string AllIsWell { get; set; }
+        public int InspectionId { get; set; }
+        public DateTimeOffset DateOfInspection { get; set; }
 
         public override void SetValuesFromObject(Inspection obj)
         {
             Key = obj.Key;
+            InspectionId = obj.InspectionId;
+            DateOfInspection = obj.DateOfInspection;
             KeyIsReturned = obj.KeyIsReturned;
             IsClean = obj.IsClean;
             HouseIsNotDestroyed = obj.HouseIsNotDestroyed;
