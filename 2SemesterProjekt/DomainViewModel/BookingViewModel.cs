@@ -17,17 +17,8 @@ namespace _2SemesterProjekt.BookingFolder
         }
         public string CustomerName { get; set; }
 
-<<<<<<< HEAD
-        public DateTime CheckInDate { get; set; }
-=======
-        // public string Name { get { return _customer.Name; } }
-
-        // public string Email { get { return _customer.Email; } }
-
-        // public int PhoneNumber { get { return _customer.PhoneNumber; } }
 
         public DateTimeOffset CheckInDate { get; set; }
->>>>>>> origin/TestingG
 
         public DateTime CheckInTime { get; set; }
 
