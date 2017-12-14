@@ -12,8 +12,26 @@ namespace _2SemesterProjekt.BookingFolder
         private Customer _customer;
         private SummerHouse _summerHouse;
         private DateTime _dayofweek;
+        private Customer _customerName;
         
-        public int BookingId { get; set; }
+
+        public int InvoiceNumber { get; set; }
+    
+        public int BookingID { get; set; }
+
+        public DateTime DateOfBooking { get; set; }
+
+        public DateTimeOffset CheckInDate { get; set; }
+        public DateTimeOffset CheckOutDate { get; set; }
+
+
+        public bool Breakfast { get; set; }
+
+        public DateTime CheckInTime { get; set; }
+
+        public DateTime CheckOutTime { get; set; }
+
+
 
         //public string Name { get { return _customer.Name; } }
 
@@ -21,21 +39,10 @@ namespace _2SemesterProjekt.BookingFolder
 
         //public int PhoneNumber { get { return _customer.PhoneNumber; } }
 
-        public DateTimeOffset CheckInDate { get; set; }
 
-        public DateTime CheckInTime { get; set; }
 
-        public DateTimeOffset CheckOutDate { get; set; }
 
-        public DateTime CheckOutTime { get; set; }
-
-        public DateTime DateOfBooking { get; set; }
-
-        public bool Breakfast { get; set; }
-
-        public int PriceForBreakfast { get; set; }
-
-        public int PriceForAnimals { get; set; }
+   
 
         public double CalculatePrice()
         {
@@ -71,19 +78,15 @@ namespace _2SemesterProjekt.BookingFolder
 
         public double TotalPrice
         {
-            get
-            {
-                return (NumberOfDays.Days * GetPrice())
-                       + ((PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren)) * NumberOfDays.Days)
-                       + (PriceForAnimals * _customer.NumberOfAnimals);
-            }
+            get { return (NumberOfDays.Days * GetPrice()); }
             set { value = TotalPrice; }
         }
 
 
         public override void SetValuesFromObject(Booking obj)
         {
-            BookingId = obj.BookingId;
+            InvoiceNumber = obj.InvoiceNumber;
+            BookingID = obj.BookingID;
             CheckInDate = obj.CheckInDate;
             CheckInTime = obj.CheckInTime;
             CheckOutDate = obj.CheckOutDate;

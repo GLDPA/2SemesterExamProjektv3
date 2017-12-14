@@ -10,6 +10,7 @@ namespace _2SemesterProjekt.BookingFolder
     class BookingDetailsViewModel : DetailsViewModelBase<BookingVm>
     {
 
+   
 
         public BookingDetailsViewModel(BookingVm obj) : base(obj)
         {
@@ -55,6 +56,12 @@ namespace _2SemesterProjekt.BookingFolder
             get { return DataObject.BookingID; } set { DataObject.BookingID = value; OnPropertyChanged(); }
         }
 
+        public int InvoiceNumber
+        {
+            get { return DataObject.InvoiceNumber;}
+            set { DataObject.InvoiceNumber = value; OnPropertyChanged(); }
+        }
+
         // 1) we create a propety 
         // 2) we create a List object with string elements
         // 3) we run a foreach-loop in Customercatalog
@@ -73,7 +80,8 @@ namespace _2SemesterProjekt.BookingFolder
         }
 
         private string _customerSelected;
-        public string CustomerSelected
+       
+ public string CustomerSelected
         {
             get { return _customerSelected; }
             set

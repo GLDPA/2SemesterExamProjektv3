@@ -1,10 +1,10 @@
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace _2SemesterProjekt.DTO
+namespace ExamProjektWebService
 {
-    //using System.Data.Entity.Spatial;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
 
     public partial class Leverandør
     {
