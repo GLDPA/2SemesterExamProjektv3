@@ -27,10 +27,10 @@ namespace _2SemesterProjekt
                Key = _phoneNr;
            }
        }
-        public int CardNumber { get; set; }
-        public int CVC { get; set; }
-        public int ExpirationMonth { get; set; }
-        public int ExpirationYear { get; set; }
+        //public int CardNumber { get; set; }
+        //public int CVC { get; set; }
+        //public int ExpirationMonth { get; set; }
+        //public int ExpirationYear { get; set; }
         public int NumberOfPeople { get; set; }
         public int NumberOfChildren { get; set; }
         public int NumberOfAnimals { get; set; }
@@ -44,10 +44,10 @@ namespace _2SemesterProjekt
            Age = obj.Age;
            Email = obj.Email;
            PhoneNumber = obj.PhoneNumber;
-           CardNumber = obj.CardNumber;
-           CVC = obj.CVC;
-           ExpirationMonth = obj.ExpirationMonth;
-           ExpirationYear = obj.ExpirationYear;
+           //CardNumber = obj.CardNumber;
+           //CVC = obj.CVC;
+           //ExpirationMonth = obj.ExpirationMonth;
+           //ExpirationYear = obj.ExpirationYear;
            NumberOfPeople = obj.NumberOfPeople;
            NumberOfChildren = obj.NumberOfChildren;
            NumberOfAnimals = obj.NumberOfAnimals;

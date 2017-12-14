@@ -15,8 +15,8 @@ namespace _2SemesterProjekt.DomainViewModelFactory1
         {
             Booking booking = new Booking()
             {
-                CheckInDate = dtoObj.Start_dato,
-                CheckOutDate = dtoObj.Slut_dato,
+                CheckInDate = dtoObj.checkIndDato,
+                CheckOutDate = dtoObj.checkUdDato,
 
             };
 

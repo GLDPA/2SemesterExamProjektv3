@@ -32,10 +32,10 @@ namespace _2SemesterProjekt
             Age = obj.Age;
             Email = obj.Email;
             PhoneNumber = obj.PhoneNumber;
-            Cardnumber = obj.CardNumber;
-            CVC = obj.CVC;
-            ExpirationMonth = obj.ExpirationMonth;
-            ExpirationYear = obj.ExpirationYear;
+            //Cardnumber = obj.CardNumber;
+            //CVC = obj.CVC;
+            //ExpirationMonth = obj.ExpirationMonth;
+            //ExpirationYear = obj.ExpirationYear;
             NumberOfPeople = obj.NumberOfPeople;
             NumberOfChildren = obj.NumberOfChildren;
             NumberOfAnimals = obj.NumberOfAnimals;

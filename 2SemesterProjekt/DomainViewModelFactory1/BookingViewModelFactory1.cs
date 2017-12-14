@@ -20,7 +20,7 @@ namespace _2SemesterProjekt.BookingFolder
                 CheckOutDate = tObj.CheckOutDate,
                 Breakfast = tObj.Breakfast,
                 DateOfBooking = tObj.DateOfBooking,
-                BookingId = tObj.BookingID
+                BookingID = tObj.BookingID
             };
 
             return booking;

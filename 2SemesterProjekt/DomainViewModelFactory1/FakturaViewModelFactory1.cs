@@ -18,10 +18,10 @@ namespace _2SemesterProjekt.Faktura
                 BookingID = tObj.BookingID,
                 Name = tObj.Name,
                 Email = tObj.Email,
-                CardNr = tObj.CardNr,
-                ExpMonth = tObj.ExpMonth,
-                ExpYear = tObj.ExpYear,
-                CVC = tObj.CVC,
+                //CardNr = tObj.CardNr,
+                //ExpMonth = tObj.ExpMonth,
+                //ExpYear = tObj.ExpYear,
+                //CVC = tObj.CVC,
                 DateOfFaktura = tObj.DateOfFaktura,
                 FakturaId = tObj.FakturaId
             };

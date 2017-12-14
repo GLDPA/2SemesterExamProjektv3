@@ -67,42 +67,42 @@ namespace _2SemesterProjekt.Faktura
                 OnPropertyChanged();
             }
         }
-        public int CardNr
-        {
-            get { return DataObject.CardNr; }
-            set
-            {
-                DataObject.CardNr = value;
-                OnPropertyChanged();
-            }
-        }
-        public int ExpMonth
-        {
-            get { return DataObject.ExpMonth; }
-            set
-            {
-                DataObject.ExpMonth = value;
-                OnPropertyChanged();
-            }
-        }
-        public int ExpYear
-        {
-            get { return DataObject.ExpYear; }
-            set
-            {
-                DataObject.ExpYear = value;
-                OnPropertyChanged();
-            }
-        }
-        public int CVC
-        {
-            get { return DataObject.CVC; }
-            set
-            {
-                DataObject.CVC = value;
-                OnPropertyChanged();
-            }
-        }
+        //public int CardNr
+        //{
+        //    get { return DataObject.CardNr; }
+        //    set
+        //    {
+        //        DataObject.CardNr = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
+        //public int ExpMonth
+        //{
+        //    get { return DataObject.ExpMonth; }
+        //    set
+        //    {
+        //        DataObject.ExpMonth = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
+        //public int ExpYear
+        //{
+        //    get { return DataObject.ExpYear; }
+        //    set
+        //    {
+        //        DataObject.ExpYear = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
+        //public int CVC
+        //{
+        //    get { return DataObject.CVC; }
+        //    set
+        //    {
+        //        DataObject.CVC = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         public double TotalPrice
         {

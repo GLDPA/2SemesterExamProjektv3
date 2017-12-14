@@ -1,3 +1,4 @@
+using DataTransformation.Implementation;
 using DataTransformation.Interfaces;
 
 namespace _2SemesterProjekt.DTO
@@ -9,7 +10,7 @@ namespace _2SemesterProjekt.DTO
 
 
     [Table("SommerhusTable")]
-    public partial class SommerhusTable : ITransformed<SummerHouse>
+    public partial class SommerhusTable : TransformedBase<SummerHouse>
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SommerhusTable()
@@ -50,15 +51,15 @@ namespace _2SemesterProjekt.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Opgaver> Opgavers { get; set; }
 
-        public int Key { get; set; }
-        public ITransformed<SummerHouse> Clone()
+        public override void SetValuesFromObject(SummerHouse obj)
         {
-            throw new NotImplementedException();
-        }
-
-        public void SetValuesFromObject(SummerHouse obj)
-        {
-            throw new NotImplementedException();
+            sommerhusNavn = obj.NickName;
+            postNummer = obj.ZipCode;
+            by = obj.City;
+            vejNavn = obj.StreetName;
+            kommune = obj.Municipality;
+            vejNummer = obj.StreetNr;
+            prisPrNat = obj.PricePrNight;
         }
     }
 }
