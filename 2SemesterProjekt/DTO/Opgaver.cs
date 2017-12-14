@@ -1,4 +1,4 @@
-namespace _2SemesterProjekt
+namespace _2SemesterProjekt.DTO
 {
     using System;
     using System.Collections.Generic;

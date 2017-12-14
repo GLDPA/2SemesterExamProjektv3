@@ -1,4 +1,6 @@
-namespace _2SemesterProjekt
+using DataTransformation.Interfaces;
+
+namespace _2SemesterProjekt.DTO
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +9,7 @@ namespace _2SemesterProjekt
 
 
     [Table("SommerhusTable")]
-    public partial class SommerhusTable
+    public partial class SommerhusTable : ITransformed<SummerHouse>
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SommerhusTable()
@@ -47,5 +49,16 @@ namespace _2SemesterProjekt
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Opgaver> Opgavers { get; set; }
+
+        public int Key { get; set; }
+        public ITransformed<SummerHouse> Clone()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetValuesFromObject(SummerHouse obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

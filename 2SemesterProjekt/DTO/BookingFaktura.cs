@@ -1,4 +1,7 @@
-namespace _2SemesterProjekt
+using DataTransformation.Interfaces;
+using _2SemesterProjekt.BookingFolder;
+
+namespace _2SemesterProjekt.DTO
 {
     using System;
     using System.Collections.Generic;
@@ -6,7 +9,7 @@ namespace _2SemesterProjekt
     using System.ComponentModel.DataAnnotations.Schema;
 
     [Table("BookingFaktura")]
-    public partial class BookingFaktura
+    public partial class BookingFaktura :ITransformed<Booking>
     {
         [Key]
         [Column(Order = 0)]
@@ -41,5 +44,15 @@ namespace _2SemesterProjekt
         public virtual SommerhusTable SommerhusTable { get; set; }
 
         public virtual Customer Customer { get; set; }
+        public int Key { get; set; }
+        public ITransformed<Booking> Clone()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetValuesFromObject(Booking obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
