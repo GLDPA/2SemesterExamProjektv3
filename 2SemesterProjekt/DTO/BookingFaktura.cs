@@ -1,58 +1,48 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using DataTransformation.Implementation;
-using _2SemesterProjekt.BookingFolder;
+using _2SemesterProjekt.DTO;
 
-namespace _2SemesterProjekt.DTO
+namespace ExamProjektWebService
 {
-    //using System.Data.Entity.Spatial;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
 
     [Table("BookingFaktura")]
-    public partial class BookingFaktura : TransformedBase<_2SemesterProjekt.BookingFolder.Booking>
+    public partial class BookingFaktura
     {
         [Key]
-        [StringLength(100)]
-        public string Email { get; set; }
+        [Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int bookingNummer { get; set; }
 
-        [Required]
-        [StringLength(100)]
-        public string KundeNavn { get; set; }
-
-        [Column("Tlf Nr")]
-        public int? Tlf_Nr { get; set; }
-
-        [Column("Antal Dyr")]
-        public int Antal_Dyr { get; set; }
-
-        [Column("Antal Børn")]
-        public int Antal_Børn { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int fakturaNummer { get; set; }
 
         [Column("Total pris")]
         public int Total_pris { get; set; }
 
-        [Column("Faktura Nr")]
-        public int Faktura_Nr { get; set; }
+        public DateTime checkIndDato { get; set; }
 
-        [Column("Start dato")]
-        public DateTimeOffset Start_dato { get; set; }
+        public DateTime checkUdDato { get; set; }
 
-        [Column("Slut dato")]
-        public DateTimeOffset Slut_dato { get; set; }
+        public DateTime datoForBooking { get; set; }
 
-        [Column("CheckIn dato")]
-        public DateTimeOffset CheckIn_dato { get; set; }
+        public DateTime datoForFaktura { get; set; }
 
-        [Column("Check-Ud dato")]
-        public DateTimeOffset Check_Ud_dato { get; set; }
+        public bool morgenmad { get; set; }
+
+        [Column("Tlf Nr")]
+        public int Tlf_Nr { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string sommerhusNavn { get; set; }
+
+        public virtual SommerhusTable SommerhusTable { get; set; }
 
         public virtual Customer Customer { get; set; }
-        public override void SetValuesFromObject(Booking obj)
-        {
-            Start_dato = obj.CheckInDate;
-            Slut_dato = obj.CheckOutDate;
-
-
-        }
     }
 }

@@ -26,7 +26,7 @@ namespace _2SemesterProjekt.BookingFolder
             }
         }
        
-        public BookingCatalog() : base("http://localhost:59749/", "BookingFakturas", new BookingViewModelFactory(), new BookingDTOFactory())
+        public BookingCatalog() : base("http://localhost:49759/", "BookingFakturas", new BookingViewModelFactory(), new BookingDTOFactory())
         {
            Load();  
             

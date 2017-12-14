@@ -1,9 +1,12 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using _2SemesterProjekt.DTO;
 
-namespace _2SemesterProjekt.DTO
+namespace ExamProjektWebService
 {
-    //using System.Data.Entity.Spatial;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
 
     [Table("Opgaver")]
     public partial class Opgaver
