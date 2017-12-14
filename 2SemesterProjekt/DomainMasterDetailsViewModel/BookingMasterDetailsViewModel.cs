@@ -10,7 +10,7 @@ using _2SemesterProjekt.DTO;
 
 namespace _2SemesterProjekt.BookingFolder
 {
-    class BookingMasterDetailsViewModel : MasterDetailsViewModelCRUD<Booking, BookingVm,  >
+    class BookingMasterDetailsViewModel : MasterDetailsViewModelCRUD<Booking, BookingVm, DTO.BookingFaktura >
     {
         public BookingMasterDetailsViewModel()
             : base(new BookingVmFactory(), ObjectProvider.BookingCatalog,

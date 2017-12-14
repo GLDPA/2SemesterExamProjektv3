@@ -1,4 +1,4 @@
-namespace ExamProjektWebService
+namespace _2SemesterProjekt
 {
     using System;
     using System.Collections.Generic;
