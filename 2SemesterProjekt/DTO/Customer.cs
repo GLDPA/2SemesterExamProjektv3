@@ -40,14 +40,21 @@ namespace _2SemesterProjekt.DTO
         public virtual ICollection<BookingFaktura> BookingFakturas { get; set; }
 
         public int Key { get; set; }
+
         public ITransformed<_2SemesterProjekt.Customer> Clone()
         {
-            throw new NotImplementedException();
+            return new Customer();
         }
 
         public void SetValuesFromObject(_2SemesterProjekt.Customer obj)
         {
-            throw new NotImplementedException();
+            TlfNr = obj.PhoneNumber;
+            Navn = obj.Name;
+            Email = obj.Email;
+            Alder = obj.Age;
+            antalPersoner = obj.NumberOfPeople;
+            antalBørn = obj.NumberOfChildren;
+            antalDyr = obj.NumberOfAnimals;
         }
     }
 }

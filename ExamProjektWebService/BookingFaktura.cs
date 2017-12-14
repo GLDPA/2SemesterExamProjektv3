@@ -20,11 +20,11 @@ namespace ExamProjektWebService
         public int fakturaNummer { get; set; }
 
         [Column("Total pris")]
-        public int Total_pris { get; set; }
+        public double Total_pris { get; set; }
 
-        public DateTime checkIndDato { get; set; }
+        public DateTimeOffset checkIndDato { get; set; }
 
-        public DateTime checkUdDato { get; set; }
+        public DateTimeOffset checkUdDato { get; set; }
 
         public DateTime datoForBooking { get; set; }
 

@@ -48,18 +48,26 @@ namespace _2SemesterProjekt.BookingFolder
         }
         public DateTime DateOfBooking
         {
-            get { return DataObject.DateOfBooking; } set { DataObject.DateOfBooking = value; OnPropertyChanged(); }
+            get { return DataObject.DateOfBooking; }
+            set { DataObject.DateOfBooking = value; OnPropertyChanged(); }
         }
 
         public int BookingID
         {
-            get { return DataObject.BookingID; } set { DataObject.BookingID = value; OnPropertyChanged(); }
+            get { return DataObject.BookingID; }
+            set { DataObject.BookingID = value; OnPropertyChanged(); }
         }
 
         public int InvoiceNumber
         {
             get { return DataObject.InvoiceNumber;}
             set { DataObject.InvoiceNumber = value; OnPropertyChanged(); }
+        }
+
+        public DateTime DateOfInvoice
+        {
+            get { return DataObject.DateOfInvoice; }
+            set { DataObject.DateOfInvoice = value; OnPropertyChanged(); }
         }
 
         // 1) we create a propety 
@@ -81,7 +89,7 @@ namespace _2SemesterProjekt.BookingFolder
 
         private int _customerSelected;
        
- public int CustomerSelected
+        public int CustomerSelected
         {
             get { return _customerSelected; }
             set

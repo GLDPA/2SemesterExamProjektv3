@@ -53,12 +53,19 @@ namespace _2SemesterProjekt.DTO
         public int Key { get; set; }
         public ITransformed<SummerHouse> Clone()
         {
-            throw new NotImplementedException();
+            return new SummerHouse();
         }
 
         public void SetValuesFromObject(SummerHouse obj)
         {
-            throw new NotImplementedException();
+            sommerhusNavn = obj.NickName;
+            vejNavn = obj.StreetName;
+            vejNummer = obj.StreetNr;
+            by = obj.City;
+            kommune = obj.Municipality;
+            postNummer = obj.ZipCode;
+            prisPrNat = obj.PricePrNight;
+
         }
     }
 }
