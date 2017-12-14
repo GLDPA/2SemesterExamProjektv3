@@ -5,7 +5,6 @@ namespace ExamProjektWebService
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-
     [Table("Customer")]
     public partial class Customer
     {

@@ -1,5 +1,3 @@
-using _2SemesterProjekt.DTO;
-
 namespace ExamProjektWebService
 {
     using System;

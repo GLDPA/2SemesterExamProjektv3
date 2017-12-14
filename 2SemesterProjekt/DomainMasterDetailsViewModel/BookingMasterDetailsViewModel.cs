@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using ExtensionsCommands.Types;
 using ExtensionsViewModel.Implementation;
+using _2SemesterProjekt.DTO;
 
 namespace _2SemesterProjekt.BookingFolder
 {
-    class BookingMasterDetailsViewModel : MasterDetailsViewModelCRUD<Booking, BookingVm, DTO.BookingFaktura>
+    class BookingMasterDetailsViewModel : MasterDetailsViewModelCRUD<Booking, BookingVm,  >
     {
         public BookingMasterDetailsViewModel()
             : base(new BookingVmFactory(), ObjectProvider.BookingCatalog,

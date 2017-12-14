@@ -12,13 +12,14 @@ namespace _2SemesterProjekt.BookingFolder
         private Customer _customer;
         private SummerHouse _summerHouse;
         private DateTime _dayofweek;
-<<<<<<< HEAD
-        private Booking _booking;
-=======
-        private Customer _customerName;
->>>>>>> gbranch
-        
 
+        private Booking _booking;
+
+        private Customer _customerName;
+
+        
+        public int PhoneNumber { get; set; }
+        public string SummerhouseName { get; set; }
         public int InvoiceNumber { get; set; }
     
         public int BookingID { get; set; }
@@ -26,8 +27,8 @@ namespace _2SemesterProjekt.BookingFolder
         public DateTime DateOfBooking { get; set; }
 
         public DateTimeOffset CheckInDate { get; set; }
-        public DateTimeOffset CheckOutDate { get; set; }
 
+        public DateTimeOffset CheckOutDate { get; set; }
 
         public bool Breakfast { get; set; }
 
@@ -53,7 +54,7 @@ namespace _2SemesterProjekt.BookingFolder
 
            return ((_summerHouse.PricePrNight - 10.0) / 100.0) * _summerHouse.PricePrNight;
 
-           return _summerHouse.PricePrNight - 10.0/ 100.0 * _summerHouse.PricePrNight;
+           //return _summerHouse.PricePrNight - 10.0/ 100.0 * _summerHouse.PricePrNight;
 
         }
 
@@ -103,6 +104,8 @@ namespace _2SemesterProjekt.BookingFolder
             Breakfast = obj.Breakfast;
             DateOfBooking = obj.DateOfBooking;
             TotalPrice = obj.TotalPrice;
+            PhoneNumber = obj.PhoneNumber;
+            SummerhouseName = obj.SummerhouseName;
         }
     }
 }

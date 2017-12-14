@@ -1,12 +1,10 @@
-using _2SemesterProjekt.DTO;
-
 namespace ExamProjektWebService
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
- 
+
 
     [Table("KontaktPerson")]
     public partial class KontaktPerson

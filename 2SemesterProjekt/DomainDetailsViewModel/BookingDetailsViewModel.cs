@@ -79,15 +79,15 @@ namespace _2SemesterProjekt.BookingFolder
             }
         }
 
-        private string _customerSelected;
+        private int _customerSelected;
        
- public string CustomerSelected
+ public int CustomerSelected
         {
             get { return _customerSelected; }
             set
             {
                 _customerSelected = value;
-                DataObject.CustomerName = _customerSelected;
+                DataObject.PhoneNumber = _customerSelected;
             }
         }
 
@@ -113,7 +113,7 @@ namespace _2SemesterProjekt.BookingFolder
             set
             {
                 _summerHouseSelected = value;
-                DataObject.SummerHouseName = _summerHouseSelected;
+                DataObject.SummerhouseName = _summerHouseSelected;
                 OnPropertyChanged(nameof(TotalPrice));
             }
         }

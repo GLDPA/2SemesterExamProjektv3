@@ -11,6 +11,10 @@ namespace _2SemesterProjekt.BookingFolder
  {
      public int InvoiceNumber { get; set; }
 
+    public int PhoneNumber { get; set; }
+
+    public string SummerhouseName { get; set; }
+
      public int BookingID { get; set; }
 
      public DateTime DateOfBooking { get; set; }
@@ -40,6 +44,8 @@ namespace _2SemesterProjekt.BookingFolder
             Breakfast = obj.Breakfast;
             DateOfBooking = obj.DateOfBooking;
             BookingID = obj.BookingID;
+            PhoneNumber = obj.PhoneNumber;
+            SummerhouseName = obj.SummerhouseName;
         }
     }
 }

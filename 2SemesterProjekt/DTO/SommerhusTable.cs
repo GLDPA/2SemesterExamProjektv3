@@ -4,7 +4,7 @@ namespace ExamProjektWebService
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
- 
+
 
     [Table("SommerhusTable")]
     public partial class SommerhusTable
