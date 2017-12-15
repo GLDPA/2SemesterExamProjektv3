@@ -7,8 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:inspectionFolder="using:_2SemesterProjekt.InspectionFolder"
     mc:Ignorable="d">
-
-
+    
+    <Page.DataContext>
+        <inspectionFolder:InspectionMasterDetailsVm/>
+    </Page.DataContext>
+    
     <Grid>
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Møns klint.jpg"/>
@@ -23,61 +26,72 @@
             <RowDefinition Height="600"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <ListView Grid.Row="0" Grid.Column="0" Margin="10,100,0,0" ItemsSource="{Binding ItemCollection}" SelectedItem="{Binding ItemSelected, Mode=TwoWay}" BorderBrush="Black" FontWeight="Bold" FontSize="16">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="inspectionFolder:InspectionMasterDetailsVm">
+                    <TextBlock Text="{Binding Description}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
         <StackPanel Grid.Column="0" Grid.Row="0">
             <TextBlock HorizontalAlignment="Left" Height="60" TextWrapping="Wrap" Text="Inspektions Vindue" VerticalAlignment="Top" Width="180" FontSize="24" FontWeight="Bold"  FontStyle="Italic"/>
         </StackPanel>
 
 
-        <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="right">
+        <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="right" Margin="0,15,0,0">
             <StackPanel Height="481" Width="217" HorizontalAlignment="right">
+                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Inspektions id" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Nøglen returneret" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Linned skiftet" Width="145" FontWeight="Bold" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Rengøring" Width="145" FontWeight="Bold" FontSize="16"/>
-                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Kunde" Width="145" FontWeight="Bold" FontSize="16"/>
+                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Skader" Width="145" FontWeight="Bold" FontSize="16"/>
+                <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Andet" Width="145" FontWeight="Bold" FontSize="16"/>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,0,0,0" Width="373">
-            <Button Command="{Binding DataCommand[CreateCommand]}" Content="Godkend" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
-            <Button Command="{Binding DataCommand[DeleteCommand]}" Content="Slet" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
-            <Button Command="{Binding DataCommand[UpdateCommand]}" Content="Opdater" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+            <Button Command="{Binding DataCommand[CreateCommand]}" Content="Godkend" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black" BorderThickness="2"/>
+            <Button Command="{Binding DataCommand[DeleteCommand]}" Content="Slet" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black" BorderThickness="2"/>
+            <Button Command="{Binding DataCommand[UpdateCommand]}" Content="Opdater" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black" BorderThickness="2"/>
             <Button Content="Annuller" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
         </StackPanel>
 
 
-        <StackPanel Grid.Column="2" HorizontalAlignment="Left">
+        <StackPanel Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="0,15,0,0">
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
             <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
             <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
             <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
-            <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
+            <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
             <Button Click="GoToMainPage" Content="Home" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right" >
-            <RadioButton Content="Create"
+            <RadioButton Content="Opret"
                          Visibility="{Binding ControlStates[CreateStateControl].VisibilityState}"
                          Command="{Binding StateCommand[CreateStateCommand]}"
-                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black" BorderThickness="2"/>
 
-            <RadioButton Content="Update"
+            <RadioButton Content="opdater"
                          Visibility="{Binding ControlStates[UpdateStateControl].VisibilityState}"
                          Command="{Binding StateCommand[UpdateStateCommand]}"
-                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black" BorderThickness="2"
                          Margin="4"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"  >
-            <RadioButton Content="Delete"
+            <RadioButton Content="Slet"
                          Visibility="{Binding ControlStates[DeleteStateControl].VisibilityState}"
                          Command="{Binding StateCommand[DeleteStateCommand]}"
-                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black" BorderThickness="2"/>
 
-            <RadioButton Content="Read" IsChecked="True" 
+            <RadioButton Content="Vis" IsChecked="True" 
                          Visibility="{Binding ControlStates[ReadStateControl].VisibilityState}"
                          Command="{Binding StateCommand[ReadStateCommand]}"
-                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black" BorderThickness="2"
                          Margin="4"/>
 
         </StackPanel>
