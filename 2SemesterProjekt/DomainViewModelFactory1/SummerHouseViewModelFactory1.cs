@@ -7,7 +7,7 @@ using DataTransformation.Implementation;
 
 namespace _2SemesterProjekt
 {
-    class SummerHouseVmFactory1 :FactoryBase<SummerHouse, SommerhusVm>
+   public class SummerHouseVmFactory1 :FactoryBase<SummerHouse, SommerhusVm>
     {
         public override SummerHouse CreateDomainObject(SommerhusVm vmObj)
         {
@@ -20,7 +20,7 @@ namespace _2SemesterProjekt
                 ZipCode = vmObj.ZipCode,
                 Municipality = vmObj.Municipality,
                 NickName = vmObj.NickName,
-                PricePrNight = vmObj.PricePrNight
+                PricePrNight = vmObj.PricePrNight,
             };
         return obj;
         }

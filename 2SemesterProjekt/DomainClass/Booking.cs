@@ -12,40 +12,69 @@ namespace _2SemesterProjekt.BookingFolder
         private Customer _customer;
         private SummerHouse _summerHouse;
         private DateTime _dayofweek;
+
+        private int _bookingId;
+
+        private Customer _customerName;
+
         
-        public int BookingId { get; set; }
+        public int PhoneNumber { get; set; }
+        public string SummerhouseName { get; set; }
+        public int InvoiceNumber { get; set; }
 
-        public string Name { get { return _customer.Name; } }
-
-        public string Email { get { return _customer.Email; } }
-
-        public int PhoneNumber { get { return _customer.PhoneNumber; } }
-
-        public DateTime CheckInDate { get; set; }
-
-        public DateTime CheckInTime { get; set; }
-
-        public DateTime CheckOutDate { get; set; }
-
-        public DateTime CheckOutTime { get; set; }
+        public int BookingID
+        {
+            get { return _bookingId; }
+            set
+            {
+                _bookingId = value;
+                Key = _bookingId;
+            }
+        }
 
         public DateTime DateOfBooking { get; set; }
 
+        public DateTimeOffset CheckInDate { get; set; }
+
+        public DateTimeOffset CheckOutDate { get; set; }
+
         public bool Breakfast { get; set; }
 
-        public int PriceForBreakfast { get; set; }
+        public DateTime CheckInTime { get; set; }
 
-        public int PriceForAnimals { get; set; }
+        public DateTime CheckOutTime { get; set; }
+
+        public DateTime DateOfInvoice { get; set; }
+
+        
+
+
+
+        //public string Name { get { return _customer.Name; } }
+
+        //public string Email { get { return _customer.Email; } }
+
+        //public int PhoneNumber { get { return _customer.PhoneNumber; } }
+
+
+
+
+   
 
         public double CalculatePrice()
         {
-           return _summerHouse.PricePrNight - 10 / 100 * _summerHouse.PricePrNight;
+
+           return ((_summerHouse.PricePrNight - 10.0) / 100.0) * _summerHouse.PricePrNight;
+
+           //return _summerHouse.PricePrNight - 10.0/ 100.0 * _summerHouse.PricePrNight;
+
         }
 
 
         public double GetPrice()
         {
-            double Price = _summerHouse.PricePrNight;
+
+            double Price =_summerHouse.PricePrNight;
             switch (DateTime.Today.DayOfWeek.ToString())
             {
                 case "Monday":
@@ -58,32 +87,33 @@ namespace _2SemesterProjekt.BookingFolder
                     Price = CalculatePrice();
                     break;
                 case "Thursday":
-                    Price = CalculatePrice();
+                    CalculatePrice();
                     break;
             }
 
             return Price;
             
         }
-       
 
-        public TimeSpan NumberOfDays { get { return CheckOutDate - CheckInDate; } set { value = NumberOfDays; } }
+
+        public TimeSpan NumberOfDays
+        {
+            get { return CheckOutDate - CheckInDate; }
+            set { value = NumberOfDays; }
+        }
 
         public double TotalPrice
         {
-            get
-            {
-                return (NumberOfDays.Days * GetPrice())
-                       + ((PriceForBreakfast * (_customer.NumberOfPeople + _customer.NumberOfChildren)) * NumberOfDays.Days)
-                       + (PriceForAnimals * _customer.NumberOfAnimals);
-            }
+            get { return (NumberOfDays.Days * GetPrice()); }
             set { value = TotalPrice; }
         }
 
 
         public override void SetValuesFromObject(Booking obj)
         {
-            BookingId = obj.BookingId;
+            Key = obj.Key;
+            InvoiceNumber = obj.InvoiceNumber;
+            BookingID = obj.BookingID;
             CheckInDate = obj.CheckInDate;
             CheckInTime = obj.CheckInTime;
             CheckOutDate = obj.CheckOutDate;
@@ -91,6 +121,9 @@ namespace _2SemesterProjekt.BookingFolder
             Breakfast = obj.Breakfast;
             DateOfBooking = obj.DateOfBooking;
             TotalPrice = obj.TotalPrice;
+            PhoneNumber = obj.PhoneNumber;
+            SummerhouseName = obj.SummerhouseName;
+            DateOfInvoice = obj.DateOfInvoice;
         }
     }
 }

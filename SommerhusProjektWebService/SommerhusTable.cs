@@ -36,6 +36,8 @@ namespace SommerhusProjektWebService
 
         public int vejNummer { get; set; }
 
+        public int prisPrNat { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Leverance> Leverances { get; set; }
 

@@ -6,10 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using DataTransformation.Interfaces;
 using ExtensionsModel.Implementation;
+using _2SemesterProjekt.DomainViewModelFactory1;
+using _2SemesterProjekt.DTO;
 
 namespace _2SemesterProjekt.BookingFolder
 {
-   public class BookingCatalog : FilePersistableCatalogNoDTO<Booking, BookingVm>
+   public class BookingCatalog : WebAPIPersistableCatalog<Booking, BookingVm, DTO.BookingFaktura> //FilePersistableCatalogNoDTO<Booking, BookingVm>
     {
         private static BookingCatalog _instance;
         public static BookingCatalog Instance
@@ -24,8 +26,10 @@ namespace _2SemesterProjekt.BookingFolder
             }
         }
        
-        public BookingCatalog() : base(new BookingViewModelFactory())
+        public BookingCatalog() : base("http://localhost:49759/", "BookingFakturas", new BookingViewModelFactory(), new BookingDTOFactory())
         {
+           Load();  
+            
         }
     }
 }

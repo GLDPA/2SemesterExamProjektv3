@@ -1,8 +1,10 @@
-﻿using ExtensionsModel.Implementation;
+﻿    using Windows.UI.Xaml.Navigation;
+using ExtensionsModel.Implementation;
+using _2SemesterProjekt.DomainViewModelFactory1;
 
 namespace _2SemesterProjekt
 {
-    class SummerHouseCatalog : FilePersistableCatalogNoDTO<SummerHouse, SommerhusVm>
+  public  class SummerHouseCatalog : WebAPIPersistableCatalog<SummerHouse, SommerhusVm, DTO.SommerhusTable>
     {
         private static SummerHouseCatalog instance;
         public static SummerHouseCatalog Instance
@@ -17,8 +19,9 @@ namespace _2SemesterProjekt
             }
         }
 
-        public SummerHouseCatalog() : base(new SummerHouseVmFactory1())
+        public SummerHouseCatalog() : base("http://localhost:49759/", "SommerhusTables", new SummerHouseVmFactory1(), new SummerHouseDTOFactory())
         {
+           Load(); 
         }
     }
 }

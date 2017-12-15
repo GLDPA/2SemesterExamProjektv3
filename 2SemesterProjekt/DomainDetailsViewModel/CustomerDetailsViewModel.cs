@@ -13,11 +13,6 @@ namespace _2SemesterProjekt
         {
         }
 
-        public int CustomerId
-        {
-            get { return DataObject.CustomerId; }
-            set { DataObject.CustomerId = value;OnPropertyChanged(); }
-        }
 
         public string Name
         {
@@ -50,6 +45,7 @@ namespace _2SemesterProjekt
             get { return DataObject.Email; }
             set
             {
+
                 DataObject.Email = value;
                 OnPropertyChanged();
 
@@ -70,50 +66,6 @@ namespace _2SemesterProjekt
             } 
         }
 
-
-        public int CardNumber
-        {
-            get
-            {
-                return DataObject.Cardnumber;
-            }
-            set
-            {
-                DataObject.Cardnumber = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public int CVRNumber
-        {
-            get { return DataObject.CVC; }
-            set
-            {
-                DataObject.CVC = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public int ExpirationMonth
-        {
-            get { return DataObject.ExpirationMonth; }
-            set
-            {
-                DataObject.ExpirationMonth = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public int ExpirationYear
-        {
-            get { return DataObject.ExpirationYear; }
-            set
-            {
-                DataObject.ExpirationYear = value;
-                OnPropertyChanged();
-                 
-            }
-        }
 
         public int NumberOfPeople
         {
@@ -144,5 +96,9 @@ namespace _2SemesterProjekt
                 OnPropertyChanged();
             }
         }
+
+
+
+       
     }
 }

@@ -1,20 +1,24 @@
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using DataTransformation.Implementation;
+using DataTransformation.Interfaces;
 
 namespace _2SemesterProjekt.DTO
 {
-    //using System.Data.Entity.Spatial;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     [Table("Customer")]
-    public partial class Customer : TransformedBase<_2SemesterProjekt.Customer>
+    public partial class Customer : ITransformed<_2SemesterProjekt.Customer>
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Customer()
         {
             BookingFakturas = new HashSet<BookingFaktura>();
         }
+
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int TlfNr { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -26,36 +30,31 @@ namespace _2SemesterProjekt.DTO
         [StringLength(100)]
         public string Email { get; set; }
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int TlfNr { get; set; }
+        public int antalBørn { get; set; }
 
-        [Column("Kort nummer")]
-        public int Kort_nummer { get; set; }
+        public int antalDyr { get; set; }
 
-        [Column("CVC nummer")]
-        public int CVC_nummer { get; set; }
-
-        public int UdløbsMåned { get; set; }
-
-        public int Udløbår { get; set; }
+        public int antalPersoner { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BookingFaktura> BookingFakturas { get; set; }
 
-        public override void SetValuesFromObject(_2SemesterProjekt.Customer obj)
+        public int Key { get; set; }
+
+        public ITransformed<_2SemesterProjekt.Customer> Clone()
         {
-            Navn = obj.Name;
-            Alder = obj.Age;
-            Email = obj.Email;
+            return new Customer();
+        }
+
+        public void SetValuesFromObject(_2SemesterProjekt.Customer obj)
+        {
             TlfNr = obj.PhoneNumber;
-            Kort_nummer = obj.CardNumber;
-            CVC_nummer = obj.CVC;
-            UdløbsMåned = obj.ExpirationMonth;
-            Udløbår = obj.ExpirationYear;
-
-
-
+            Navn = obj.Name;
+            Email = obj.Email;
+            Alder = obj.Age;
+            antalPersoner = obj.NumberOfPeople;
+            antalBørn = obj.NumberOfChildren;
+            antalDyr = obj.NumberOfAnimals;
         }
     }
 }

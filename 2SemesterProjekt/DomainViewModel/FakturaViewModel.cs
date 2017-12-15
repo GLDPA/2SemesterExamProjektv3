@@ -19,23 +19,14 @@ namespace _2SemesterProjekt.Faktura
 
         public int FakturaId { get; set; }
 
-        public int BookingID { get { return _booking.BookingId; } set { value = _booking.BookingId; } }
+        public int BookingID { get { return _booking.BookingID; } set { value = _booking.BookingID; } }
 
-        public int CustomerId { get { return _customer.CustomerId; } set { value = _customer.CustomerId; } }
 
         public string Name { get { return _customer.Name; } set { value = _customer.Name; } }
 
         public string Email { get { return _customer.Email; } set { value = _customer.Email; } }
 
         public int PhoneNr { get { return _customer.PhoneNumber; } set { value = _customer.PhoneNumber; } }
-
-        public int CardNr { get { return _customer.CardNumber; } set { value = _customer.CardNumber; } }
-
-        public int ExpMonth { get { return _customer.ExpirationMonth; } set { value = _customer.ExpirationMonth; } }
-
-        public int ExpYear { get { return _customer.ExpirationYear; } set { value = _customer.ExpirationYear; } }
-
-        public int CVC { get { return _customer.CVC; } set { value = _customer.CVC; } }
 
         public DateTime DateOfFaktura { get; set; }
 
@@ -56,15 +47,10 @@ namespace _2SemesterProjekt.Faktura
         public override void SetValuesFromObject(Faktura obj)
         {
             Key = obj.Key;
-            CustomerId = obj.CustomerId;
             BookingID = obj.BookingID;
             Name = obj.Name;
             Email = obj.Email;
             PhoneNr = obj.PhoneNr;
-            CardNr = obj.CardNr;
-            ExpMonth = obj.ExpMonth;
-            ExpYear = obj.ExpYear;
-            CVC = obj.CVC;
             TotalPrice = obj.TotalPrice;
             DateOfFaktura = obj.DateOfFaktura;
             FakturaId = obj.FakturaId;

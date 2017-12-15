@@ -12,7 +12,7 @@ using _2SemesterProjekt.SummerHouseMappe;
 
 namespace _2SemesterProjekt
 {
-    public class SummerHouseMasterDetailsVm : MasterDetailsViewModelCRUD<SummerHouse, SommerhusVm, SummerHouse>
+    public class SummerHouseMasterDetailsVm : MasterDetailsViewModelCRUD<SummerHouse, SommerhusVm, DTO.SommerhusTable>
     {
         public SummerHouseMasterDetailsVm()
             : base(new SummerhouseVmFactory2(),

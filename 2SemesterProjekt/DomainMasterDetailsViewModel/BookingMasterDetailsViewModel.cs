@@ -4,16 +4,26 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using ExtensionsCommands.Types;
 using ExtensionsViewModel.Implementation;
+using _2SemesterProjekt.DTO;
 
 namespace _2SemesterProjekt.BookingFolder
 {
-    class BookingMasterDetailsViewModel : MasterDetailsViewModelCRUD<Booking, BookingVm, Booking>
+    class BookingMasterDetailsViewModel : MasterDetailsViewModelCRUD<Booking, BookingVm, DTO.BookingFaktura >
     {
         public BookingMasterDetailsViewModel()
-            : base(new BookingVmFactory(), ObjectProvider.BookingCatalog,
-                new List<string> { }, new List<string>())
-        { }
+            : base(new BookingVmFactory(), 
+                ObjectProvider.BookingCatalog,
+                new List<string> { },
+                new List<string>())
+        {
+            ViewStateService.ViewState = CRUDStates.CreateState;
+        }
+
+
+
+
 
     }
 }
