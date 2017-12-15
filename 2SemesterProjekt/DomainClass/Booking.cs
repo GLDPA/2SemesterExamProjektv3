@@ -66,15 +66,13 @@ namespace _2SemesterProjekt.BookingFolder
 
            return ((_summerHouse.PricePrNight - 10.0) / 100.0) * _summerHouse.PricePrNight;
 
-           //return _summerHouse.PricePrNight - 10.0/ 100.0 * _summerHouse.PricePrNight;
-
         }
 
 
         public double GetPrice()
         {
 
-            double Price =_summerHouse.PricePrNight;
+            double Price = _summerHouse.PricePrNight;
             switch (DateTime.Today.DayOfWeek.ToString())
             {
                 case "Monday":
@@ -92,7 +90,7 @@ namespace _2SemesterProjekt.BookingFolder
             }
 
             return Price;
-            
+
         }
 
 
@@ -107,6 +105,7 @@ namespace _2SemesterProjekt.BookingFolder
             get { return (NumberOfDays.Days * GetPrice()); }
             set { value = TotalPrice; }
         }
+
 
 
         public override void SetValuesFromObject(Booking obj)

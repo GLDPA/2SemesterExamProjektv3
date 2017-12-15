@@ -72,7 +72,7 @@ namespace _2SemesterProjekt
             get { return DataObject.NumberOfPeople; }
             set
             {
-                DataObject.NumberOfAnimals = value;
+                DataObject.NumberOfPeople = value;
                 OnPropertyChanged();
             }
         }
