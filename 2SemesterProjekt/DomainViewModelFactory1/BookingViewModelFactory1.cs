@@ -22,7 +22,7 @@ namespace _2SemesterProjekt.BookingFolder
                 DateOfBooking = tObj.DateOfBooking,
                 BookingID = tObj.BookingID,
                 TotalPrice = tObj.Totalprice,
-                DateOfInvoice = tObj.DateOfInvoice
+                DateOfInvoice = tObj.DateOfInvoice,
             };
 
             return booking;
