@@ -17,13 +17,13 @@ namespace _2SemesterProjekt.Faktura
                 BookingID = tObj.BookingID,
                 Name = tObj.Name,
                 Email = tObj.Email,
-<<<<<<< HEAD
+
                 //CardNr = tObj.CardNr,
                 //ExpMonth = tObj.ExpMonth,
                 //ExpYear = tObj.ExpYear,
                 //CVC = tObj.CVC,
-=======
->>>>>>> Peders
+
+
                 DateOfFaktura = tObj.DateOfFaktura,
                 FakturaId = tObj.FakturaId
             };

@@ -26,13 +26,12 @@ namespace _2SemesterProjekt
             Age = obj.Age;
             Email = obj.Email;
             PhoneNumber = obj.PhoneNumber;
-<<<<<<< HEAD
+
             //Cardnumber = obj.CardNumber;
             //CVC = obj.CVC;
             //ExpirationMonth = obj.ExpirationMonth;
             //ExpirationYear = obj.ExpirationYear;
-=======
->>>>>>> Peders
+
             NumberOfPeople = obj.NumberOfPeople;
             NumberOfChildren = obj.NumberOfChildren;
             NumberOfAnimals = obj.NumberOfAnimals;

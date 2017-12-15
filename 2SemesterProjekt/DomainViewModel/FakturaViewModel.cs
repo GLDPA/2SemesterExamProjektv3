@@ -28,7 +28,7 @@ namespace _2SemesterProjekt.Faktura
 
         public int PhoneNr { get { return _customer.PhoneNumber; } set { value = _customer.PhoneNumber; } }
 
-<<<<<<< HEAD
+
      //   public int CardNr { get { return _customer.CardNumber; } set { value = _customer.CardNumber; } }
 
         //public int ExpMonth { get { return _customer.ExpirationMonth; } set { value = _customer.ExpirationMonth; } }
@@ -37,8 +37,7 @@ namespace _2SemesterProjekt.Faktura
 
         //public int CVC { get { return _customer.CVC; } set { value = _customer.CVC; } }
 
-=======
->>>>>>> Peders
+
         public DateTime DateOfFaktura { get; set; }
 
         public double TotalPrice
@@ -62,13 +61,12 @@ namespace _2SemesterProjekt.Faktura
             Name = obj.Name;
             Email = obj.Email;
             PhoneNr = obj.PhoneNr;
-<<<<<<< HEAD
+
             //CardNr = obj.CardNr;
             //ExpMonth = obj.ExpMonth;
             //ExpYear = obj.ExpYear;
             //CVC = obj.CVC;
-=======
->>>>>>> Peders
+
             TotalPrice = obj.TotalPrice;
             DateOfFaktura = obj.DateOfFaktura;
             FakturaId = obj.FakturaId;

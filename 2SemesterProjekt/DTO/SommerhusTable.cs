@@ -51,22 +51,21 @@ namespace _2SemesterProjekt.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Opgaver> Opgavers { get; set; }
 
+        //public override void SetValuesFromObject(SummerHouse obj)
+        //{
+        //    sommerhusNavn = obj.NickName;
+        //    postNummer = obj.ZipCode;
+        //    by = obj.City;
+        //    vejNavn = obj.StreetName;
+        //    kommune = obj.Municipality;
+        //    vejNummer = obj.StreetNr;
+        //    prisPrNat = obj.PricePrNight;
+
+        //    return new SummerHouse();
+        //}
+
         public override void SetValuesFromObject(SummerHouse obj)
         {
-<<<<<<< HEAD
-            sommerhusNavn = obj.NickName;
-            postNummer = obj.ZipCode;
-            by = obj.City;
-            vejNavn = obj.StreetName;
-            kommune = obj.Municipality;
-            vejNummer = obj.StreetNr;
-            prisPrNat = obj.PricePrNight;
-=======
-            return new SummerHouse();
-        }
-
-        public void SetValuesFromObject(SummerHouse obj)
-        {
             sommerhusNavn = obj.NickName;
             vejNavn = obj.StreetName;
             vejNummer = obj.StreetNr;
@@ -75,7 +74,7 @@ namespace _2SemesterProjekt.DTO
             postNummer = obj.ZipCode;
             prisPrNat = obj.PricePrNight;
 
->>>>>>> Peders
+
         }
     }
 }

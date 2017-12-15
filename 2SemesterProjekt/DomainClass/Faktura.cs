@@ -22,11 +22,10 @@ namespace _2SemesterProjekt.Faktura
         public int FakturaId { get; set; }
 
         public int BookingID { get { return _booking.BookingID; } set { value = _booking.BookingID; } }
-<<<<<<< HEAD
 
-        public int CustomerId { get { return _customer.CustomerId; }set { value = _customer.CustomerId; } }
-=======
->>>>>>> Peders
+
+        //public int CustomerId { get { return _customer.CustomerId; }set { value = _customer.CustomerId; } }
+
 
         public string Name { get { return _customer.Name; } set { value = _customer.Name; } }
 
@@ -34,7 +33,7 @@ namespace _2SemesterProjekt.Faktura
 
         public int PhoneNr { get { return _customer.PhoneNumber; } set { value = _customer.PhoneNumber; } }
 
-<<<<<<< HEAD
+
      //   public int CardNr { get { return _customer.CardNumber; } set { value = _customer.CardNumber; } }
 
      //   public int ExpMonth { get { return _customer.ExpirationMonth; } set { value = _customer.ExpirationMonth; } }
@@ -43,8 +42,7 @@ namespace _2SemesterProjekt.Faktura
 
 //        public int CVC { get { return _customer.CVC; } set { value = _customer.CVC; } }
 
-=======
->>>>>>> Peders
+
         public DateTime DateOfFaktura { get; set; }
 
         public double TotalPrice { get { return _booking.TotalPrice; } set { value = _booking.TotalPrice; } }
@@ -57,13 +55,12 @@ namespace _2SemesterProjekt.Faktura
             Name = obj.Name;
             Email = obj.Email;
             PhoneNr = obj.PhoneNr;
-<<<<<<< HEAD
+
          //   CardNr = obj.CardNr;
            // ExpMonth = obj.ExpMonth;
            // ExpYear = obj.ExpYear;
            // CVC = obj.CVC;
-=======
->>>>>>> Peders
+
             TotalPrice = obj.TotalPrice;
             FakturaId = obj.FakturaId;
         }

@@ -61,7 +61,7 @@ namespace _2SemesterProjekt.Faktura
                 OnPropertyChanged();
             }
         }
-<<<<<<< HEAD
+
         //public int CardNr
         //{
         //    get { return DataObject.CardNr; }
@@ -98,8 +98,7 @@ namespace _2SemesterProjekt.Faktura
         //        OnPropertyChanged();
         //    }
         //}
-=======
->>>>>>> Peders
+
 
         public double TotalPrice
         {

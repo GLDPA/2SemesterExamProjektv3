@@ -18,13 +18,12 @@ namespace _2SemesterProjekt
                 Age = vmObj.Age,
                 Email = vmObj.Email,
                 PhoneNumber = vmObj.PhoneNumber,
-<<<<<<< HEAD
+
                 //CardNumber = vmObj.Cardnumber,
                // CVC = vmObj.CVC,
                // ExpirationYear = vmObj.ExpirationYear,
                // ExpirationMonth = vmObj.ExpirationMonth,
-=======
->>>>>>> Peders
+
                 NumberOfPeople = vmObj.NumberOfPeople,
                 NumberOfChildren = vmObj.NumberOfChildren,
                 NumberOfAnimals = vmObj.NumberOfAnimals

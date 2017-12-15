@@ -20,13 +20,13 @@ namespace _2SemesterProjekt.BookingFolder
                 CheckOutDate = tObj.CheckOutDate,
                 Breakfast = tObj.Breakfast,
                 DateOfBooking = tObj.DateOfBooking,
-<<<<<<< HEAD
-                BookingID = tObj.BookingID
-=======
+
                 BookingID = tObj.BookingID,
+
+                
                 TotalPrice = tObj.Totalprice,
                 DateOfInvoice = tObj.DateOfInvoice
->>>>>>> Peders
+
             };
 
             return booking;
