@@ -17,6 +17,17 @@ namespace _2SemesterProjekt.DomainViewModelFactory1
             {
                 CheckInDate = dtoObj.checkIndDato,
                 CheckOutDate = dtoObj.checkUdDato,
+<<<<<<< HEAD
+=======
+                BookingID = dtoObj.bookingNummer,
+                InvoiceNumber = dtoObj.fakturaNummer,
+                TotalPrice = dtoObj.Total_pris,
+                DateOfInvoice = dtoObj.datoForFaktura,
+                DateOfBooking = dtoObj.datoForFaktura,
+                Breakfast = dtoObj.morgenmad,
+                //PhoneNumber = dtoObj.Tlf_Nr,
+                //SummerhouseName = dtoObj.sommerhusNavn
+>>>>>>> Peders
 
             };
 

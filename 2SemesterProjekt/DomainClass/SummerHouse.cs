@@ -14,12 +14,15 @@ namespace _2SemesterProjekt
         private int _streetnummber;
         public string StreetName { get; set; }
 
-        public int StreetNr { get { return _streetnummber; }
+        public int StreetNr
+        {
+            get { return _streetnummber; }
             set
             {
                 _streetnummber = value;
                 Key = _streetnummber;
-            } }
+            } 
+        }
   
         public int ZipCode { get; set; }
 
@@ -27,11 +30,7 @@ namespace _2SemesterProjekt
 
         public string Municipality { get; set; }
 
-        public string NickName
-        {
-            get;
-            set;
-        }
+        public string NickName{ get; set;}
 
         public int PricePrNight { get; set; }
 

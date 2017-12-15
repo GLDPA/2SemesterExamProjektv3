@@ -13,7 +13,7 @@ namespace _2SemesterProjekt.BookingFolder
         private SummerHouse _summerHouse;
         private DateTime _dayofweek;
 
-        private Booking _booking;
+        private int _bookingId;
 
         private Customer _customerName;
 
@@ -21,8 +21,16 @@ namespace _2SemesterProjekt.BookingFolder
         public int PhoneNumber { get; set; }
         public string SummerhouseName { get; set; }
         public int InvoiceNumber { get; set; }
-    
-        public int BookingID { get; set; }
+
+        public int BookingID
+        {
+            get { return _bookingId; }
+            set
+            {
+                _bookingId = value;
+                Key = _bookingId;
+            }
+        }
 
         public DateTime DateOfBooking { get; set; }
 
@@ -35,6 +43,10 @@ namespace _2SemesterProjekt.BookingFolder
         public DateTime CheckInTime { get; set; }
 
         public DateTime CheckOutTime { get; set; }
+
+        public DateTime DateOfInvoice { get; set; }
+
+        
 
 
 
@@ -54,15 +66,13 @@ namespace _2SemesterProjekt.BookingFolder
 
            return ((_summerHouse.PricePrNight - 10.0) / 100.0) * _summerHouse.PricePrNight;
 
-           //return _summerHouse.PricePrNight - 10.0/ 100.0 * _summerHouse.PricePrNight;
-
         }
 
 
         public double GetPrice()
         {
 
-            double Price =_summerHouse.PricePrNight;
+            double Price = _summerHouse.PricePrNight;
             switch (DateTime.Today.DayOfWeek.ToString())
             {
                 case "Monday":
@@ -80,11 +90,15 @@ namespace _2SemesterProjekt.BookingFolder
             }
 
             return Price;
-            
-        }
-       
 
-        public TimeSpan NumberOfDays { get { return CheckOutDate - CheckInDate; } set { value = NumberOfDays; } }
+        }
+
+
+        public TimeSpan NumberOfDays
+        {
+            get { return CheckOutDate - CheckInDate; }
+            set { value = NumberOfDays; }
+        }
 
         public double TotalPrice
         {
@@ -93,8 +107,10 @@ namespace _2SemesterProjekt.BookingFolder
         }
 
 
+
         public override void SetValuesFromObject(Booking obj)
         {
+            Key = obj.Key;
             InvoiceNumber = obj.InvoiceNumber;
             BookingID = obj.BookingID;
             CheckInDate = obj.CheckInDate;
@@ -106,6 +122,7 @@ namespace _2SemesterProjekt.BookingFolder
             TotalPrice = obj.TotalPrice;
             PhoneNumber = obj.PhoneNumber;
             SummerhouseName = obj.SummerhouseName;
+            DateOfInvoice = obj.DateOfInvoice;
         }
     }
 }

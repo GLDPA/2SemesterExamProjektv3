@@ -22,11 +22,11 @@ namespace _2SemesterProjekt.DTO
         public int fakturaNummer { get; set; }
 
         [Column("Total pris")]
-        public int Total_pris { get; set; }
+        public double Total_pris { get; set; }
 
-        public DateTime checkIndDato { get; set; }
+        public DateTimeOffset checkIndDato { get; set; }
 
-        public DateTime checkUdDato { get; set; }
+        public DateTimeOffset checkUdDato { get; set; }
 
         public DateTime datoForBooking { get; set; }
 
@@ -47,12 +47,19 @@ namespace _2SemesterProjekt.DTO
         public int Key { get; set; }
         public ITransformed<Booking> Clone()
         {
-            throw new NotImplementedException();
+            return new Booking();
         }
 
         public void SetValuesFromObject(Booking obj)
         {
-            throw new NotImplementedException();
+            bookingNummer = obj.BookingID;
+            fakturaNummer = obj.InvoiceNumber;
+            datoForBooking = obj.DateOfBooking;
+            datoForFaktura = obj.DateOfInvoice;
+            checkIndDato = obj.CheckInDate;
+            checkUdDato = obj.CheckOutDate;
+            Total_pris = obj.TotalPrice;
+            morgenmad = obj.Breakfast;
         }
     }
 }

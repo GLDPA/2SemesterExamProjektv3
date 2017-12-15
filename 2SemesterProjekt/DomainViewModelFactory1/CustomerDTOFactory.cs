@@ -19,6 +19,7 @@ namespace _2SemesterProjekt.DomainViewModelFactory1
                 Age = dtoObj.Alder,
                 Email = dtoObj.Email,
                 PhoneNumber = dtoObj.TlfNr,
+<<<<<<< HEAD
                 //CardNumber = dtoObj.Kort_nummer,
                 //CVC = dtoObj.CVC_nummer,
                 //ExpirationYear = dtoObj.Udløbår,
@@ -26,6 +27,11 @@ namespace _2SemesterProjekt.DomainViewModelFactory1
                 NumberOfPeople = 4,
                 NumberOfChildren = 2,
                 NumberOfAnimals = 1
+=======
+                NumberOfPeople = dtoObj.antalPersoner,
+                NumberOfChildren = dtoObj.antalBørn,
+                NumberOfAnimals = dtoObj.antalDyr
+>>>>>>> Peders
             };
 
 

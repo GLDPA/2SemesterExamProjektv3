@@ -13,7 +13,6 @@ namespace _2SemesterProjekt
    {
        private int _phoneNr;
 
-        public int CustomerId { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
         public string Email { get; set; }
@@ -27,10 +26,14 @@ namespace _2SemesterProjekt
                Key = _phoneNr;
            }
        }
+<<<<<<< HEAD
         //public int CardNumber { get; set; }
         //public int CVC { get; set; }
         //public int ExpirationMonth { get; set; }
         //public int ExpirationYear { get; set; }
+=======
+
+>>>>>>> Peders
         public int NumberOfPeople { get; set; }
         public int NumberOfChildren { get; set; }
         public int NumberOfAnimals { get; set; }
@@ -39,15 +42,17 @@ namespace _2SemesterProjekt
        public override void SetValuesFromObject(Customer obj)
         {
            Key = obj.Key;
-           CustomerId = obj.CustomerId;
            Name = obj.Name;
            Age = obj.Age;
            Email = obj.Email;
            PhoneNumber = obj.PhoneNumber;
+<<<<<<< HEAD
            //CardNumber = obj.CardNumber;
            //CVC = obj.CVC;
            //ExpirationMonth = obj.ExpirationMonth;
            //ExpirationYear = obj.ExpirationYear;
+=======
+>>>>>>> Peders
            NumberOfPeople = obj.NumberOfPeople;
            NumberOfChildren = obj.NumberOfChildren;
            NumberOfAnimals = obj.NumberOfAnimals;

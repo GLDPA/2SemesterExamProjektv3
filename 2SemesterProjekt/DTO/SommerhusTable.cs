@@ -53,6 +53,7 @@ namespace _2SemesterProjekt.DTO
 
         public override void SetValuesFromObject(SummerHouse obj)
         {
+<<<<<<< HEAD
             sommerhusNavn = obj.NickName;
             postNummer = obj.ZipCode;
             by = obj.City;
@@ -60,6 +61,21 @@ namespace _2SemesterProjekt.DTO
             kommune = obj.Municipality;
             vejNummer = obj.StreetNr;
             prisPrNat = obj.PricePrNight;
+=======
+            return new SummerHouse();
+        }
+
+        public void SetValuesFromObject(SummerHouse obj)
+        {
+            sommerhusNavn = obj.NickName;
+            vejNavn = obj.StreetName;
+            vejNummer = obj.StreetNr;
+            by = obj.City;
+            kommune = obj.Municipality;
+            postNummer = obj.ZipCode;
+            prisPrNat = obj.PricePrNight;
+
+>>>>>>> Peders
         }
     }
 }

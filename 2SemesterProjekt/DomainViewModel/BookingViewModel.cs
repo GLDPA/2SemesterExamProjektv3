@@ -19,6 +19,8 @@ namespace _2SemesterProjekt.BookingFolder
 
      public DateTime DateOfBooking { get; set; }
 
+        public DateTime DateOfInvoice { get; set; }
+
      public DateTimeOffset CheckInDate { get; set; }
      public DateTimeOffset CheckOutDate { get; set; }
 
@@ -30,7 +32,7 @@ namespace _2SemesterProjekt.BookingFolder
      public DateTime CheckOutTime { get; set; }
 
 
-
+        public double Totalprice { get; set; }
 
 
 
@@ -43,6 +45,7 @@ namespace _2SemesterProjekt.BookingFolder
             CheckOutDate = obj.CheckOutDate;
             Breakfast = obj.Breakfast;
             DateOfBooking = obj.DateOfBooking;
+            DateOfInvoice = obj.DateOfInvoice;
             BookingID = obj.BookingID;
             PhoneNumber = obj.PhoneNumber;
             SummerhouseName = obj.SummerhouseName;

@@ -33,12 +33,6 @@ namespace _2SemesterProjekt.Faktura
             }
         }
 
-        public int CustomerId
-        {
-            get { return DataObject.CustomerId; }
-            set { DataObject.CustomerId = value;OnPropertyChanged(); }
-        }
-
        
         public string CustomerName
         {
@@ -67,6 +61,7 @@ namespace _2SemesterProjekt.Faktura
                 OnPropertyChanged();
             }
         }
+<<<<<<< HEAD
         //public int CardNr
         //{
         //    get { return DataObject.CardNr; }
@@ -103,6 +98,8 @@ namespace _2SemesterProjekt.Faktura
         //        OnPropertyChanged();
         //    }
         //}
+=======
+>>>>>>> Peders
 
         public double TotalPrice
         {
