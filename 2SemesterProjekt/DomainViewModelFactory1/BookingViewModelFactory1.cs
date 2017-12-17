@@ -25,8 +25,12 @@ namespace _2SemesterProjekt.BookingFolder
 
                 
                 TotalPrice = tObj.Totalprice,
+<<<<<<< HEAD
                 DateOfInvoice = tObj.DateOfInvoice
 
+=======
+                DateOfInvoice = tObj.DateOfInvoice,
+>>>>>>> Semi-Master
             };
 
             return booking;

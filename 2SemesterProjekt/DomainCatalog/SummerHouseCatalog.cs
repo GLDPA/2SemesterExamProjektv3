@@ -19,7 +19,7 @@ namespace _2SemesterProjekt
             }
         }
 
-        public SummerHouseCatalog() : base("http://localhost:49759/", "SommerhusTables", new SummerHouseVmFactory1(), new SummerHouseDTOFactory())
+        public SummerHouseCatalog() : base("http://examprojektwebservice20171215.azurewebsites.net/", "SommerhusTables", new SummerHouseVmFactory1(), new SummerHouseDTOFactory())
         {
            Load(); 
         }

@@ -38,7 +38,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right">
+        <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" Margin="0,15,0,0">
             <StackPanel HorizontalAlignment="Right">
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Booking ID" Width="145" FontWeight="Bold" FontSize="16" />
                 <TextBlock HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Kunde" Width="145" FontWeight="Bold" FontSize="16" />
@@ -56,8 +56,13 @@
             <Button Command="{Binding DataCommand[UpdateCommand]}" Content="Opdater" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
             <Button Content="Annuller" FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
         </StackPanel>
+<<<<<<< HEAD
         
         <StackPanel Grid.Column="2" HorizontalAlignment="Left">
+=======
+
+        <StackPanel Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="0,15,0,0">
+>>>>>>> Semi-Master
             <TextBox HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="{Binding ItemDetails.BookingID, Mode=TwoWay}" VerticalAlignment="Top" Width="300"/>
             <ComboBox ItemsSource="{Binding ItemDetails.CustomerNamesList}" SelectedItem="{Binding ItemDetails.CustomerSelected, Mode=TwoWay}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
             <ComboBox ItemsSource="{Binding ItemDetails.SummerhouseNamesList}" SelectedItem="{Binding ItemDetails.SummerHouseSelected, Mode=TwoWay}" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="300"/>
@@ -73,27 +78,27 @@
             <Button Click="GoToMainPage" Content="Home" FontSize="20" FontWeight="Bold" Background="{ThemeResource AccentButtonForegroundPointerOver}" BorderBrush="Black" />
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right" >
-            <RadioButton Content="Create"
+            <RadioButton Content="Opret"
                          Visibility="{Binding ControlStates[CreateStateControl].VisibilityState}"
                          Command="{Binding StateCommand[CreateStateCommand]}"
-                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black" BorderThickness="2"/>
 
-            <RadioButton Content="Update"
+            <RadioButton Content="Opdater"
                          Visibility="{Binding ControlStates[UpdateStateControl].VisibilityState}"
                          Command="{Binding StateCommand[UpdateStateCommand]}"
-                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black" BorderThickness="2"
                          Margin="4"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left"  >
-            <RadioButton Content="Delete"
+            <RadioButton Content="Slet"
                          Visibility="{Binding ControlStates[DeleteStateControl].VisibilityState}"
                          Command="{Binding StateCommand[DeleteStateCommand]}"
-                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"/>
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black" BorderThickness="2"/>
 
-            <RadioButton Content="Read" IsChecked="True" 
+            <RadioButton Content="Vis" IsChecked="True" 
                          Visibility="{Binding ControlStates[ReadStateControl].VisibilityState}"
                          Command="{Binding StateCommand[ReadStateCommand]}"
-                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black"
+                         FontSize="20" FontWeight="Bold" Background="White" BorderBrush="Black" BorderThickness="2"
                          Margin="4"/>
 
         </StackPanel>
